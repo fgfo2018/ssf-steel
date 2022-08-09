@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/jqurey.number.js"></script>
+
+</head>
+
+<body style="background-color: #e2e2e2;">
+  <div class="loading_bar"></div>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark darken py-0 shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active fw-bold title" aria-current="page" href="index.html"
+            style="color:#6f6f6f;font-size:15px;margin-left: 40px;">即時監控</a>
+          <a class="nav-link active fw-bold title" aria-current="page" href="dataScraping.html"
+            style="color:#6f6f6f;font-size:15px;margin-left: 40px;">資料分析</a>
+          </div></a>
+        </div>
+      </div>
+    </div>
+  </nav> -->
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark  bg-gradient px-3" style="background-color: #262626;">
+    <div class="container-fluid" style="">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">即時監控</a>
+        </li>
+        <li class="nav-item">
+          <a href="dataScraping.html" class="nav-link">資料分析</a>
+        </li>
+        <li class="nav-item">
+          <a href="FrameDetection.html" class="nav-link">檢測框調整</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-3">
+    <div id="liveAlertPlaceholder" class="d-none" style="position: absolute;z-index: 9999;margin-left: 26.8%">
+      <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+          <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>
+          警告：你與影像伺服器失去連線，請嘗試重開瀏覽器在開啟本頁面，如此通知並未消失，請再聯絡相關技術人員。
+        </div>
+      </div>
+    </div>
+    <div class="row gx-3">
+      <div class="col-6 col-md-4">
+        <!-- 上方--------------------------------------------------------------------------------------------- -->
+        <!-- 上1 -->
+        <div class="card shadow">
+          <div class="card-header titleTop py-1 text-center">L/F 副料區</div>
+          <div class="card-body pt-0">
+            <div class="box1 text-center">
+              <div class="text-center subtitle p-0">min</div>
+              <input id="" type="float" disabled value="" class="subtitle text-center status_LF_colorbar_min"
+                name="status_LF_colorbar_min" style="width:40px;height:21px">
+            </div>
+            <div class="center rainbowBar"></div>
+            <div class="box2 text-center">
+              <div class="text-center subtitle p-0">max</div>
+              <input id="" type="float" disabled value="" class="subtitle text-center status_LF_colorbar_max"
+                name="status_LF_colorbar_max" style="width:40px;height:21px">
+            </div>
+            <div class="position-relative">
+              <img src="static/loading.png" id="rtsp_image01" class="imgCenter" alt="..." />
+              <div id="rtsp-error01">
+              </div>
+            </div>
+            <div class="w-100">
+              <div class="d-none" id="rtsp-status01"></div>
+              <div class="d-none" id="rtsp-stay01"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 ">
+        <!-- 上2 -->
+        <div class="card shadow">
+          <div class="card-header titleTop py-1 text-center">出鋼室地下樓梯</div>
+          <div class="card-body pt-0">
+            <div class="box1 text-center">
+              <div class="text-center subtitle p-0">min</div>
+              <input id="" type="float" disabled value="" class="subtitle text-center status_STAIR_colorbar_min"
+                name="status_STAIR_colorbar_min" style="width:40px;height:21px">
+            </div>
+            <div class="center rainbowBar"></div>
+            <div class="box2 text-center">
+              <div class="text-center subtitle p-0">max</div>
+              <input id="" type="float" disabled value="" class="subtitle text-center status_STAIR_colorbar_max"
+                name="status_STAIR_colorbar_max" style="width:40px;height:21px">
+            </div>
+            <div class="position-relative">
+              <img src="static/loading.png" id="rtsp_image02" class="imgCenter" alt="..." />
+              <div id="rtsp-error02">
+              </div>
+            </div>
+            <div class="d-none" id="rtsp-status02"></div>
+            <div class="d-none" id="rtsp-stay02"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 ">
+        <!-- 上3 -->
+        <div class="card shadow">
+          <div class="card-header titleTop py-1 text-center">L/D 2F平台</div>
+          <div class="card-body pt-0">
+            <div class="box1 text-center">
+              <div class="text-center subtitle p-0">min</div>
+              <input id="" type="float" disabled value="" class="subtitle text-center status_LD_colorbar_min"
+                name="status_LD_colorbar_min" style="width:40px;height:21px">
+            </div>
+            <div class="center rainbowBar"></div>
+            <div class="box2 text-center">
+              <div class="text-center subtitle p-0">max</div>
+              <input id="" type="float" disabled value="" class="subtitle text-center status_LD_colorbar_max"
+                name="status_LD_colorbar_max" style="width:40px;height:21px">
+            </div>
+            <div class="position-relative"> <img src="static/loading.png" id="rtsp_image03" class="imgCenter"
+                alt="..." />
+              <div id="rtsp-error03">
+              </div>
+            </div>
+            <div class="d-none" id="rtsp-status03"></div>
+            <div class="d-none" id="rtsp-stay03"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- nested grid -->
+  <div class="container-fluid mt-3">
+    <div class="row ">
+      <div class="col-md-6">
+        <!-- 下1---------------------------------------------------------------------------------------------- -->
+        <div class="card shadow" style="width:955px;height:316px;">
+          <div class="card-header title py-1">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <div class="col-form-label subtitle p-0">錄影回放</div>
+              </div>
+              <div class="col-auto" id="videosList">
+
+                <select id="videoSelect" class="subtitle" style="border: 1px solid gainsboro;">
+                </select>
+
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-0 ">
+            <div class="row  align-items-center tri subtitle">
+              <div class="col-4">
+                &nbsp;&nbsp;&nbsp;L/F 副料區
+              </div>
+              <div class="col-4">
+                &nbsp;&nbsp;&nbsp;出鋼室地下樓梯
+              </div>
+              <div class="col-4">
+                &nbsp;&nbsp;&nbsp;L/D 2F平台
+              </div>
+            </div>
+            <!-- <div class="gap"></div>
+            <div class="gap2"></div> -->
+            <video id="videoList" loop controls muted preload src="static/mock_vod/.mp4" class="video imgCenter">
+            </video>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 ">
+        <!-- 下2---------------------------------------------------------------------------------------------- -->
+        <div class="card shadow subtitle" style="width:226px;height:200px;left:12px">
+          <div class="card-header title py-1">
+            系統狀態
+          </div>
+          <form class="form-system_status">
+            <div class="card-body py-1 ">
+
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label class="col-form-label subtitle py-0">相機連線狀態:</label>
+                </div>
+                <div class="col-auto">
+                </div>
+              </div>
+
+              <ul class="py-0 m-0">
+                <div class="row g-3 align-items-center py-0">
+                  <div class="col-auto ">
+                    <li><label class="col-form-label subtitle py-0">L/F副料區:</label></li>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="status_LF" type="" disabled value="" class="subtitle text-center status_LF"
+                      style="width:56px;margin-left:31px;height:21px;border: 1px solid gainsboro;">
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <li><label class="col-form-label subtitle py-0">出鋼室下方樓梯:</label></li>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="status_STAIR" type="" disabled value=""
+                      class="subtitle text-center status_STAIR"
+                      style="width:56px;margin-left:px;height:21px;border: 1px solid gainsboro;">
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <li><label class="col-form-label subtitle py-0">L/D 2F平台:</label></li>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="status_LD" type="" disabled value="" class="subtitle text-center status_LD"
+                      style="width:56px;margin-left:24px;height:21px;border: 1px solid gainsboro;">
+                  </div>
+                </div>
+              </ul>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label class="col-form-label subtitle py-0">錄影狀態:</label>
+                </div>
+                <div class="col-auto">
+                  <input id="number" name="status_recording" type="" disabled value=""
+                    class="subtitle text-center status_recording"
+                    style="width:56px;margin-left:68px;height:21px;border: 1px solid gainsboro;">
+                </div>
+              </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label class="col-form-label subtitle py-0">硬碟剩餘容量 (%):</label>
+                </div>
+                <div class="col-auto">
+                  <input id="number" name="status_available_space" type="" disabled value=""
+                    class="subtitle text-center judge status_available_space"
+                    style="width:56px;margin-left:23px;height:21px;border: 1px solid gainsboro;">
+                </div>
+              </div>
+            </div>
+            <button type="submit" hidden>get</button>
+          </form>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-md-12 mt-3">
+            <form class="form-temperature_status">
+              <!-- 下3---------------------------------------------------------------------------------------- -->
+              <div class="card shadow subtitle" style="width:226px;left:12px">
+                <div class="card-header title py-1">
+                  熱像儀主機溫度
+                </div>
+                <div class="card-body py-1">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-8">
+                      <label class="col-form-label subtitle py-0">L/F副料區 (°C)</label>
+                    </div>
+                    <div class="col-4">
+                      <input id="number" name="temperature_LF" type="" disabled value=""
+                        class="subtitle text-center judge temperature_LF"
+                        style="width:56px;height:21px;border: 1px solid gainsboro;">
+                    </div>
+                  </div>
+                  <div class="row g-3 align-items-center">
+                    <div class="col-8">
+                      <label class="col-form-label subtitle py-0">出鋼室下方樓梯 (°C)</label>
+                    </div>
+                    <div class="col-4">
+                      <input id="number" name="temperature_STAIR" type="" disabled value=""
+                        class="subtitle text-center judge temperature_STAIR"
+                        style="width:56px;height:21px;border: 1px solid gainsboro;">
+                    </div>
+                  </div>
+                  <div class="row g-3 align-items-center">
+                    <div class="col-8">
+                      <label class="col-form-label subtitle py-0">L/D 2F平台 (°C)</label>
+                    </div>
+                    <div class="col-4">
+                      <input id="number" name="temperature_LD" type="" disabled value=""
+                        class="subtitle text-center judge temperature_LD"
+                        style="width:56px;height:21px;border: 1px solid gainsboro;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" hidden>get</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="row">
+          <div class=" col-md-5">
+            <!-- 下4------------------------------------------------------------------------------------------ -->
+            <div class="card shadow subtitle" style="width:290px;right:64px;height:200px;">
+              <div class="card-header title py-1">
+                量測參數設定
+              </div>
+              <form class="form-temperature_setting">
+                <div class="card-body py-1">
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle py-0">Reflected Temperature (°C)</label>
+                    </div>
+                    <div class="col-auto">
+                      <input id="number" name="setting_reflected_temperature" type="number" value="" step="0.1" min="0"
+                        max="1000" class="subtitle setting_reflected_temperature"
+                        style="width:56px;margin-left:27.5px;height:21px;border: 1px solid gainsboro;" required>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">Atmospheric Temperature (°C)</label>
+                    </div>
+                    <div class="col-auto">
+                      <input id="number" name="setting_atmospheric_temperature" type="number" value="" step="0.1"
+                        min="0" max="1000" class="subtitle setting_atmospheric_temperature"
+                        style="width:56px;margin-left:8px;height:21px;border: 1px solid gainsboro;" required>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">Object Distance (m)</label>
+                    </div>
+                    <div class="col-auto">
+                      <input id="number" name="setting_object_distance" type="number" value="" step="0.1" min="0"
+                        max="25" class="subtitle setting_object_distance"
+                        style="width:56px;margin-left:67px;height:21px;border: 1px solid gainsboro;" required>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">Object Emissivity (%)</label>
+                    </div>
+                    <div class="col-auto">
+                      <input id="number" name="setting_object_emissivity" type="number" value="" step="0.01" min="0"
+                        max="1" class="subtitle setting_object_emissivity"
+                        style="width:56px;margin-left:61.5px;height:21px;border: 1px solid gainsboro;" required>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">Relative Humidity (%)</label>
+                    </div>
+                    <div class="col-auto">
+                      <input id="number" name="setting_relative_humidity" type="number" value="" step="0.01" min="0"
+                        max="1" class="subtitle setting_relative_humidity"
+                        style="width:56px;margin-left:57.5px;height:21px;border: 1px solid gainsboro;" required>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">Extenal Optics Temperature (°C)</label>
+                    </div>
+                    <div class="col-auto">
+                      <input id="number" name="setting_external_optics_temperature" type="number" value="" step="0.1"
+                        min="0" max="100" class="subtitle setting_external_optics_temperature"
+                        style="width:56px;margin-left:0px;height:21px;border: 1px solid gainsboro;" required>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">External Optics Transmission (%)</label>
+                    </div>
+                    <div class="col-auto">
+                      <input id="number" name="setting_external_optics_transmission" type="number" value="" step="0.01"
+                        min="0" max="1" class="subtitle setting_external_optics_transmission"
+                        style="width:56px;height:21px;margin-left:-3px;border: 1px solid gainsboro;" required>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" hidden>get</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <!-- 下5------------------------------------------------------------------------------------------ -->
+            <div class="card shadow subtitle" style="width:373px;right:24px;">
+              <div class="card-header title py-1">
+                顯示狀態設定
+              </div>
+              <form class="form-display_status">
+                <div class="card-body py-1">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto subtitle">
+                      <label class="col-form-label  py-0 px-1">色譜設定</label>
+                    </div>
+                    <div class="col-auto">
+                      <select class="subtitle  py-0 setting_pattern" aria-label="Default select example"
+                        name="setting_pattern" style="width:178px;border: 1px solid gainsboro;">
+                        <option value="1" class="ml-0">彩虹模式</option>
+                        <option value="2">熔岩模式</option>
+                        <option value="3">灰階模式</option>
+                        <option value="4">影像強化</option>
+                      </select>
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-light btn-sm subtitle py-0 border setting_once_calibration"
+                        style="font-size: 12px;color:#6f6f6f;">執行校正</button>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto subtitle">
+                      <label class="col-form-label  py-1 px-1">校正設定</label>
+                    </div>
+                    <div class="col-auto">
+                      <select class="subtitle py-0 setting_calibration" name="setting_calibration"
+                        aria-label="Default select example"
+                        style="font-size: 12px;width:178px;border: 1px solid gainsboro;">
+                        <option value="0">自動校正</option>
+                        <option value="1">每10分鐘</option>
+                        <option value="2">每30分鐘</option>
+                        <option value="3">關閉校正</option>
+                      </select>
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-light btn-sm border subtitle py-0 setting_once_autofocus"
+                        style="font-size: 12px;color:#6f6f6f;">自動對焦</button>
+                    </div>
+                  </div>
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto subtitle">
+                      <label class="col-form-label  py-0 px-1">量測溫度區間(°C)</label>
+                    </div>
+                    <div class="col-auto subtitle">
+                      <input id="number" type="number" value="" class="subtitle setting_colorbar_min is-visible"
+                        step="0.1" name="setting_colorbar_min" style="width:56px;height:21px;margin-left:11px;"
+                        required>
+                      -
+                      <input id="number" name="setting_colorbar_max" type="number" value="" step="0.1"
+                        class="subtitle setting_colorbar_max is-visible" style="width:56px;height:21px;" required>
+                    </div>
+                    <div class="col-12 mt-1 text-danger setting_colorbar-visible-error d-none">
+                      # 量測範圍設定錯誤，格式: [測量最小值] < [測量最大值] </div> </div> </div> <button type="submit" hidden>get</button>
+              </form>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-12 mt-3">
+                <!-- 下6-------------------------------------------------------------------------------------- -->
+                <div class="card shadow subtitle" style="width:373px;right:24px;">
+                  <div class="card-header title py-1">
+                    監測設定
+                  </div>
+                  <form class="form-alarm_temperature">
+                    <div class="card-body py-1" style="margin-left: 3px;">
+                      <div class="row g-2">
+                        <div class="col-auto">
+                          <label class="col-form-label subtitle p-0">第一段警報溫度 (°C):</label>
+                          <input id="number" type="number" step="0.1" name="setting_first_alarm_temperature" value=""
+                            class="subtitle setting_first_alarm_temperature is-visible" style="width:56px;height:21px;"
+                            required>
+                        </div>
+
+                        <div class="col-auto">
+                          <label class="col-form-label subtitle p-0">&nbsp&nbsp取樣率 (Hz):</label>
+                          <input id="number" type="number" step="0.1" name="setting_sampling_rate" value=""
+                            class="subtitle setting_sampling_rate"
+                            style="margin-left:23px; width:56px;height:21px;border: 1px solid gainsboro;" required>
+                        </div>
+                      </div>
+
+
+                      <div class="row g-2 align-items-center">
+                        <div class="col-auto">
+                          <label class="col-form-label subtitle p-0">第二段警報溫度 (°C):</label>
+                          <input id="number" type="number" step="0.1" value=""
+                            class="subtitle setting_second_alarm_temperature is-visible"
+                            name="setting_second_alarm_temperature" style="width:56px;height:21px;" required>
+
+                        </div>
+                        <div class="col-auto">
+                          <label class="col-form-label subtitle p-0">&nbsp&nbsp像素閥值 (pixel):</label>
+                          <input id="number" type="number" step="0.1" value="" class="subtitle setting_threshold_pixel"
+                            name="setting_threshold_pixel" style="width:56px;height:21px;border: 1px solid gainsboro;"
+                            required>
+                        </div>
+                        <div class="col-12 mt-1 text-danger alarm-visible-error d-none">
+                          # 警報溫度範圍設定錯誤，格式: [第一段警報溫度] < [第二段警報溫度] </div> </div> </div> <button type="submit" hidden>
+                            get</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-12 demo-content text-black mt-3">
+          <!-- 下7-------------------------------------------------------------------------------------------- -->
+          <div class="card shadow subtitle" style="width:680px;right:64px">
+            <div class="card-header title py-1">
+              輸出設定
+            </div>
+            <form class="form-export_temperature">
+              <div class="card-body py-1">
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto subtitle">
+                    <label class="col-form-label title p-0">Export Maximum Data to</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="" type="text" value="" class="subtitle setting_export_maximum_data"
+                      name="setting_export_maximum_data"
+                      style="width:447px;margin-left:38px;height:21px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto subtitle">
+                    <label class="col-form-label subtitle1 p-0">Export Image and video to</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="" type="text" value="" class="subtitle setting_export_image_video"
+                      name="setting_export_image_video"
+                      style="width:447px;margin-left:30px;height:21px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto subtitle">
+                    <label class="col-form-label subtitle1 p-0">Export Cameras Temperature to</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="" type="text" value="" class="subtitle setting_export_camera_temperature"
+                      name="setting_export_camera_temperature"
+                      style="width:447px;margin-left:1px;height:21px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" hidden>get</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- 訊息 -->
+  <div class="toast-container">
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="liveToast" class="toast align-items-center text-white bg-primary border-0 mt-2" role="alert"
+        aria-live="assertive" aria-atomic="true" data-bs-delay="1500">
+        <div class="d-flex">
+          <div class="toast-body" id="thisMessage">
+            message.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+            aria-label="Close"></button>
+        </div>
+      </div>
+      <!-- 表單有誤顯示 -->
+      <div id="liveToast1" class="toast align-items-center text-white bg-danger border-0 mt-2" role="alert"
+        aria-live="assertive" aria-atomic="true" data-bs-delay="20000">
+        <div class="d-flex">
+          <div class="toast-body" id="thisMessage1">
+            message.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+            aria-label="Close"></button>
+        </div>
+      </div>
+      <div id="liveToast2" class="toast align-items-center text-white bg-danger border-0 mt-2" role="alert"
+        aria-live="assertive" aria-atomic="true" data-bs-autohide="false" data-bs-animation="false">
+        <div class="d-flex">
+          <div class="toast-body" id="thisMessage2">
+            message.
+          </div>
+        </div>
+      </div>
+      <!-- 以更新數據用 -->
+      <div id="liveToast3" class="toast align-items-center text-white bg-primary border-0 mt-2" role="alert"
+        aria-live="assertive" aria-atomic="true" data-bs-delay="1500">
+        <div class="d-flex">
+          <div class="toast-body" id="thisMessage3">
+            message.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+            aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <script type="text/javascript">
+    //下1選擇影像
+    $(document).ready(function () {
+      var config = getConfig();
+      var VideoTemp = null;
+      url = config.web_video_initial;
+      getVideosList(url, initial = true, VideoTemp, config)
+      var videoL = document.getElementById("videoList")
+      $("#videosList").on("change", '#videoSelect', function () {
+        var videoValue = $(this).val();
+        VideoTemp = videoValue
+        $("#videoList").attr("src", videoValue)
+        videoL.play();
+      })
+      var run = null;
+      run = setInterval(function () {
+        none = config.web_video_normal
+        getVideosList(none, initial = false, VideoTemp, config)
+      }, 1000)
+
+      function getVideosList(url, initial, VideoTemp, config) {
+        var initial = initial;
+        $.ajax({
+          type: "GET",
+          url: url,
+          dataType: "json",
+          success: function (response) {
+            var videos = response
+            var name = [];
+            // 初始化選單
+            $('#videoSelect').html('')
+            for (var i = 1; i <= Object.keys(videos).length; i++) {
+              arr = response[i].split("\\")
+              arr = arr[Object.keys(arr)[Object.keys(arr).length - 1]]
+              name.push(arr)
+            }
+            if (config.web_video_list_Sorting === "reverse") {
+              name = name.reverse()
+            }
+            var z = 1;
+            name.forEach(function (data) {
+              if (VideoTemp != null) {
+                VideoTemp = VideoTemp.split("/")
+                VideoTemp = VideoTemp[Object.keys(VideoTemp)[Object.keys(VideoTemp).length - 1]]
+              }
+              if (data === VideoTemp) {
+                $('#videoSelect').append('<option value="' + config.web_video_url_prefix + data +
+                  '" selected>' + data +
+                  '</option>')
+              } else {
+                $('#videoSelect').append('<option value="' + config.web_video_url_prefix + data + '">' +
+                  data +
+                  '</option>')
+              }
+              if (z == 1 && initial == true) {
+                $('#videoList').attr("src", config.web_video_url_prefix + data)
+                videoL.play();
+              }
+              z++
+            })
+          },
+          error: function (thrownError) {}
+        })
+      }
+
+      function getConfig() {
+        var rtn;
+        $.ajax({
+          url: '/config',
+          type: 'get',
+          async: false,
+          success: function (res) {
+            rtn = res;
+          },
+          error: function (res) {
+            rtn = false;
+          }
+        });
+        return rtn;
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+    var config = getConfig();
+    const content = {
+      0: '前端伺服器已回應，正在重啟程式!(如果無法連線請檢查後端連線狀況)',
+      1: '已偵測影像無回應，',
+      2: '秒後將重新啟動程式',
+      3: '連線出現錯誤!!!',
+      4: '影像處理伺服器已中斷連線，',
+      5: '秒後嘗試與伺服器連線...',
+      6: '正在嘗試與伺服器連線中...',
+      7: '嘗試與伺服器連線失敗...',
+    }
+    // L/F 副料區
+    var configSocket = {
+      1: config.web_socket_communication01,
+      2: config.web_socket_communication02,
+      3: config.web_socket_communication03
+    }
+    for (var i = 1; i <= 3; i++) {
+      transcoding(i, configSocket[i])
+    }
+
+    function transcoding(i, configSocket) {
+      var socket1 = io(configSocket);
+      const img1 = document.getElementById('rtsp_image0' + i)
+      const rtspstatus01 = document.getElementById('rtsp-status0' + i)
+      const rtspstay01 = document.getElementById('rtsp-stay0' + i)
+      const rtsperror = document.getElementById('rtsp-error0' + i)
+      var stay01 = 0
+      var socket1_timeOutRefresh01 = null
+      socket1.on('connect', () => {
+        rtspstatus01.innerHTML = content[0]
+        if (socket1_timeOutRefresh01 != null) {
+          clearInterval(socket1_timeOutRefresh01)
+        }
+        socket1.on('data', (data1) => {
+          stay01 = 0
+          rtspstatus01.classList.add('d-none')
+          img1.src = 'data:image/jpeg;base64,' + data1
+          rtsperror.style.opacity = "0";
+        })
+
+      })
+      socket1_timeOutRefresh02 = setInterval(() => {
+        if (stay01 < 10) {
+          rtspstay01.classList.add('d-none')
+        } else if (stay01 >= 15 && stay01 <= 20) {
+          // rtspstay01.classList.remove('d-none') //偵錯用
+          var tmp01 = 20
+          tmp01 = tmp01 - stay01
+          rtspstay01.innerHTML = content[1] + tmp01 + content[2]
+          rtsperror.style.opacity = "1";
+        } else if (stay01 >= 21) {
+          stay01 = 0
+          socket1.disconnect()
+          var logname = {
+            name: i
+          }
+          logname = JSON.stringify(logname)
+          jQuery.ajax({
+            type: "POST",
+            url: '/log',
+            data: logname,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+              console.log('save log')
+            },
+            error: function (thrownError) {}
+          })
+        }
+        stay01++
+        // console.log(stay01)
+      }, 1000)
+
+      socket1.on("disconnect", (reason) => {
+        rtspstatus01.innerHTML = content[3]
+        let count = 0
+        socket1_timeOutRefresh01 = setInterval(() => {
+          socket1.connect()
+          if (count <= 15) {
+            var tpa = 15 - count
+            rtspstatus01.innerHTML =
+              content[4] + tpa + content[5]
+          } else if (count > 15 && count <= 20) {
+            rtspstatus01.innerHTML = content[6]
+          } else if (count > 20 && count < 25) {
+            rtspstatus01.innerHTML = content[7]
+          } else {
+            count = 0
+          }
+        }, 1000)
+        rtsperror.style.opacity = "1";
+        // img1.src = 'static/loading.png'
+        // rtspstatus01.classList.remove('d-none') //偵錯用
+      });
+    }
+
+
+    // L/F 副料區end
+    // var socket2 = io(config.web_socket_communication02);
+    // var img2 = document.getElementById('rtsp_image02')
+    // socket2.on('data', (data2) => {
+    //   img2.src = 'data:image/jpeg;base64,' + data2
+    // })
+    // 
+    // var socket3 = io(config.web_socket_communication03);
+    // var img3 = document.getElementById('rtsp_image03')
+    // socket3.on('data', (data3) => {
+    //   img3.src = 'data:image/jpeg;base64,' + data3
+    // })
+
+    function getConfig() {
+      var rtn;
+      $.ajax({
+        url: '/config',
+        type: 'get',
+        async: false,
+        success: function (res) {
+          rtn = res;
+        },
+        error: function (res) {
+          rtn = false;
+        }
+      });
+      return rtn;
+    }
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var config = getConfig();
+      // 初始化
+      getInitial()
+
+      // 常態性刷新
+      var run = null;
+      run = setInterval(function () {
+        getInitial()
+      }, 1000)
+      $("input").focus(function () {
+        clearInterval(run);
+      });
+      $("input").focusout(function () {
+        run = setInterval(function () {
+          getInitial()
+        }, 1000)
+      })
+
+      // 前端數值設定
+      // 定義要被偵測的form
+      formName = [
+        'form.form-temperature_setting',
+        'form.form-display_status',
+        'form.form-alarm_temperature',
+        'form.form-export_temperature'
+      ]
+      var temp = 0; // 判斷執行校正或是自動對焦用
+      for (var i = 0; i < formName.length; i++) {
+        $(formName[i]).on('submit', function (e) {
+          e.preventDefault();
+          $(".loading_bar").css('opacity', "1");
+          $(".loading_bar").css('width', getRandom(50, 70) + "%");
+          changeApi(formName, temp)
+        });
+      }
+      // 偵測select被選為焦點時，暫停initial動作
+      $("select").focus(function () {
+        clearInterval(run);
+        $(this).addClass('focusSelect')
+
+      });
+      // 動態方式判斷select是否有被更動
+      $(".form-display_status").on("change", '.focusSelect', function () {
+        $(".loading_bar").css('opacity', "1");
+        $(".loading_bar").css('width', getRandom(50, 70) + "%");
+        changeApi(formName, temp)
+      })
+      // select被移除焦點將恢復執行initial
+      $("select").focusout(function () {
+        $(this).removeClass('focusSelect')
+        run = setInterval(function () {
+          getInitial()
+        }, 1000)
+      });
+      $(".focusSelect").on('change', function () {
+        $(".loading_bar").css('opacity', "1");
+        $(".loading_bar").css('width', getRandom(50, 70) + "%");
+        changeApi(formName, temp)
+        $(this).removeClass('focusSelect')
+      })
+      // 執行校正
+      $(".setting_once_calibration").click(function () {
+        temp = 1;
+        // disable button
+        $(this).prop("disabled", true);
+        // add spinner to button
+        $(this).html(
+          `<span class="spinner-border spinner-border-sm " role="status" aria-hidden="true"></span>校正中`
+        );
+        $(".loading_bar").css('opacity', "1");
+        $(".loading_bar").css('width', getRandom(50, 70) + "%");
+        changeApi(formName, temp)
+      });
+
+      // 自動對焦
+      $(".setting_once_autofocus").click(function () {
+        temp = 2;
+        // disable button
+        $(this).prop("disabled", true);
+        // add spinner to button
+        $(this).html(
+          `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>設定中`
+        );
+        $(".loading_bar").css('opacity', "1");
+        $(".loading_bar").css('width', getRandom(50, 70) + "%");
+        changeApi(formName, temp)
+      });
+
+
+
+      function changeApi(formName, temp) {
+        var changeData = {}
+        if (valid()) {
+          for (var i = 0; i < formName.length; i++) {
+            var array = $(formName[i]).serializeArray();
+            array.forEach(function (index) {
+              // 鎖住input
+              $("." + index.name).attr('disabled', 'disabled');
+              $("." + index.name).addClass('LockInput');
+              // 鎖住input end
+              changeData[index.name] = index.value
+            })
+          }
+          if (temp === 1) {
+            changeData['setting_once_calibration'] = '1' // 執行校正的預設值
+          } else {
+            changeData['setting_once_calibration'] = '0' // 執行校正的預設值
+          }
+          if (temp === 2) {
+            changeData['setting_once_autofocus'] = '1' // 自動對焦的預設值
+          } else {
+            changeData['setting_once_autofocus'] = '0' // 自動對焦的預設值
+          }
+          data = JSON.stringify(changeData)
+          param = 15; // 嘗試重新連線紀錄
+          maxretry = 10 // 最大嘗試次數
+          timeout = 1000 // 嘗試連線紀錄
+          func(data, param)
+
+          function func(data, param) {
+            var toastLiveExample = document.getElementById('liveToast2')
+            var toast2 = new bootstrap.Toast(toastLiveExample)
+            var PostUrl = config.web_data_changed
+            $.ajax({
+              type: "POST",
+              url: PostUrl,
+              data: data,
+              dataType: 'json',
+              contentType: 'application/json; charset=utf-8',
+              success: function (response) {
+                console.log(response)
+                if (response.setting_atmospheric_temperature) {
+                  toast2.hide()
+                  setTimeout(function () {
+                    $(".LockInput").removeAttr('disabled');
+                    $(".LockInput").removeClass("LockInput")
+                    var toastLiveExample = document.getElementById('liveToast3')
+                    var toast = new bootstrap.Toast(toastLiveExample)
+                    document.getElementById('thisMessage3').innerHTML = "已更新數據"
+                    toast.show()
+                    $(".loading_bar").css('opacity', "0");
+                    $(".loading_bar").css('width', 100 + "%");
+                  }, 3000)
+                  // console.log(response.setting_once_calibration)
+                  if (response.setting_once_calibration === 1) {
+                    setTimeout(function () {
+                      $(".setting_once_calibration").prop("disabled", false);
+                      $(".setting_once_calibration").html("執行校正")
+                      var data = {
+                        "setting_once_calibration": 0
+                      }
+                      data = JSON.stringify(data)
+                      $.ajax({
+                        type: "POST",
+                        url: PostUrl,
+                        data: data,
+                        dataType: 'json',
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (response) {},
+                        error: function (thrownError) {}
+                      })
+                    }, 5000)
+                  }
+                  if (response.setting_once_autofocus === 1) {
+                    setTimeout(function () {
+                      $(".setting_once_autofocus").prop("disabled", false);
+                      $(".setting_once_autofocus").html("自動對焦")
+                      var data = {
+                        "setting_once_autofocus": 0
+                      }
+                      data = JSON.stringify(data)
+                      $.ajax({
+                        type: "POST",
+                        url: PostUrl,
+                        data: data,
+                        dataType: 'json',
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (response) {},
+                        error: function (thrownError) {}
+                      })
+                    }, 5000)
+                  }
+                } else {
+                  var toastLiveExample = document.getElementById('liveToast1')
+                  var toast3 = new bootstrap.Toast(toastLiveExample)
+                  document.getElementById('thisMessage1').innerHTML =
+                    "表單有非法字元，請重新刷新填入數據，如果還是無法傳送，請聯絡相關人員進行協助。"
+                  toast3.show()
+                }
+              },
+              error: function (thrownError) {
+                // console.log(thrownError)
+                // console.log("POSTERROR")
+                // console.log(data)
+                if (param > 0) {
+                  setTimeout(function () {
+                    param = param - 1
+                    document.getElementById('thisMessage2').innerHTML =
+                      "傳送資料/設定失敗，正在重新傳送中...<br />請勿刷新頁面，以免資料遺失。<br />系統正在自動嘗試次數#" + param
+                    toast2.show()
+                    func(data, param)
+                  }, 1000)
+                } else {
+                  toast2.hide()
+                  var toastLiveExample = document.getElementById('liveToast1')
+                  var toast3 = new bootstrap.Toast(toastLiveExample)
+                  document.getElementById('thisMessage1').innerHTML =
+                    "無法與伺服器連線，請重新刷新，或是請聯繫相關人員協助。"
+                  toast3.show()
+                }
+              }
+            });
+          }
+        } else {
+          setTimeout(function () {
+            $(".loading_bar").css('opacity', "0");
+            $(".loading_bar").css('width', "0%");
+          }, 1000)
+        }
+      }
+
+      function valid() {
+        // 量測範圍
+        var setting_colorbar_min = $(".setting_colorbar_min");
+        var setting_colorbar_max = $(".setting_colorbar_max");
+        console.log(setting_colorbar_min + "," + setting_colorbar_max)
+        if (parseFloat(setting_colorbar_min.val()) > parseFloat(setting_colorbar_max.val())) {
+          setting_colorbar_min.addClass("is-error")
+          setting_colorbar_max.addClass("is-error")
+          $(".setting_colorbar-visible-error").removeClass("d-none")
+          return false;
+        } else {
+          setting_colorbar_min.removeClass("is-error")
+          setting_colorbar_max.removeClass("is-error")
+          $(".setting_colorbar-visible-error").addClass("d-none")
+        }
+        // 警報溫度 範圍
+        var setting_first_alarm_temperature = $(".setting_first_alarm_temperature");
+        var setting_second_alarm_temperature = $(".setting_second_alarm_temperature");
+        if (parseFloat(setting_first_alarm_temperature.val()) > parseFloat(setting_second_alarm_temperature
+            .val())) {
+          setting_first_alarm_temperature.addClass("is-error")
+          setting_second_alarm_temperature.addClass("is-error")
+          $(".alarm-visible-error").removeClass("d-none")
+          return false;
+        } else {
+          setting_first_alarm_temperature.removeClass("is-error")
+          setting_second_alarm_temperature.removeClass("is-error")
+          $(".alarm-visible-error").addClass("d-none")
+        }
+        return true;
+      }
+      // 以下方法為將form底下各input(需有name)的val解析，並且存入陣列中
+      $.fn.serializeObject = function () {
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function () {
+          if (o[this.name]) {
+            if (!o[this.name].push) {
+              o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+          } else {
+            o[this.name] = this.value || '';
+          }
+        });
+        return o;
+      };
+      // 以下是GET 
+      function getInitial() {
+        var formName = [
+          'form.form-temperature_setting',
+          'form.form-display_status',
+          'form.form-alarm_temperature',
+          'form.form-export_temperature'
+        ]
+        $.ajax({
+          type: "GET",
+          url: config.web_data_initial,
+          dataType: "json",
+          success: function (response) {
+            $('#liveAlertPlaceholder').addClass('d-none');
+            // color bar溫度顯示
+            $(".status_LF_colorbar_max").val(response.status_LF_colorbar_max.toFixed(0))
+            $(".status_LF_colorbar_min").val(response.status_LF_colorbar_min.toFixed(0))
+            $(".status_STAIR_colorbar_max").val(response.status_STAIR_colorbar_max.toFixed(0))
+            $(".status_STAIR_colorbar_min").val(response.status_STAIR_colorbar_min.toFixed(0))
+            $(".status_LD_colorbar_max").val(response.status_LD_colorbar_max.toFixed(0))
+            $(".status_LD_colorbar_min").val(response.status_LD_colorbar_min.toFixed(0))
+            // ~~~~ color bar溫度顯示 end ~~~~
+            // 系統狀態
+            // system_status以及system_status_this_div需要對應，用來判斷連線是否正常，並且正確放入值
+            var system_status = [
+              response.status_LF, response.status_STAIR, response.status_LD
+            ]
+            var system_status_this_div = [
+              '.status_LF', '.status_STAIR', '.status_LD'
+            ]
+            for (var i = 0; i < system_status.length; i++) {
+              if (system_status[i] === 1) {
+                $(system_status_this_div[i]).val('連線正常')
+                $(system_status_this_div[i]).addClass('judge')
+                $(system_status_this_div[i]).removeClass('judge2')
+              } else {
+                $(system_status_this_div[i]).val('連線異常')
+                $(system_status_this_div[i]).addClass('judge2')
+                $(system_status_this_div[i]).removeClass('judge')
+              }
+            }
+            if (response.status_recording === 1) {
+              $('.status_recording').val("待命中")
+              $('.status_recording').addClass('judge')
+              $('.status_recording').removeClass('judge2')
+            } else if (response.status_recording === 0) {
+              $('.status_recording').val("錄影中")
+              $('.status_recording').addClass('judge2')
+              $('.status_recording').removeClass('judge')
+            }
+            $('.status_available_space').val($.number(response.status_available_space, 1))
+            if (response.status_recording <= 85) {
+              $('.status_available_space').addClass('judge')
+              $('.status_available_space').removeClass('judge2')
+            } else {
+              $('.status_available_space').addClass('judge2')
+              $('.status_available_space').removeClass('judge')
+            }
+
+            // ~~~~ 系統狀態 end ~~~~
+
+            // 熱像儀主機回放
+            var
+              machine_temperature = [
+                response.temperature_LF,
+                response.temperature_STAIR,
+                response.temperature_LD
+              ]
+            var
+              machine_temperature_this_div = [
+                '.temperature_LF',
+                '.temperature_STAIR',
+                '.temperature_LD'
+              ]
+            for (var i = 0; i < machine_temperature.length; i++) {
+              var temperature = $.number(machine_temperature[i], 1)
+              if (temperature < 55) {
+                $(machine_temperature_this_div[i]).val(temperature)
+                $(machine_temperature_this_div[i]).css("background-color", "#7fffd4")
+              } else if (temperature >= 55 && temperature < 60) {
+                $(machine_temperature_this_div[i]).val(temperature)
+                $(machine_temperature_this_div[i]).css("background-color", "#ffc87f")
+              } else if (temperature >= 60) {
+                $(machine_temperature_this_div[i]).val(temperature)
+                $(machine_temperature_this_div[i]).css("background-color", "#ff5452")
+              }
+            }
+            // ~~~~ 熱像儀主機回放 end ~~~~
+
+            // 量測參數設定
+            $(".setting_reflected_temperature").val($.number(response.setting_reflected_temperature, 1))
+            $(".setting_atmospheric_temperature").val($.number(response.setting_atmospheric_temperature, 1))
+            $(".setting_object_distance").val($.number(response.setting_object_distance, 1))
+            $(".setting_object_emissivity").val($.number(response.setting_object_emissivity, 2))
+            $(".setting_relative_humidity").val($.number(response.setting_relative_humidity, 2))
+            $(".setting_external_optics_temperature").val($.number(response
+              .setting_external_optics_temperature,
+              1))
+            $(".setting_external_optics_transmission").val($.number(response
+              .setting_external_optics_transmission,
+              2))
+            // ~~~~ 量測參數設定 end ~~~~
+
+            // 顯示狀態設定
+            $(".setting_pattern").val(response.setting_pattern).change();
+            $(".setting_calibration").val(response.setting_calibration).change();
+            $(".setting_colorbar_min").val($.number(response.setting_colorbar_min, 1))
+            $(".setting_colorbar_max").val($.number(response.setting_colorbar_max, 1))
+            // ~~~~ 顯示狀態設定 end ~~~~
+
+            // 監測設定
+            $(".setting_first_alarm_temperature").val($.number(response.setting_first_alarm_temperature, 1))
+            $(".setting_second_alarm_temperature").val($.number(response.setting_second_alarm_temperature,
+              1))
+            $(".setting_sampling_rate").val(response.setting_sampling_rate)
+            $(".setting_threshold_pixel").val(response.setting_threshold_pixel)
+            // ~~~~ 監測設定 end ~~~~
+
+            // 輸出設定
+            $(".setting_export_maximum_data").val(response.setting_export_maximum_data)
+            $(".setting_export_image_video").val(response.setting_export_image_video)
+            $(".setting_export_camera_temperature").val(response.setting_export_camera_temperature)
+            // ~~~~ 輸出設定 end ~~~~
+            // 鎖住input
+            $(".LockInput").removeAttr('disabled');
+            $(".LockInput").removeClass('LockInput');
+            // 鎖住input end
+
+          },
+          error: function (thrownError) {
+            $('#liveAlertPlaceholder').removeClass('d-none');
+            for (var i = 0; i < formName.length; i++) {
+              var array = $(formName[i]).serializeArray();
+              array.forEach(function (index) {
+                // 鎖住input
+                $("." + index.name).attr('disabled', 'disabled');
+                $("." + index.name).addClass('LockInput');
+                // 鎖住input end
+              })
+            }
+          }
+        });
+
+      }
+      // 小數點轉換
+      function fix(num, N) {
+        var base = Math.pow(10, N);
+        // base = N * 10;
+        return Math.floor(num * base) / base
+      }
+      // 小數點轉換(強制顯示小數點，需搭配jqurey.number.js)
+      function toDecimal2(x) {
+        var f = parseFloat(x);
+        if (isNaN(f)) {
+          return false;
+        }
+        var f = Math.round(x * 100) / 100;
+        var s = f.toString();
+        var rs = s.indexOf('.');
+        if (rs < 0) {
+          rs = s.length;
+          s = '.';
+        }
+        while (s.length <= rs) {
+          s = '0';
+        }
+        return s;
+      }
+      // 亂數產生器
+      function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function getConfig() {
+        var rtn;
+        $.ajax({
+          url: '/config',
+          type: 'get',
+          async: false,
+          success: function (res) {
+            rtn = res;
+          },
+          error: function (res) {
+            rtn = false;
+          }
+        });
+        return rtn;
+      }
+    })
+  </script>
+</body>
+
+</html>

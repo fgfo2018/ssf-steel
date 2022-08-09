@@ -1,0 +1,4161 @@
+[{
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:01:33",
+        "table_stop": "2022-04-29 08:05:17",
+        "table_maxTempLF": 442.96,
+        "table_maxTempSTAIR": 405.68,
+        "table_maxTempLD": 419.86,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:55:00",
+        "table_stop": "2022-04-28 12:52:08",
+        "table_maxTempLF": 434.42,
+        "table_maxTempSTAIR": 405.97,
+        "table_maxTempLD": 401.18,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-29 14:36:59",
+        "table_stop": "2022-04-29 15:04:50",
+        "table_maxTempLF": 410.63,
+        "table_maxTempSTAIR": 436.73,
+        "table_maxTempLD": 412.84,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 12:04:48",
+        "table_stop": "2022-04-28 12:57:46",
+        "table_maxTempLF": 420.27,
+        "table_maxTempSTAIR": 414.84,
+        "table_maxTempLD": 432.13,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:13:02",
+        "table_stop": "2022-04-28 10:57:49",
+        "table_maxTempLF": 450.45,
+        "table_maxTempSTAIR": 416.09,
+        "table_maxTempLD": 417.12,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:30:05",
+        "table_stop": "2022-04-28 18:44:08",
+        "table_maxTempLF": 439.95,
+        "table_maxTempSTAIR": 434.91,
+        "table_maxTempLD": 409.73,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 20:46:45",
+        "table_stop": "2022-04-29 20:51:55",
+        "table_maxTempLF": 441.33,
+        "table_maxTempSTAIR": 435.01,
+        "table_maxTempLD": 426.21,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 13:48:45",
+        "table_stop": "2022-04-29 14:41:21",
+        "table_maxTempLF": 420.94,
+        "table_maxTempSTAIR": 430.11,
+        "table_maxTempLD": 445.08,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 19:03:12",
+        "table_stop": "2022-04-29 19:37:45",
+        "table_maxTempLF": 451.59,
+        "table_maxTempSTAIR": 435.86,
+        "table_maxTempLD": 418.33,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 18:16:19",
+        "table_stop": "2022-04-29 18:41:11",
+        "table_maxTempLF": 435.51,
+        "table_maxTempSTAIR": 420.16,
+        "table_maxTempLD": 405.49,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 03:12:18",
+        "table_stop": "2022-04-28 03:50:58",
+        "table_maxTempLF": 445.33,
+        "table_maxTempSTAIR": 410.01,
+        "table_maxTempLD": 440.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 22:20:13",
+        "table_stop": "2022-04-29 22:23:58",
+        "table_maxTempLF": 444.07,
+        "table_maxTempSTAIR": 427.92,
+        "table_maxTempLD": 432.46,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 10:48:56",
+        "table_stop": "2022-04-29 10:59:20",
+        "table_maxTempLF": 419.68,
+        "table_maxTempSTAIR": 434.68,
+        "table_maxTempLD": 443.12,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:26:52",
+        "table_stop": "2022-04-29 01:20:25",
+        "table_maxTempLF": 429.39,
+        "table_maxTempSTAIR": 436.69,
+        "table_maxTempLD": 444.21,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:14:45",
+        "table_stop": "2022-04-28 01:25:40",
+        "table_maxTempLF": 451.12,
+        "table_maxTempSTAIR": 416.27,
+        "table_maxTempLD": 443.99,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:31:16",
+        "table_stop": "2022-04-28 11:17:14",
+        "table_maxTempLF": 421.46,
+        "table_maxTempSTAIR": 432.38,
+        "table_maxTempLD": 402.02,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 04:31:50",
+        "table_stop": "2022-04-29 05:13:27",
+        "table_maxTempLF": 447.91,
+        "table_maxTempSTAIR": 410.77,
+        "table_maxTempLD": 447.62,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-29 06:04:33",
+        "table_stop": "2022-04-29 07:02:48",
+        "table_maxTempLF": 421.78,
+        "table_maxTempSTAIR": 403.39,
+        "table_maxTempLD": 423.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 20:18:23",
+        "table_stop": "2022-04-29 21:04:09",
+        "table_maxTempLF": 427.46,
+        "table_maxTempSTAIR": 409.35,
+        "table_maxTempLD": 426.82,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:46:53",
+        "table_stop": "2022-04-28 19:29:25",
+        "table_maxTempLF": 404.36,
+        "table_maxTempSTAIR": 419.16,
+        "table_maxTempLD": 437.31,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:15:33",
+        "table_stop": "2022-04-28 19:13:25",
+        "table_maxTempLF": 429.93,
+        "table_maxTempSTAIR": 415.62,
+        "table_maxTempLD": 431.05,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:29:57",
+        "table_stop": "2022-04-29 10:01:24",
+        "table_maxTempLF": 404.78,
+        "table_maxTempSTAIR": 420.29,
+        "table_maxTempLD": 445.56,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 15:59:50",
+        "table_stop": "2022-04-29 16:53:45",
+        "table_maxTempLF": 416.18,
+        "table_maxTempSTAIR": 418.87,
+        "table_maxTempLD": 432.29,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 23:34:43",
+        "table_stop": "2022-04-28 23:48:35",
+        "table_maxTempLF": 410.88,
+        "table_maxTempSTAIR": 428.09,
+        "table_maxTempLD": 403.45,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 10:37:07",
+        "table_stop": "2022-04-29 11:14:46",
+        "table_maxTempLF": 438.37,
+        "table_maxTempSTAIR": 428.25,
+        "table_maxTempLD": 401.53,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-28 19:25:47",
+        "table_stop": "2022-04-28 19:41:45",
+        "table_maxTempLF": 415.51,
+        "table_maxTempSTAIR": 418.45,
+        "table_maxTempLD": 406.94,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 14:07:59",
+        "table_stop": "2022-04-29 14:13:20",
+        "table_maxTempLF": 421.32,
+        "table_maxTempSTAIR": 401.92,
+        "table_maxTempLD": 438.16,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 03:35:58",
+        "table_stop": "2022-04-29 03:53:15",
+        "table_maxTempLF": 444.29,
+        "table_maxTempSTAIR": 432.43,
+        "table_maxTempLD": 437.89,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 13:44:08",
+        "table_stop": "2022-04-28 14:34:35",
+        "table_maxTempLF": 427.51,
+        "table_maxTempSTAIR": 418.52,
+        "table_maxTempLD": 430.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 15:27:00",
+        "table_stop": "2022-04-29 16:17:28",
+        "table_maxTempLF": 404.07,
+        "table_maxTempSTAIR": 416.97,
+        "table_maxTempLD": 420.21,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:15:43",
+        "table_stop": "2022-04-29 08:25:14",
+        "table_maxTempLF": 405.68,
+        "table_maxTempSTAIR": 427.54,
+        "table_maxTempLD": 426.41,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-29 20:39:43",
+        "table_stop": "2022-04-29 21:13:26",
+        "table_maxTempLF": 407.25,
+        "table_maxTempSTAIR": 400.57,
+        "table_maxTempLD": 424.16,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-28 10:37:51",
+        "table_stop": "2022-04-28 11:29:23",
+        "table_maxTempLF": 417.65,
+        "table_maxTempSTAIR": 423.07,
+        "table_maxTempLD": 417.13,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 05:05:03",
+        "table_stop": "2022-04-28 05:29:12",
+        "table_maxTempLF": 429.21,
+        "table_maxTempSTAIR": 428.35,
+        "table_maxTempLD": 413.53,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 05:49:28",
+        "table_stop": "2022-04-29 06:20:19",
+        "table_maxTempLF": 434.95,
+        "table_maxTempSTAIR": 429.25,
+        "table_maxTempLD": 448.83,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-28 07:32:14",
+        "table_stop": "2022-04-28 07:47:04",
+        "table_maxTempLF": 419.97,
+        "table_maxTempSTAIR": 410.71,
+        "table_maxTempLD": 410.64,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:43:05",
+        "table_stop": "2022-04-28 02:42:00",
+        "table_maxTempLF": 421.22,
+        "table_maxTempSTAIR": 428.26,
+        "table_maxTempLD": 428.62,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:29:37",
+        "table_stop": "2022-04-29 16:44:13",
+        "table_maxTempLF": 438.78,
+        "table_maxTempSTAIR": 419.94,
+        "table_maxTempLD": 404.07,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:31:57",
+        "table_stop": "2022-04-29 21:32:55",
+        "table_maxTempLF": 447.06,
+        "table_maxTempSTAIR": 425.69,
+        "table_maxTempLD": 432.64,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 15:56:29",
+        "table_stop": "2022-04-28 16:32:11",
+        "table_maxTempLF": 430.36,
+        "table_maxTempSTAIR": 429.31,
+        "table_maxTempLD": 428.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:07:15",
+        "table_stop": "2022-04-29 16:13:20",
+        "table_maxTempLF": 423.05,
+        "table_maxTempSTAIR": 401.29,
+        "table_maxTempLD": 419.46,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 16:53:56",
+        "table_stop": "2022-04-28 17:13:15",
+        "table_maxTempLF": 422.49,
+        "table_maxTempSTAIR": 400.74,
+        "table_maxTempLD": 431.02,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 16:01:39",
+        "table_stop": "2022-04-28 16:26:07",
+        "table_maxTempLF": 451.09,
+        "table_maxTempSTAIR": 415.23,
+        "table_maxTempLD": 419.81,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 02:05:49",
+        "table_stop": "2022-04-28 02:24:24",
+        "table_maxTempLF": 407.29,
+        "table_maxTempSTAIR": 414.29,
+        "table_maxTempLD": 423.34,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-29 09:52:30",
+        "table_stop": "2022-04-29 10:15:33",
+        "table_maxTempLF": 403.93,
+        "table_maxTempSTAIR": 434.75,
+        "table_maxTempLD": 423.79,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 09:25:00",
+        "table_stop": "2022-04-28 10:02:36",
+        "table_maxTempLF": 409.11,
+        "table_maxTempSTAIR": 428.86,
+        "table_maxTempLD": 433.48,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 13:10:56",
+        "table_stop": "2022-04-28 13:28:05",
+        "table_maxTempLF": 423.13,
+        "table_maxTempSTAIR": 400.11,
+        "table_maxTempLD": 413.26,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:45:12",
+        "table_stop": "2022-04-28 06:47:01",
+        "table_maxTempLF": 423.09,
+        "table_maxTempSTAIR": 437.98,
+        "table_maxTempLD": 427.67,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 6,
+        "table_start": "2022-04-29 08:14:30",
+        "table_stop": "2022-04-29 09:05:13",
+        "table_maxTempLF": 415.86,
+        "table_maxTempSTAIR": 407.83,
+        "table_maxTempLD": 445.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:09:07",
+        "table_stop": "2022-04-28 06:23:34",
+        "table_maxTempLF": 416.95,
+        "table_maxTempSTAIR": 403.79,
+        "table_maxTempLD": 429.85,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 17:35:12",
+        "table_stop": "2022-04-29 18:25:31",
+        "table_maxTempLF": 412.94,
+        "table_maxTempSTAIR": 403.52,
+        "table_maxTempLD": 427.97,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 22:23:16",
+        "table_stop": "2022-04-29 22:44:01",
+        "table_maxTempLF": 419.32,
+        "table_maxTempSTAIR": 439.88,
+        "table_maxTempLD": 447.88,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 17:55:21",
+        "table_stop": "2022-04-29 18:51:25",
+        "table_maxTempLF": 406.68,
+        "table_maxTempSTAIR": 437.45,
+        "table_maxTempLD": 408.24,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 21:30:19",
+        "table_stop": "2022-04-28 21:50:32",
+        "table_maxTempLF": 444.32,
+        "table_maxTempSTAIR": 407.77,
+        "table_maxTempLD": 445.22,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 02:44:17",
+        "table_stop": "2022-04-28 02:47:34",
+        "table_maxTempLF": 442.56,
+        "table_maxTempSTAIR": 401.64,
+        "table_maxTempLD": 440.96,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 09:37:31",
+        "table_stop": "2022-04-28 10:19:28",
+        "table_maxTempLF": 400.99,
+        "table_maxTempSTAIR": 421.57,
+        "table_maxTempLD": 425.56,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:14:40",
+        "table_stop": "2022-04-29 21:52:55",
+        "table_maxTempLF": 455.66,
+        "table_maxTempSTAIR": 434.04,
+        "table_maxTempLD": 404.38,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-28 00:24:58",
+        "table_stop": "2022-04-28 01:01:38",
+        "table_maxTempLF": 453.07,
+        "table_maxTempSTAIR": 431.71,
+        "table_maxTempLD": 401.18,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 04:16:27",
+        "table_stop": "2022-04-29 04:25:58",
+        "table_maxTempLF": 407.53,
+        "table_maxTempSTAIR": 427.54,
+        "table_maxTempLD": 401.97,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-28 12:41:12",
+        "table_stop": "2022-04-28 12:56:32",
+        "table_maxTempLF": 451.58,
+        "table_maxTempSTAIR": 434.94,
+        "table_maxTempLD": 416.51,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 17:32:30",
+        "table_stop": "2022-04-29 18:15:59",
+        "table_maxTempLF": 441.16,
+        "table_maxTempSTAIR": 401.53,
+        "table_maxTempLD": 401.17,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 11:04:44",
+        "table_stop": "2022-04-29 11:43:21",
+        "table_maxTempLF": 414.59,
+        "table_maxTempSTAIR": 405.99,
+        "table_maxTempLD": 420.91,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:07:06",
+        "table_stop": "2022-04-29 10:03:30",
+        "table_maxTempLF": 426.59,
+        "table_maxTempSTAIR": 427.64,
+        "table_maxTempLD": 442.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:21:25",
+        "table_stop": "2022-04-29 00:51:13",
+        "table_maxTempLF": 427.84,
+        "table_maxTempSTAIR": 407.04,
+        "table_maxTempLD": 414.75,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-28 18:25:28",
+        "table_stop": "2022-04-28 18:39:19",
+        "table_maxTempLF": 435.87,
+        "table_maxTempSTAIR": 402.06,
+        "table_maxTempLD": 433.14,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-28 04:26:13",
+        "table_stop": "2022-04-28 04:41:44",
+        "table_maxTempLF": 415.37,
+        "table_maxTempSTAIR": 432.02,
+        "table_maxTempLD": 404.92,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 14:35:48",
+        "table_stop": "2022-04-28 15:10:36",
+        "table_maxTempLF": 434.72,
+        "table_maxTempSTAIR": 409.94,
+        "table_maxTempLD": 434.31,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-29 14:16:29",
+        "table_stop": "2022-04-29 14:18:48",
+        "table_maxTempLF": 443.27,
+        "table_maxTempSTAIR": 408.31,
+        "table_maxTempLD": 437.32,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 23:23:56",
+        "table_stop": "2022-04-29 00:01:13",
+        "table_maxTempLF": 438.13,
+        "table_maxTempSTAIR": 439.54,
+        "table_maxTempLD": 439.14,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-29 04:13:26",
+        "table_stop": "2022-04-29 04:54:45",
+        "table_maxTempLF": 451.97,
+        "table_maxTempSTAIR": 412.32,
+        "table_maxTempLD": 405.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 9,
+        "table_start": "2022-04-29 22:24:19",
+        "table_stop": "2022-04-29 23:04:08",
+        "table_maxTempLF": 422.75,
+        "table_maxTempSTAIR": 403.12,
+        "table_maxTempLD": 418.41,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:17:53",
+        "table_stop": "2022-04-29 16:38:11",
+        "table_maxTempLF": 413.22,
+        "table_maxTempSTAIR": 409.84,
+        "table_maxTempLD": 437.02,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-29 04:45:46",
+        "table_stop": "2022-04-29 04:55:49",
+        "table_maxTempLF": 406.81,
+        "table_maxTempSTAIR": 408.82,
+        "table_maxTempLD": 418.22,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 6,
+        "table_start": "2022-04-28 15:43:48",
+        "table_stop": "2022-04-28 16:12:03",
+        "table_maxTempLF": 437.87,
+        "table_maxTempSTAIR": 402.82,
+        "table_maxTempLD": 436.81,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 02:24:03",
+        "table_stop": "2022-04-28 03:15:49",
+        "table_maxTempLF": 440.37,
+        "table_maxTempSTAIR": 426.83,
+        "table_maxTempLD": 422.48,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 14:20:15",
+        "table_stop": "2022-04-28 14:21:09",
+        "table_maxTempLF": 405.02,
+        "table_maxTempSTAIR": 419.16,
+        "table_maxTempLD": 407.05,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:16:45",
+        "table_stop": "2022-04-28 01:57:54",
+        "table_maxTempLF": 458.33,
+        "table_maxTempSTAIR": 435.74,
+        "table_maxTempLD": 430.13,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 9,
+        "table_start": "2022-04-28 06:31:27",
+        "table_stop": "2022-04-28 07:14:26",
+        "table_maxTempLF": 412.67,
+        "table_maxTempSTAIR": 435.13,
+        "table_maxTempLD": 443.08,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 03:27:11",
+        "table_stop": "2022-04-29 04:08:18",
+        "table_maxTempLF": 449.34,
+        "table_maxTempSTAIR": 428.77,
+        "table_maxTempLD": 445.14,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 19:59:00",
+        "table_stop": "2022-04-29 20:05:19",
+        "table_maxTempLF": 403.47,
+        "table_maxTempSTAIR": 425.57,
+        "table_maxTempLD": 448.39,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:41:52",
+        "table_stop": "2022-04-29 08:59:52",
+        "table_maxTempLF": 430.43,
+        "table_maxTempSTAIR": 411.95,
+        "table_maxTempLD": 439.27,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:16:51",
+        "table_stop": "2022-04-28 11:16:18",
+        "table_maxTempLF": 452.26,
+        "table_maxTempSTAIR": 416.05,
+        "table_maxTempLD": 445.72,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 03:48:48",
+        "table_stop": "2022-04-28 03:58:37",
+        "table_maxTempLF": 434.16,
+        "table_maxTempSTAIR": 428.58,
+        "table_maxTempLD": 441.79,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-29 00:15:46",
+        "table_stop": "2022-04-29 01:09:04",
+        "table_maxTempLF": 406.18,
+        "table_maxTempSTAIR": 418.71,
+        "table_maxTempLD": 441.46,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 20:59:02",
+        "table_stop": "2022-04-28 21:28:02",
+        "table_maxTempLF": 447.73,
+        "table_maxTempSTAIR": 423.47,
+        "table_maxTempLD": 414.18,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:12:29",
+        "table_stop": "2022-04-29 09:20:58",
+        "table_maxTempLF": 439.14,
+        "table_maxTempSTAIR": 427.87,
+        "table_maxTempLD": 403.21,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:39:41",
+        "table_stop": "2022-04-29 10:11:47",
+        "table_maxTempLF": 426.09,
+        "table_maxTempSTAIR": 417.39,
+        "table_maxTempLD": 413.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 01:51:10",
+        "table_stop": "2022-04-29 02:21:02",
+        "table_maxTempLF": 429.22,
+        "table_maxTempSTAIR": 413.53,
+        "table_maxTempLD": 411.95,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-28 16:44:43",
+        "table_stop": "2022-04-28 17:39:38",
+        "table_maxTempLF": 408.61,
+        "table_maxTempSTAIR": 438.22,
+        "table_maxTempLD": 409.85,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 17:38:46",
+        "table_stop": "2022-04-29 18:03:41",
+        "table_maxTempLF": 443.17,
+        "table_maxTempSTAIR": 415.12,
+        "table_maxTempLD": 407.46,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-29 17:02:07",
+        "table_stop": "2022-04-29 17:56:56",
+        "table_maxTempLF": 441.78,
+        "table_maxTempSTAIR": 401.88,
+        "table_maxTempLD": 433.89,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-29 06:18:04",
+        "table_stop": "2022-04-29 07:14:53",
+        "table_maxTempLF": 453.17,
+        "table_maxTempSTAIR": 416.63,
+        "table_maxTempLD": 437.11,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 23:04:05",
+        "table_stop": "2022-04-29 23:22:59",
+        "table_maxTempLF": 441.06,
+        "table_maxTempSTAIR": 405.43,
+        "table_maxTempLD": 409.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-29 10:34:28",
+        "table_stop": "2022-04-29 11:23:50",
+        "table_maxTempLF": 458.87,
+        "table_maxTempSTAIR": 419.01,
+        "table_maxTempLD": 429.82,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 17:02:24",
+        "table_stop": "2022-04-29 17:31:14",
+        "table_maxTempLF": 419.41,
+        "table_maxTempSTAIR": 413.52,
+        "table_maxTempLD": 444.56,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-29 15:31:05",
+        "table_stop": "2022-04-29 16:09:15",
+        "table_maxTempLF": 432.97,
+        "table_maxTempSTAIR": 420.05,
+        "table_maxTempLD": 427.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:25:36",
+        "table_stop": "2022-04-29 17:15:06",
+        "table_maxTempLF": 402.83,
+        "table_maxTempSTAIR": 406.21,
+        "table_maxTempLD": 449.85,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 16:26:41",
+        "table_stop": "2022-04-28 17:00:21",
+        "table_maxTempLF": 413.17,
+        "table_maxTempSTAIR": 402.34,
+        "table_maxTempLD": 414.62,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 16:37:12",
+        "table_stop": "2022-04-28 17:17:55",
+        "table_maxTempLF": 441.55,
+        "table_maxTempSTAIR": 405.82,
+        "table_maxTempLD": 412.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-28 00:55:56",
+        "table_stop": "2022-04-28 00:57:27",
+        "table_maxTempLF": 426.02,
+        "table_maxTempSTAIR": 432.24,
+        "table_maxTempLD": 442.44,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:19:20",
+        "table_stop": "2022-04-29 08:23:50",
+        "table_maxTempLF": 403.26,
+        "table_maxTempSTAIR": 404.93,
+        "table_maxTempLD": 424.45,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-28 01:39:41",
+        "table_stop": "2022-04-28 01:58:06",
+        "table_maxTempLF": 421.31,
+        "table_maxTempSTAIR": 402.79,
+        "table_maxTempLD": 404.32,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:09:08",
+        "table_stop": "2022-04-28 06:51:17",
+        "table_maxTempLF": 447.18,
+        "table_maxTempSTAIR": 430.34,
+        "table_maxTempLD": 411.87,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 23:11:45",
+        "table_stop": "2022-04-28 23:54:22",
+        "table_maxTempLF": 434.38,
+        "table_maxTempSTAIR": 435.27,
+        "table_maxTempLD": 420.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 02:23:37",
+        "table_stop": "2022-04-28 02:34:17",
+        "table_maxTempLF": 422.52,
+        "table_maxTempSTAIR": 402.57,
+        "table_maxTempLD": 436.88,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 6,
+        "table_start": "2022-04-28 05:12:15",
+        "table_stop": "2022-04-28 05:29:21",
+        "table_maxTempLF": 442.04,
+        "table_maxTempSTAIR": 427.05,
+        "table_maxTempLD": 430.05,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-28 16:55:37",
+        "table_stop": "2022-04-28 17:07:22",
+        "table_maxTempLF": 438.87,
+        "table_maxTempSTAIR": 425.99,
+        "table_maxTempLD": 424.98,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:43:16",
+        "table_stop": "2022-04-29 10:09:10",
+        "table_maxTempLF": 453.81,
+        "table_maxTempSTAIR": 432.68,
+        "table_maxTempLD": 429.51,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:04:21",
+        "table_stop": "2022-04-29 00:42:20",
+        "table_maxTempLF": 410.35,
+        "table_maxTempSTAIR": 422.06,
+        "table_maxTempLD": 435.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-29 08:32:18",
+        "table_stop": "2022-04-29 09:11:46",
+        "table_maxTempLF": 430.51,
+        "table_maxTempSTAIR": 432.05,
+        "table_maxTempLD": 434.75,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 04:06:45",
+        "table_stop": "2022-04-29 04:11:36",
+        "table_maxTempLF": 438.01,
+        "table_maxTempSTAIR": 409.97,
+        "table_maxTempLD": 434.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-29 18:32:44",
+        "table_stop": "2022-04-29 19:07:59",
+        "table_maxTempLF": 454.28,
+        "table_maxTempSTAIR": 439.87,
+        "table_maxTempLD": 440.57,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 07:45:25",
+        "table_stop": "2022-04-29 08:07:46",
+        "table_maxTempLF": 449.13,
+        "table_maxTempSTAIR": 406.34,
+        "table_maxTempLD": 419.46,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 02:09:22",
+        "table_stop": "2022-04-29 02:47:49",
+        "table_maxTempLF": 417.92,
+        "table_maxTempSTAIR": 429.41,
+        "table_maxTempLD": 438.15,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 07:37:41",
+        "table_stop": "2022-04-28 08:29:29",
+        "table_maxTempLF": 436.55,
+        "table_maxTempSTAIR": 421.08,
+        "table_maxTempLD": 435.23,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:29:46",
+        "table_stop": "2022-04-28 18:31:27",
+        "table_maxTempLF": 421.52,
+        "table_maxTempSTAIR": 420.62,
+        "table_maxTempLD": 417.18,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:15:44",
+        "table_stop": "2022-04-28 11:06:24",
+        "table_maxTempLF": 416.96,
+        "table_maxTempSTAIR": 424.27,
+        "table_maxTempLD": 400.84,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 13:19:34",
+        "table_stop": "2022-04-29 14:13:43",
+        "table_maxTempLF": 455.98,
+        "table_maxTempSTAIR": 426.94,
+        "table_maxTempLD": 434.66,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:54:43",
+        "table_stop": "2022-04-28 11:51:46",
+        "table_maxTempLF": 413.46,
+        "table_maxTempSTAIR": 428.41,
+        "table_maxTempLD": 406.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 11:14:09",
+        "table_stop": "2022-04-29 11:26:48",
+        "table_maxTempLF": 449.48,
+        "table_maxTempSTAIR": 409.04,
+        "table_maxTempLD": 427.01,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 07:01:23",
+        "table_stop": "2022-04-29 07:39:43",
+        "table_maxTempLF": 420.16,
+        "table_maxTempSTAIR": 431.46,
+        "table_maxTempLD": 420.56,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:03:56",
+        "table_stop": "2022-04-28 18:13:43",
+        "table_maxTempLF": 415.11,
+        "table_maxTempSTAIR": 425.96,
+        "table_maxTempLD": 402.48,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 22:43:10",
+        "table_stop": "2022-04-28 23:41:05",
+        "table_maxTempLF": 401.03,
+        "table_maxTempSTAIR": 439.19,
+        "table_maxTempLD": 442.02,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 03:41:12",
+        "table_stop": "2022-04-28 03:58:38",
+        "table_maxTempLF": 428.77,
+        "table_maxTempSTAIR": 402.58,
+        "table_maxTempLD": 412.95,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 19:50:17",
+        "table_stop": "2022-04-28 20:47:26",
+        "table_maxTempLF": 443.27,
+        "table_maxTempSTAIR": 408.16,
+        "table_maxTempLD": 419.92,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 15:53:31",
+        "table_stop": "2022-04-28 16:30:05",
+        "table_maxTempLF": 425.99,
+        "table_maxTempSTAIR": 401.65,
+        "table_maxTempLD": 439.29,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 04:28:20",
+        "table_stop": "2022-04-28 05:02:33",
+        "table_maxTempLF": 435.07,
+        "table_maxTempSTAIR": 426.45,
+        "table_maxTempLD": 432.09,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-29 09:51:20",
+        "table_stop": "2022-04-29 10:14:33",
+        "table_maxTempLF": 438.45,
+        "table_maxTempSTAIR": 416.62,
+        "table_maxTempLD": 443.32,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 01:42:40",
+        "table_stop": "2022-04-29 02:32:53",
+        "table_maxTempLF": 456.11,
+        "table_maxTempSTAIR": 403.07,
+        "table_maxTempLD": 402.86,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:22:22",
+        "table_stop": "2022-04-28 01:35:55",
+        "table_maxTempLF": 444.29,
+        "table_maxTempSTAIR": 414.86,
+        "table_maxTempLD": 406.48,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:22:49",
+        "table_stop": "2022-04-29 21:46:30",
+        "table_maxTempLF": 426.26,
+        "table_maxTempSTAIR": 402.57,
+        "table_maxTempLD": 440.84,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:56:54",
+        "table_stop": "2022-04-29 01:19:33",
+        "table_maxTempLF": 421.58,
+        "table_maxTempSTAIR": 427.22,
+        "table_maxTempLD": 445.12,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:32:10",
+        "table_stop": "2022-04-28 10:34:11",
+        "table_maxTempLF": 440.83,
+        "table_maxTempSTAIR": 437.84,
+        "table_maxTempLD": 442.24,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 00:32:10",
+        "table_stop": "2022-04-28 00:34:31",
+        "table_maxTempLF": 409.76,
+        "table_maxTempSTAIR": 400.69,
+        "table_maxTempLD": 419.42,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-29 03:44:17",
+        "table_stop": "2022-04-29 04:15:15",
+        "table_maxTempLF": 446.87,
+        "table_maxTempSTAIR": 437.39,
+        "table_maxTempLD": 448.01,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 23:59:59",
+        "table_stop": "2022-04-29 00:52:03",
+        "table_maxTempLF": 425.21,
+        "table_maxTempSTAIR": 401.82,
+        "table_maxTempLD": 439.05,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 6,
+        "table_start": "2022-04-29 19:36:05",
+        "table_stop": "2022-04-29 20:24:27",
+        "table_maxTempLF": 422.05,
+        "table_maxTempSTAIR": 401.42,
+        "table_maxTempLD": 444.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-28 02:11:46",
+        "table_stop": "2022-04-28 02:39:24",
+        "table_maxTempLF": 404.85,
+        "table_maxTempSTAIR": 424.74,
+        "table_maxTempLD": 402.62,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 20:23:32",
+        "table_stop": "2022-04-28 20:28:38",
+        "table_maxTempLF": 442.68,
+        "table_maxTempSTAIR": 428.53,
+        "table_maxTempLD": 411.14,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-29 17:03:45",
+        "table_stop": "2022-04-29 17:23:27",
+        "table_maxTempLF": 458.92,
+        "table_maxTempSTAIR": 432.56,
+        "table_maxTempLD": 423.05,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:00:21",
+        "table_stop": "2022-04-29 21:33:53",
+        "table_maxTempLF": 447.26,
+        "table_maxTempSTAIR": 410.52,
+        "table_maxTempLD": 439.16,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:54:48",
+        "table_stop": "2022-04-29 01:26:57",
+        "table_maxTempLF": 442.33,
+        "table_maxTempSTAIR": 413.68,
+        "table_maxTempLD": 408.78,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 02:45:57",
+        "table_stop": "2022-04-28 02:48:18",
+        "table_maxTempLF": 400.83,
+        "table_maxTempSTAIR": 420.07,
+        "table_maxTempLD": 413.39,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 14:05:56",
+        "table_stop": "2022-04-29 14:34:39",
+        "table_maxTempLF": 454.33,
+        "table_maxTempSTAIR": 411.23,
+        "table_maxTempLD": 448.02,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-29 16:43:23",
+        "table_stop": "2022-04-29 17:42:06",
+        "table_maxTempLF": 439.91,
+        "table_maxTempSTAIR": 415.19,
+        "table_maxTempLD": 448.65,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-29 00:47:21",
+        "table_stop": "2022-04-29 01:00:13",
+        "table_maxTempLF": 450.88,
+        "table_maxTempSTAIR": 407.06,
+        "table_maxTempLD": 448.44,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 02:29:06",
+        "table_stop": "2022-04-28 03:13:10",
+        "table_maxTempLF": 428.99,
+        "table_maxTempSTAIR": 407.16,
+        "table_maxTempLD": 400.91,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 23:32:04",
+        "table_stop": "2022-04-30 00:25:15",
+        "table_maxTempLF": 437.99,
+        "table_maxTempSTAIR": 406.39,
+        "table_maxTempLD": 426.45,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 07:04:26",
+        "table_stop": "2022-04-28 07:29:48",
+        "table_maxTempLF": 428.39,
+        "table_maxTempSTAIR": 407.52,
+        "table_maxTempLD": 437.41,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 10:32:44",
+        "table_stop": "2022-04-29 10:52:26",
+        "table_maxTempLF": 402.44,
+        "table_maxTempSTAIR": 417.94,
+        "table_maxTempLD": 402.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-28 19:54:59",
+        "table_stop": "2022-04-28 20:41:28",
+        "table_maxTempLF": 406.65,
+        "table_maxTempSTAIR": 419.28,
+        "table_maxTempLD": 413.27,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-29 08:11:16",
+        "table_stop": "2022-04-29 08:21:29",
+        "table_maxTempLF": 407.94,
+        "table_maxTempSTAIR": 435.95,
+        "table_maxTempLD": 440.07,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:42:15",
+        "table_stop": "2022-04-28 12:34:28",
+        "table_maxTempLF": 427.12,
+        "table_maxTempSTAIR": 402.16,
+        "table_maxTempLD": 444.73,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 22:34:35",
+        "table_stop": "2022-04-29 22:49:51",
+        "table_maxTempLF": 454.23,
+        "table_maxTempSTAIR": 436.09,
+        "table_maxTempLD": 442.27,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 14:20:10",
+        "table_stop": "2022-04-29 15:14:41",
+        "table_maxTempLF": 401.19,
+        "table_maxTempSTAIR": 414.57,
+        "table_maxTempLD": 432.61,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 01:40:58",
+        "table_stop": "2022-04-29 02:18:38",
+        "table_maxTempLF": 420.48,
+        "table_maxTempSTAIR": 403.05,
+        "table_maxTempLD": 406.46,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-29 14:26:21",
+        "table_stop": "2022-04-29 15:08:04",
+        "table_maxTempLF": 449.74,
+        "table_maxTempSTAIR": 425.18,
+        "table_maxTempLD": 444.32,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:55:57",
+        "table_stop": "2022-04-29 09:20:44",
+        "table_maxTempLF": 416.42,
+        "table_maxTempSTAIR": 407.67,
+        "table_maxTempLD": 438.39,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 14:04:06",
+        "table_stop": "2022-04-29 14:36:58",
+        "table_maxTempLF": 427.76,
+        "table_maxTempSTAIR": 412.91,
+        "table_maxTempLD": 434.76,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:29:22",
+        "table_stop": "2022-04-29 08:53:41",
+        "table_maxTempLF": 417.16,
+        "table_maxTempSTAIR": 435.16,
+        "table_maxTempLD": 408.93,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:38:42",
+        "table_stop": "2022-04-28 06:39:15",
+        "table_maxTempLF": 448.93,
+        "table_maxTempSTAIR": 406.09,
+        "table_maxTempLD": 448.37,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 12:56:52",
+        "table_stop": "2022-04-28 13:24:41",
+        "table_maxTempLF": 456.12,
+        "table_maxTempSTAIR": 402.44,
+        "table_maxTempLD": 425.59,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 18:13:26",
+        "table_stop": "2022-04-29 18:30:27",
+        "table_maxTempLF": 433.25,
+        "table_maxTempSTAIR": 406.22,
+        "table_maxTempLD": 448.08,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:37:18",
+        "table_stop": "2022-04-28 07:23:00",
+        "table_maxTempLF": 427.32,
+        "table_maxTempSTAIR": 437.33,
+        "table_maxTempLD": 440.87,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 14:27:32",
+        "table_stop": "2022-04-29 15:05:23",
+        "table_maxTempLF": 453.95,
+        "table_maxTempSTAIR": 428.99,
+        "table_maxTempLD": 421.61,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 18:28:50",
+        "table_stop": "2022-04-29 19:23:28",
+        "table_maxTempLF": 423.88,
+        "table_maxTempSTAIR": 416.06,
+        "table_maxTempLD": 440.48,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:31:34",
+        "table_stop": "2022-04-29 00:49:03",
+        "table_maxTempLF": 441.85,
+        "table_maxTempSTAIR": 414.07,
+        "table_maxTempLD": 448.61,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:33:07",
+        "table_stop": "2022-04-29 09:42:26",
+        "table_maxTempLF": 444.61,
+        "table_maxTempSTAIR": 404.17,
+        "table_maxTempLD": 431.13,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 9,
+        "table_start": "2022-04-29 17:45:08",
+        "table_stop": "2022-04-29 18:29:11",
+        "table_maxTempLF": 443.11,
+        "table_maxTempSTAIR": 429.37,
+        "table_maxTempLD": 434.01,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:45:57",
+        "table_stop": "2022-04-28 10:57:18",
+        "table_maxTempLF": 417.57,
+        "table_maxTempSTAIR": 415.27,
+        "table_maxTempLD": 431.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 11:43:13",
+        "table_stop": "2022-04-29 12:35:53",
+        "table_maxTempLF": 458.31,
+        "table_maxTempSTAIR": 420.93,
+        "table_maxTempLD": 436.53,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:20:23",
+        "table_stop": "2022-04-28 18:25:26",
+        "table_maxTempLF": 446.93,
+        "table_maxTempSTAIR": 425.47,
+        "table_maxTempLD": 420.91,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 04:23:01",
+        "table_stop": "2022-04-29 05:05:31",
+        "table_maxTempLF": 443.79,
+        "table_maxTempSTAIR": 410.62,
+        "table_maxTempLD": 412.91,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 00:05:21",
+        "table_stop": "2022-04-28 00:43:46",
+        "table_maxTempLF": 455.77,
+        "table_maxTempSTAIR": 415.24,
+        "table_maxTempLD": 445.38,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:42:49",
+        "table_stop": "2022-04-29 10:13:10",
+        "table_maxTempLF": 437.38,
+        "table_maxTempSTAIR": 420.47,
+        "table_maxTempLD": 429.02,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:29:45",
+        "table_stop": "2022-04-29 22:11:42",
+        "table_maxTempLF": 411.96,
+        "table_maxTempSTAIR": 403.03,
+        "table_maxTempLD": 424.58,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:18:38",
+        "table_stop": "2022-04-29 16:23:09",
+        "table_maxTempLF": 434.36,
+        "table_maxTempSTAIR": 419.74,
+        "table_maxTempLD": 416.08,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-29 05:11:48",
+        "table_stop": "2022-04-29 05:58:56",
+        "table_maxTempLF": 417.63,
+        "table_maxTempSTAIR": 429.32,
+        "table_maxTempLD": 435.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 00:19:53",
+        "table_stop": "2022-04-28 01:02:56",
+        "table_maxTempLF": 419.12,
+        "table_maxTempSTAIR": 423.31,
+        "table_maxTempLD": 409.29,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:14:41",
+        "table_stop": "2022-04-28 11:45:59",
+        "table_maxTempLF": 450.75,
+        "table_maxTempSTAIR": 429.44,
+        "table_maxTempLD": 439.88,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 13:17:53",
+        "table_stop": "2022-04-28 14:13:47",
+        "table_maxTempLF": 456.85,
+        "table_maxTempSTAIR": 429.55,
+        "table_maxTempLD": 433.21,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 07:06:42",
+        "table_stop": "2022-04-29 07:11:00",
+        "table_maxTempLF": 409.68,
+        "table_maxTempSTAIR": 416.98,
+        "table_maxTempLD": 404.37,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 9,
+        "table_start": "2022-04-28 22:10:01",
+        "table_stop": "2022-04-28 22:54:08",
+        "table_maxTempLF": 421.12,
+        "table_maxTempSTAIR": 423.82,
+        "table_maxTempLD": 409.44,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 17:04:39",
+        "table_stop": "2022-04-28 17:50:23",
+        "table_maxTempLF": 400.88,
+        "table_maxTempSTAIR": 432.75,
+        "table_maxTempLD": 438.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 15:34:01",
+        "table_stop": "2022-04-29 16:19:37",
+        "table_maxTempLF": 418.59,
+        "table_maxTempSTAIR": 424.89,
+        "table_maxTempLD": 446.23,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-28 08:42:02",
+        "table_stop": "2022-04-28 09:07:28",
+        "table_maxTempLF": 448.76,
+        "table_maxTempSTAIR": 431.97,
+        "table_maxTempLD": 430.52,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:57:08",
+        "table_stop": "2022-04-29 22:37:01",
+        "table_maxTempLF": 413.07,
+        "table_maxTempSTAIR": 435.63,
+        "table_maxTempLD": 414.56,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 03:29:23",
+        "table_stop": "2022-04-28 03:53:10",
+        "table_maxTempLF": 428.08,
+        "table_maxTempSTAIR": 415.75,
+        "table_maxTempLD": 417.26,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 13:58:57",
+        "table_stop": "2022-04-28 14:38:46",
+        "table_maxTempLF": 456.18,
+        "table_maxTempSTAIR": 416.12,
+        "table_maxTempLD": 412.17,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 20:36:34",
+        "table_stop": "2022-04-29 21:05:34",
+        "table_maxTempLF": 451.28,
+        "table_maxTempSTAIR": 406.51,
+        "table_maxTempLD": 406.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-29 23:14:44",
+        "table_stop": "2022-04-29 23:45:57",
+        "table_maxTempLF": 452.96,
+        "table_maxTempSTAIR": 417.37,
+        "table_maxTempLD": 445.88,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 02:42:15",
+        "table_stop": "2022-04-29 03:38:36",
+        "table_maxTempLF": 403.78,
+        "table_maxTempSTAIR": 409.85,
+        "table_maxTempLD": 443.57,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 20:49:54",
+        "table_stop": "2022-04-28 21:34:29",
+        "table_maxTempLF": 441.17,
+        "table_maxTempSTAIR": 437.23,
+        "table_maxTempLD": 419.07,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:47:04",
+        "table_stop": "2022-04-28 19:03:56",
+        "table_maxTempLF": 414.81,
+        "table_maxTempSTAIR": 436.29,
+        "table_maxTempLD": 418.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 08:59:46",
+        "table_stop": "2022-04-28 09:06:53",
+        "table_maxTempLF": 411.12,
+        "table_maxTempSTAIR": 416.46,
+        "table_maxTempLD": 425.43,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 07:03:51",
+        "table_stop": "2022-04-28 07:10:54",
+        "table_maxTempLF": 412.08,
+        "table_maxTempSTAIR": 437.07,
+        "table_maxTempLD": 423.83,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-29 16:18:07",
+        "table_stop": "2022-04-29 16:46:46",
+        "table_maxTempLF": 411.21,
+        "table_maxTempSTAIR": 407.81,
+        "table_maxTempLD": 428.35,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-29 20:43:06",
+        "table_stop": "2022-04-29 21:11:45",
+        "table_maxTempLF": 433.39,
+        "table_maxTempSTAIR": 419.05,
+        "table_maxTempLD": 438.66,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 12:42:07",
+        "table_stop": "2022-04-29 13:32:29",
+        "table_maxTempLF": 412.51,
+        "table_maxTempSTAIR": 406.23,
+        "table_maxTempLD": 439.96,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:59:19",
+        "table_stop": "2022-04-29 10:00:05",
+        "table_maxTempLF": 431.92,
+        "table_maxTempSTAIR": 428.07,
+        "table_maxTempLD": 432.07,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 08:50:19",
+        "table_stop": "2022-04-28 09:16:44",
+        "table_maxTempLF": 414.68,
+        "table_maxTempSTAIR": 434.91,
+        "table_maxTempLD": 439.91,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:10:08",
+        "table_stop": "2022-04-28 11:39:43",
+        "table_maxTempLF": 424.56,
+        "table_maxTempSTAIR": 403.65,
+        "table_maxTempLD": 431.24,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 23:22:33",
+        "table_stop": "2022-04-28 23:48:13",
+        "table_maxTempLF": 415.75,
+        "table_maxTempSTAIR": 401.92,
+        "table_maxTempLD": 401.89,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:59:53",
+        "table_stop": "2022-04-29 22:18:39",
+        "table_maxTempLF": 425.98,
+        "table_maxTempSTAIR": 421.54,
+        "table_maxTempLD": 416.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 00:03:46",
+        "table_stop": "2022-04-28 00:04:14",
+        "table_maxTempLF": 400.29,
+        "table_maxTempSTAIR": 407.38,
+        "table_maxTempLD": 418.04,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 15:33:03",
+        "table_stop": "2022-04-28 16:16:42",
+        "table_maxTempLF": 411.13,
+        "table_maxTempSTAIR": 404.75,
+        "table_maxTempLD": 401.22,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 19:27:30",
+        "table_stop": "2022-04-28 19:31:02",
+        "table_maxTempLF": 452.54,
+        "table_maxTempSTAIR": 423.49,
+        "table_maxTempLD": 403.29,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 20:10:20",
+        "table_stop": "2022-04-28 20:30:27",
+        "table_maxTempLF": 429.99,
+        "table_maxTempSTAIR": 401.12,
+        "table_maxTempLD": 401.88,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 19:33:07",
+        "table_stop": "2022-04-28 19:45:06",
+        "table_maxTempLF": 428.94,
+        "table_maxTempSTAIR": 411.95,
+        "table_maxTempLD": 405.61,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:54:40",
+        "table_stop": "2022-04-28 19:17:51",
+        "table_maxTempLF": 417.68,
+        "table_maxTempSTAIR": 421.37,
+        "table_maxTempLD": 448.79,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 16:41:09",
+        "table_stop": "2022-04-28 17:12:50",
+        "table_maxTempLF": 436.01,
+        "table_maxTempSTAIR": 422.45,
+        "table_maxTempLD": 426.49,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 02:16:24",
+        "table_stop": "2022-04-29 02:34:39",
+        "table_maxTempLF": 416.38,
+        "table_maxTempSTAIR": 427.28,
+        "table_maxTempLD": 404.83,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:07:37",
+        "table_stop": "2022-04-28 10:13:39",
+        "table_maxTempLF": 438.99,
+        "table_maxTempSTAIR": 400.75,
+        "table_maxTempLD": 405.44,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-29 15:50:57",
+        "table_stop": "2022-04-29 16:37:40",
+        "table_maxTempLF": 405.01,
+        "table_maxTempSTAIR": 426.08,
+        "table_maxTempLD": 437.42,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:12:27",
+        "table_stop": "2022-04-29 16:36:45",
+        "table_maxTempLF": 418.98,
+        "table_maxTempSTAIR": 431.22,
+        "table_maxTempLD": 425.75,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-28 17:14:06",
+        "table_stop": "2022-04-28 17:43:52",
+        "table_maxTempLF": 448.21,
+        "table_maxTempSTAIR": 425.67,
+        "table_maxTempLD": 437.62,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 14:48:28",
+        "table_stop": "2022-04-29 14:56:34",
+        "table_maxTempLF": 404.75,
+        "table_maxTempSTAIR": 438.08,
+        "table_maxTempLD": 441.55,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:43:14",
+        "table_stop": "2022-04-28 12:09:42",
+        "table_maxTempLF": 408.79,
+        "table_maxTempSTAIR": 413.11,
+        "table_maxTempLD": 439.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 22:19:13",
+        "table_stop": "2022-04-29 22:34:08",
+        "table_maxTempLF": 438.02,
+        "table_maxTempSTAIR": 429.81,
+        "table_maxTempLD": 405.04,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 11:50:31",
+        "table_stop": "2022-04-29 11:55:00",
+        "table_maxTempLF": 438.99,
+        "table_maxTempSTAIR": 429.18,
+        "table_maxTempLD": 422.72,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-29 03:29:56",
+        "table_stop": "2022-04-29 03:39:18",
+        "table_maxTempLF": 421.19,
+        "table_maxTempSTAIR": 426.21,
+        "table_maxTempLD": 414.06,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 03:19:31",
+        "table_stop": "2022-04-28 04:14:34",
+        "table_maxTempLF": 427.57,
+        "table_maxTempSTAIR": 403.99,
+        "table_maxTempLD": 404.85,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 02:53:25",
+        "table_stop": "2022-04-28 02:55:05",
+        "table_maxTempLF": 421.75,
+        "table_maxTempSTAIR": 414.16,
+        "table_maxTempLD": 428.33,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 16:13:25",
+        "table_stop": "2022-04-28 16:41:41",
+        "table_maxTempLF": 453.67,
+        "table_maxTempSTAIR": 416.05,
+        "table_maxTempLD": 405.65,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:24:48",
+        "table_stop": "2022-04-28 06:34:37",
+        "table_maxTempLF": 425.17,
+        "table_maxTempSTAIR": 408.03,
+        "table_maxTempLD": 416.52,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:21:14",
+        "table_stop": "2022-04-29 09:07:25",
+        "table_maxTempLF": 455.77,
+        "table_maxTempSTAIR": 430.61,
+        "table_maxTempLD": 425.54,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 20:01:37",
+        "table_stop": "2022-04-28 20:07:20",
+        "table_maxTempLF": 403.11,
+        "table_maxTempSTAIR": 428.75,
+        "table_maxTempLD": 401.86,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 03:19:13",
+        "table_stop": "2022-04-29 04:08:04",
+        "table_maxTempLF": 416.39,
+        "table_maxTempSTAIR": 428.97,
+        "table_maxTempLD": 416.11,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 15:48:24",
+        "table_stop": "2022-04-28 15:52:44",
+        "table_maxTempLF": 413.36,
+        "table_maxTempSTAIR": 411.46,
+        "table_maxTempLD": 425.43,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 12:42:37",
+        "table_stop": "2022-04-28 13:38:01",
+        "table_maxTempLF": 425.28,
+        "table_maxTempSTAIR": 439.15,
+        "table_maxTempLD": 401.76,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-29 13:13:10",
+        "table_stop": "2022-04-29 13:42:10",
+        "table_maxTempLF": 419.51,
+        "table_maxTempSTAIR": 432.42,
+        "table_maxTempLD": 409.29,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 14:15:50",
+        "table_stop": "2022-04-29 15:03:56",
+        "table_maxTempLF": 419.28,
+        "table_maxTempSTAIR": 416.76,
+        "table_maxTempLD": 406.48,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 03:10:14",
+        "table_stop": "2022-04-28 03:52:14",
+        "table_maxTempLF": 451.85,
+        "table_maxTempSTAIR": 433.02,
+        "table_maxTempLD": 438.56,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:31:52",
+        "table_stop": "2022-04-28 11:39:59",
+        "table_maxTempLF": 419.85,
+        "table_maxTempSTAIR": 413.24,
+        "table_maxTempLD": 417.65,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:13:07",
+        "table_stop": "2022-04-29 08:25:05",
+        "table_maxTempLF": 406.09,
+        "table_maxTempSTAIR": 408.22,
+        "table_maxTempLD": 420.72,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 09:15:18",
+        "table_stop": "2022-04-28 09:25:28",
+        "table_maxTempLF": 455.25,
+        "table_maxTempSTAIR": 427.81,
+        "table_maxTempLD": 420.06,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-29 22:03:30",
+        "table_stop": "2022-04-29 22:37:27",
+        "table_maxTempLF": 407.09,
+        "table_maxTempSTAIR": 420.81,
+        "table_maxTempLD": 433.93,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-28 00:09:36",
+        "table_stop": "2022-04-28 01:08:13",
+        "table_maxTempLF": 447.44,
+        "table_maxTempSTAIR": 409.02,
+        "table_maxTempLD": 434.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 19:02:29",
+        "table_stop": "2022-04-28 19:19:03",
+        "table_maxTempLF": 420.86,
+        "table_maxTempSTAIR": 408.45,
+        "table_maxTempLD": 407.97,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 20:25:18",
+        "table_stop": "2022-04-29 20:33:21",
+        "table_maxTempLF": 439.99,
+        "table_maxTempSTAIR": 436.84,
+        "table_maxTempLD": 421.86,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:05:33",
+        "table_stop": "2022-04-28 01:58:11",
+        "table_maxTempLF": 451.76,
+        "table_maxTempSTAIR": 405.28,
+        "table_maxTempLD": 420.82,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 22:54:58",
+        "table_stop": "2022-04-29 23:44:11",
+        "table_maxTempLF": 410.59,
+        "table_maxTempSTAIR": 410.59,
+        "table_maxTempLD": 449.49,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:30:29",
+        "table_stop": "2022-04-28 11:38:15",
+        "table_maxTempLF": 452.16,
+        "table_maxTempSTAIR": 421.06,
+        "table_maxTempLD": 406.69,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 18:49:51",
+        "table_stop": "2022-04-29 18:50:54",
+        "table_maxTempLF": 416.01,
+        "table_maxTempSTAIR": 431.31,
+        "table_maxTempLD": 437.59,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 19:40:46",
+        "table_stop": "2022-04-28 19:57:05",
+        "table_maxTempLF": 424.43,
+        "table_maxTempSTAIR": 404.08,
+        "table_maxTempLD": 420.19,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 04:59:05",
+        "table_stop": "2022-04-28 05:55:42",
+        "table_maxTempLF": 453.71,
+        "table_maxTempSTAIR": 402.19,
+        "table_maxTempLD": 429.31,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 17:24:22",
+        "table_stop": "2022-04-29 17:55:49",
+        "table_maxTempLF": 426.75,
+        "table_maxTempSTAIR": 411.78,
+        "table_maxTempLD": 406.66,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 17:21:15",
+        "table_stop": "2022-04-29 18:00:02",
+        "table_maxTempLF": 416.48,
+        "table_maxTempSTAIR": 411.42,
+        "table_maxTempLD": 425.49,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 05:21:20",
+        "table_stop": "2022-04-29 05:23:13",
+        "table_maxTempLF": 443.74,
+        "table_maxTempSTAIR": 434.51,
+        "table_maxTempLD": 429.17,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 11:44:18",
+        "table_stop": "2022-04-29 12:42:34",
+        "table_maxTempLF": 457.94,
+        "table_maxTempSTAIR": 403.03,
+        "table_maxTempLD": 414.89,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:24:02",
+        "table_stop": "2022-04-28 11:56:37",
+        "table_maxTempLF": 419.32,
+        "table_maxTempSTAIR": 406.71,
+        "table_maxTempLD": 413.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:48:06",
+        "table_stop": "2022-04-28 19:18:21",
+        "table_maxTempLF": 401.37,
+        "table_maxTempSTAIR": 415.17,
+        "table_maxTempLD": 446.66,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:04:21",
+        "table_stop": "2022-04-28 18:37:45",
+        "table_maxTempLF": 445.76,
+        "table_maxTempSTAIR": 415.18,
+        "table_maxTempLD": 437.13,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 05:47:08",
+        "table_stop": "2022-04-28 06:38:01",
+        "table_maxTempLF": 457.39,
+        "table_maxTempSTAIR": 407.55,
+        "table_maxTempLD": 401.81,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 20:47:27",
+        "table_stop": "2022-04-29 20:57:05",
+        "table_maxTempLF": 454.67,
+        "table_maxTempSTAIR": 405.18,
+        "table_maxTempLD": 441.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:57:54",
+        "table_stop": "2022-04-29 09:35:54",
+        "table_maxTempLF": 440.74,
+        "table_maxTempSTAIR": 421.85,
+        "table_maxTempLD": 435.14,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:33:42",
+        "table_stop": "2022-04-28 19:32:50",
+        "table_maxTempLF": 442.57,
+        "table_maxTempSTAIR": 407.91,
+        "table_maxTempLD": 413.35,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 6,
+        "table_start": "2022-04-28 15:05:36",
+        "table_stop": "2022-04-28 15:41:45",
+        "table_maxTempLF": 429.06,
+        "table_maxTempSTAIR": 400.08,
+        "table_maxTempLD": 405.63,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:13:14",
+        "table_stop": "2022-04-29 00:32:11",
+        "table_maxTempLF": 401.91,
+        "table_maxTempSTAIR": 432.91,
+        "table_maxTempLD": 439.58,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 12:57:19",
+        "table_stop": "2022-04-29 13:23:39",
+        "table_maxTempLF": 425.98,
+        "table_maxTempSTAIR": 404.81,
+        "table_maxTempLD": 434.92,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-29 16:04:59",
+        "table_stop": "2022-04-29 16:27:57",
+        "table_maxTempLF": 427.79,
+        "table_maxTempSTAIR": 414.46,
+        "table_maxTempLD": 416.95,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 05:57:08",
+        "table_stop": "2022-04-28 06:21:58",
+        "table_maxTempLF": 416.31,
+        "table_maxTempSTAIR": 425.74,
+        "table_maxTempLD": 418.35,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 20:38:47",
+        "table_stop": "2022-04-28 21:34:48",
+        "table_maxTempLF": 446.08,
+        "table_maxTempSTAIR": 413.23,
+        "table_maxTempLD": 414.76,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 05:19:12",
+        "table_stop": "2022-04-29 06:02:07",
+        "table_maxTempLF": 400.95,
+        "table_maxTempSTAIR": 426.12,
+        "table_maxTempLD": 440.54,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:08:29",
+        "table_stop": "2022-04-28 18:31:06",
+        "table_maxTempLF": 439.83,
+        "table_maxTempSTAIR": 403.35,
+        "table_maxTempLD": 416.93,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 15:38:42",
+        "table_stop": "2022-04-29 15:56:14",
+        "table_maxTempLF": 451.28,
+        "table_maxTempSTAIR": 408.35,
+        "table_maxTempLD": 421.32,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:29:24",
+        "table_stop": "2022-04-29 00:59:21",
+        "table_maxTempLF": 445.44,
+        "table_maxTempSTAIR": 401.77,
+        "table_maxTempLD": 436.51,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 13:33:03",
+        "table_stop": "2022-04-29 14:06:15",
+        "table_maxTempLF": 444.24,
+        "table_maxTempSTAIR": 416.57,
+        "table_maxTempLD": 428.16,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 23:05:06",
+        "table_stop": "2022-04-29 23:31:10",
+        "table_maxTempLF": 417.99,
+        "table_maxTempSTAIR": 414.76,
+        "table_maxTempLD": 411.78,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 14:42:13",
+        "table_stop": "2022-04-28 15:20:52",
+        "table_maxTempLF": 455.24,
+        "table_maxTempSTAIR": 436.39,
+        "table_maxTempLD": 416.36,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:18:29",
+        "table_stop": "2022-04-29 22:05:17",
+        "table_maxTempLF": 446.83,
+        "table_maxTempSTAIR": 404.42,
+        "table_maxTempLD": 417.25,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:30:03",
+        "table_stop": "2022-04-29 16:46:01",
+        "table_maxTempLF": 457.54,
+        "table_maxTempSTAIR": 436.94,
+        "table_maxTempLD": 403.07,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:21:05",
+        "table_stop": "2022-04-28 19:17:28",
+        "table_maxTempLF": 455.27,
+        "table_maxTempSTAIR": 433.31,
+        "table_maxTempLD": 435.26,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-28 17:36:19",
+        "table_stop": "2022-04-28 17:53:29",
+        "table_maxTempLF": 405.53,
+        "table_maxTempSTAIR": 402.31,
+        "table_maxTempLD": 422.68,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 04:41:41",
+        "table_stop": "2022-04-28 05:38:56",
+        "table_maxTempLF": 435.86,
+        "table_maxTempSTAIR": 437.48,
+        "table_maxTempLD": 426.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 22:00:58",
+        "table_stop": "2022-04-28 22:41:50",
+        "table_maxTempLF": 441.48,
+        "table_maxTempSTAIR": 427.67,
+        "table_maxTempLD": 412.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-29 12:16:01",
+        "table_stop": "2022-04-29 12:41:33",
+        "table_maxTempLF": 441.06,
+        "table_maxTempSTAIR": 413.93,
+        "table_maxTempLD": 433.08,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 09:44:29",
+        "table_stop": "2022-04-28 10:12:38",
+        "table_maxTempLF": 422.04,
+        "table_maxTempSTAIR": 427.07,
+        "table_maxTempLD": 431.32,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-29 13:07:50",
+        "table_stop": "2022-04-29 13:18:25",
+        "table_maxTempLF": 424.81,
+        "table_maxTempSTAIR": 429.51,
+        "table_maxTempLD": 407.67,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:21:22",
+        "table_stop": "2022-04-29 21:49:07",
+        "table_maxTempLF": 430.96,
+        "table_maxTempSTAIR": 414.98,
+        "table_maxTempLD": 444.22,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 16:28:41",
+        "table_stop": "2022-04-28 17:08:21",
+        "table_maxTempLF": 415.56,
+        "table_maxTempSTAIR": 402.04,
+        "table_maxTempLD": 433.69,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 07:20:30",
+        "table_stop": "2022-04-28 07:56:45",
+        "table_maxTempLF": 448.45,
+        "table_maxTempSTAIR": 430.47,
+        "table_maxTempLD": 436.14,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:37:05",
+        "table_stop": "2022-04-28 11:28:34",
+        "table_maxTempLF": 439.06,
+        "table_maxTempSTAIR": 424.85,
+        "table_maxTempLD": 447.09,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:57:22",
+        "table_stop": "2022-04-28 19:23:46",
+        "table_maxTempLF": 401.49,
+        "table_maxTempSTAIR": 429.41,
+        "table_maxTempLD": 428.24,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:37:40",
+        "table_stop": "2022-04-28 11:50:49",
+        "table_maxTempLF": 442.32,
+        "table_maxTempSTAIR": 421.91,
+        "table_maxTempLD": 410.17,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 08:25:17",
+        "table_stop": "2022-04-28 09:11:45",
+        "table_maxTempLF": 404.82,
+        "table_maxTempSTAIR": 403.32,
+        "table_maxTempLD": 407.62,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:33:21",
+        "table_stop": "2022-04-29 00:57:04",
+        "table_maxTempLF": 425.75,
+        "table_maxTempSTAIR": 438.91,
+        "table_maxTempLD": 424.87,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 10:18:09",
+        "table_stop": "2022-04-29 11:08:30",
+        "table_maxTempLF": 455.73,
+        "table_maxTempSTAIR": 421.32,
+        "table_maxTempLD": 449.41,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:13:49",
+        "table_stop": "2022-04-28 18:33:25",
+        "table_maxTempLF": 420.22,
+        "table_maxTempSTAIR": 408.58,
+        "table_maxTempLD": 445.62,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 01:35:30",
+        "table_stop": "2022-04-29 02:14:17",
+        "table_maxTempLF": 442.98,
+        "table_maxTempSTAIR": 435.44,
+        "table_maxTempLD": 437.96,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 03:07:02",
+        "table_stop": "2022-04-28 03:45:01",
+        "table_maxTempLF": 403.97,
+        "table_maxTempSTAIR": 411.63,
+        "table_maxTempLD": 411.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 00:45:18",
+        "table_stop": "2022-04-28 00:53:08",
+        "table_maxTempLF": 433.26,
+        "table_maxTempSTAIR": 412.05,
+        "table_maxTempLD": 416.37,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-29 04:39:48",
+        "table_stop": "2022-04-29 05:19:25",
+        "table_maxTempLF": 429.35,
+        "table_maxTempSTAIR": 400.43,
+        "table_maxTempLD": 419.78,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:51:22",
+        "table_stop": "2022-04-29 10:23:07",
+        "table_maxTempLF": 431.69,
+        "table_maxTempSTAIR": 426.18,
+        "table_maxTempLD": 436.54,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 22:03:58",
+        "table_stop": "2022-04-29 23:03:22",
+        "table_maxTempLF": 422.61,
+        "table_maxTempSTAIR": 423.25,
+        "table_maxTempLD": 419.91,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 13:01:45",
+        "table_stop": "2022-04-29 13:14:28",
+        "table_maxTempLF": 449.67,
+        "table_maxTempSTAIR": 414.03,
+        "table_maxTempLD": 443.13,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:30:25",
+        "table_stop": "2022-04-28 11:12:08",
+        "table_maxTempLF": 439.26,
+        "table_maxTempSTAIR": 428.71,
+        "table_maxTempLD": 402.02,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 12:12:57",
+        "table_stop": "2022-04-29 12:28:19",
+        "table_maxTempLF": 434.03,
+        "table_maxTempSTAIR": 417.36,
+        "table_maxTempLD": 422.95,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-28 07:24:27",
+        "table_stop": "2022-04-28 08:04:19",
+        "table_maxTempLF": 429.58,
+        "table_maxTempSTAIR": 425.81,
+        "table_maxTempLD": 434.54,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:47:53",
+        "table_stop": "2022-04-29 10:21:38",
+        "table_maxTempLF": 434.43,
+        "table_maxTempSTAIR": 403.94,
+        "table_maxTempLD": 412.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 03:59:54",
+        "table_stop": "2022-04-29 04:22:17",
+        "table_maxTempLF": 448.45,
+        "table_maxTempSTAIR": 420.18,
+        "table_maxTempLD": 420.38,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-29 19:24:34",
+        "table_stop": "2022-04-29 19:44:20",
+        "table_maxTempLF": 450.18,
+        "table_maxTempSTAIR": 405.56,
+        "table_maxTempLD": 448.63,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 08:27:17",
+        "table_stop": "2022-04-28 08:51:51",
+        "table_maxTempLF": 448.17,
+        "table_maxTempSTAIR": 400.71,
+        "table_maxTempLD": 437.55,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 16:05:00",
+        "table_stop": "2022-04-28 16:07:37",
+        "table_maxTempLF": 434.16,
+        "table_maxTempSTAIR": 423.37,
+        "table_maxTempLD": 441.75,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 23:25:59",
+        "table_stop": "2022-04-29 23:45:20",
+        "table_maxTempLF": 456.39,
+        "table_maxTempSTAIR": 404.19,
+        "table_maxTempLD": 416.92,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-29 22:04:57",
+        "table_stop": "2022-04-29 22:25:41",
+        "table_maxTempLF": 400.09,
+        "table_maxTempSTAIR": 437.16,
+        "table_maxTempLD": 447.75,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-28 03:10:36",
+        "table_stop": "2022-04-28 03:40:55",
+        "table_maxTempLF": 401.23,
+        "table_maxTempSTAIR": 412.02,
+        "table_maxTempLD": 424.86,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 13:55:50",
+        "table_stop": "2022-04-28 14:36:45",
+        "table_maxTempLF": 401.16,
+        "table_maxTempSTAIR": 413.95,
+        "table_maxTempLD": 435.68,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 15:13:50",
+        "table_stop": "2022-04-29 16:07:45",
+        "table_maxTempLF": 415.06,
+        "table_maxTempSTAIR": 433.57,
+        "table_maxTempLD": 445.22,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 6,
+        "table_start": "2022-04-28 01:15:01",
+        "table_stop": "2022-04-28 01:36:22",
+        "table_maxTempLF": 452.87,
+        "table_maxTempSTAIR": 429.88,
+        "table_maxTempLD": 441.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:29:07",
+        "table_stop": "2022-04-29 10:12:38",
+        "table_maxTempLF": 436.73,
+        "table_maxTempSTAIR": 402.94,
+        "table_maxTempLD": 410.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 14:40:25",
+        "table_stop": "2022-04-29 15:24:53",
+        "table_maxTempLF": 411.15,
+        "table_maxTempSTAIR": 416.25,
+        "table_maxTempLD": 449.51,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 12:58:16",
+        "table_stop": "2022-04-28 13:52:27",
+        "table_maxTempLF": 454.25,
+        "table_maxTempSTAIR": 407.29,
+        "table_maxTempLD": 403.02,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 19:34:48",
+        "table_stop": "2022-04-29 20:23:00",
+        "table_maxTempLF": 419.06,
+        "table_maxTempSTAIR": 432.93,
+        "table_maxTempLD": 448.25,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 19:37:39",
+        "table_stop": "2022-04-28 20:17:00",
+        "table_maxTempLF": 403.09,
+        "table_maxTempSTAIR": 416.21,
+        "table_maxTempLD": 439.15,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:41:35",
+        "table_stop": "2022-04-29 01:41:21",
+        "table_maxTempLF": 437.98,
+        "table_maxTempSTAIR": 418.32,
+        "table_maxTempLD": 402.92,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-28 03:53:38",
+        "table_stop": "2022-04-28 04:12:47",
+        "table_maxTempLF": 437.88,
+        "table_maxTempSTAIR": 407.18,
+        "table_maxTempLD": 416.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 19:20:49",
+        "table_stop": "2022-04-29 19:23:22",
+        "table_maxTempLF": 458.31,
+        "table_maxTempSTAIR": 426.27,
+        "table_maxTempLD": 425.06,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 00:26:01",
+        "table_stop": "2022-04-28 00:48:38",
+        "table_maxTempLF": 404.23,
+        "table_maxTempSTAIR": 432.48,
+        "table_maxTempLD": 423.93,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 15:11:06",
+        "table_stop": "2022-04-28 15:16:23",
+        "table_maxTempLF": 447.74,
+        "table_maxTempSTAIR": 422.31,
+        "table_maxTempLD": 437.79,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-28 17:15:41",
+        "table_stop": "2022-04-28 18:06:45",
+        "table_maxTempLF": 402.35,
+        "table_maxTempSTAIR": 428.06,
+        "table_maxTempLD": 447.64,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 14:41:49",
+        "table_stop": "2022-04-28 15:39:58",
+        "table_maxTempLF": 427.53,
+        "table_maxTempSTAIR": 400.53,
+        "table_maxTempLD": 400.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 19:44:33",
+        "table_stop": "2022-04-28 20:00:04",
+        "table_maxTempLF": 405.94,
+        "table_maxTempSTAIR": 430.36,
+        "table_maxTempLD": 405.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 15:55:36",
+        "table_stop": "2022-04-29 15:57:36",
+        "table_maxTempLF": 410.12,
+        "table_maxTempSTAIR": 424.63,
+        "table_maxTempLD": 439.25,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 17:13:41",
+        "table_stop": "2022-04-28 18:10:31",
+        "table_maxTempLF": 456.34,
+        "table_maxTempSTAIR": 426.11,
+        "table_maxTempLD": 444.03,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 08:20:32",
+        "table_stop": "2022-04-28 09:13:31",
+        "table_maxTempLF": 417.77,
+        "table_maxTempSTAIR": 439.32,
+        "table_maxTempLD": 447.66,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 00:25:41",
+        "table_stop": "2022-04-28 00:36:11",
+        "table_maxTempLF": 407.56,
+        "table_maxTempSTAIR": 406.92,
+        "table_maxTempLD": 414.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-28 00:43:10",
+        "table_stop": "2022-04-28 00:52:02",
+        "table_maxTempLF": 424.83,
+        "table_maxTempSTAIR": 418.63,
+        "table_maxTempLD": 434.49,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-28 11:08:26",
+        "table_stop": "2022-04-28 11:49:09",
+        "table_maxTempLF": 431.62,
+        "table_maxTempSTAIR": 408.97,
+        "table_maxTempLD": 443.24,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 09:59:38",
+        "table_stop": "2022-04-29 10:16:40",
+        "table_maxTempLF": 403.63,
+        "table_maxTempSTAIR": 424.51,
+        "table_maxTempLD": 404.91,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 00:01:30",
+        "table_stop": "2022-04-29 01:00:39",
+        "table_maxTempLF": 433.23,
+        "table_maxTempSTAIR": 407.81,
+        "table_maxTempLD": 449.23,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 02:38:15",
+        "table_stop": "2022-04-29 03:19:11",
+        "table_maxTempLF": 445.21,
+        "table_maxTempSTAIR": 409.15,
+        "table_maxTempLD": 428.06,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:31:30",
+        "table_stop": "2022-04-29 21:41:19",
+        "table_maxTempLF": 413.57,
+        "table_maxTempSTAIR": 418.93,
+        "table_maxTempLD": 442.17,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:24:11",
+        "table_stop": "2022-04-29 22:05:41",
+        "table_maxTempLF": 428.28,
+        "table_maxTempSTAIR": 429.25,
+        "table_maxTempLD": 408.16,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 6,
+        "table_start": "2022-04-28 19:51:41",
+        "table_stop": "2022-04-28 20:44:51",
+        "table_maxTempLF": 436.39,
+        "table_maxTempSTAIR": 437.46,
+        "table_maxTempLD": 411.78,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 07:42:38",
+        "table_stop": "2022-04-29 08:31:25",
+        "table_maxTempLF": 429.68,
+        "table_maxTempSTAIR": 439.17,
+        "table_maxTempLD": 416.85,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:50:47",
+        "table_stop": "2022-04-28 02:14:29",
+        "table_maxTempLF": 438.75,
+        "table_maxTempSTAIR": 401.23,
+        "table_maxTempLD": 421.83,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 19:16:41",
+        "table_stop": "2022-04-28 20:14:01",
+        "table_maxTempLF": 414.81,
+        "table_maxTempSTAIR": 405.63,
+        "table_maxTempLD": 435.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 12:53:25",
+        "table_stop": "2022-04-28 13:36:10",
+        "table_maxTempLF": 452.81,
+        "table_maxTempSTAIR": 428.28,
+        "table_maxTempLD": 443.18,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:26:44",
+        "table_stop": "2022-04-28 11:04:28",
+        "table_maxTempLF": 400.13,
+        "table_maxTempSTAIR": 410.52,
+        "table_maxTempLD": 414.73,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 9,
+        "table_start": "2022-04-28 06:52:46",
+        "table_stop": "2022-04-28 07:02:32",
+        "table_maxTempLF": 454.94,
+        "table_maxTempSTAIR": 402.57,
+        "table_maxTempLD": 403.06,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 20:36:03",
+        "table_stop": "2022-04-29 20:54:26",
+        "table_maxTempLF": 445.61,
+        "table_maxTempSTAIR": 430.92,
+        "table_maxTempLD": 400.59,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-28 20:29:50",
+        "table_stop": "2022-04-28 20:57:23",
+        "table_maxTempLF": 445.69,
+        "table_maxTempSTAIR": 402.05,
+        "table_maxTempLD": 443.35,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:02:18",
+        "table_stop": "2022-04-28 06:14:09",
+        "table_maxTempLF": 425.19,
+        "table_maxTempSTAIR": 431.81,
+        "table_maxTempLD": 402.76,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:55:00",
+        "table_stop": "2022-04-28 02:17:41",
+        "table_maxTempLF": 427.36,
+        "table_maxTempSTAIR": 436.68,
+        "table_maxTempLD": 441.72,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-28 09:48:12",
+        "table_stop": "2022-04-28 10:42:09",
+        "table_maxTempLF": 434.29,
+        "table_maxTempSTAIR": 427.09,
+        "table_maxTempLD": 407.08,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:32:45",
+        "table_stop": "2022-04-28 12:14:51",
+        "table_maxTempLF": 418.35,
+        "table_maxTempSTAIR": 402.03,
+        "table_maxTempLD": 446.42,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 19:15:19",
+        "table_stop": "2022-04-29 19:40:27",
+        "table_maxTempLF": 448.57,
+        "table_maxTempSTAIR": 423.29,
+        "table_maxTempLD": 427.09,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 14:54:12",
+        "table_stop": "2022-04-28 15:54:10",
+        "table_maxTempLF": 402.77,
+        "table_maxTempSTAIR": 427.11,
+        "table_maxTempLD": 416.09,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 04:56:52",
+        "table_stop": "2022-04-29 05:02:37",
+        "table_maxTempLF": 442.74,
+        "table_maxTempSTAIR": 400.35,
+        "table_maxTempLD": 440.92,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 12:58:59",
+        "table_stop": "2022-04-29 13:31:25",
+        "table_maxTempLF": 436.61,
+        "table_maxTempSTAIR": 416.05,
+        "table_maxTempLD": 412.27,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 08:06:14",
+        "table_stop": "2022-04-29 09:03:54",
+        "table_maxTempLF": 410.17,
+        "table_maxTempSTAIR": 425.17,
+        "table_maxTempLD": 444.33,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 05:39:03",
+        "table_stop": "2022-04-28 06:28:52",
+        "table_maxTempLF": 433.37,
+        "table_maxTempSTAIR": 431.86,
+        "table_maxTempLD": 416.09,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:18:37",
+        "table_stop": "2022-04-28 02:17:24",
+        "table_maxTempLF": 426.32,
+        "table_maxTempSTAIR": 430.13,
+        "table_maxTempLD": 412.03,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 12:28:13",
+        "table_stop": "2022-04-28 13:25:28",
+        "table_maxTempLF": 448.96,
+        "table_maxTempSTAIR": 404.16,
+        "table_maxTempLD": 430.87,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 07:38:11",
+        "table_stop": "2022-04-29 08:02:26",
+        "table_maxTempLF": 435.43,
+        "table_maxTempSTAIR": 438.44,
+        "table_maxTempLD": 441.53,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:24:07",
+        "table_stop": "2022-04-29 16:58:28",
+        "table_maxTempLF": 453.79,
+        "table_maxTempSTAIR": 418.58,
+        "table_maxTempLD": 412.75,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-29 22:09:44",
+        "table_stop": "2022-04-29 22:15:48",
+        "table_maxTempLF": 453.44,
+        "table_maxTempSTAIR": 419.45,
+        "table_maxTempLD": 443.54,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 15:28:30",
+        "table_stop": "2022-04-29 16:18:45",
+        "table_maxTempLF": 438.43,
+        "table_maxTempSTAIR": 429.07,
+        "table_maxTempLD": 444.07,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 19:14:45",
+        "table_stop": "2022-04-29 19:47:43",
+        "table_maxTempLF": 459.38,
+        "table_maxTempSTAIR": 439.79,
+        "table_maxTempLD": 430.28,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-29 12:18:07",
+        "table_stop": "2022-04-29 13:12:08",
+        "table_maxTempLF": 458.07,
+        "table_maxTempSTAIR": 435.14,
+        "table_maxTempLD": 426.22,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 22:25:55",
+        "table_stop": "2022-04-29 22:42:18",
+        "table_maxTempLF": 438.62,
+        "table_maxTempSTAIR": 430.28,
+        "table_maxTempLD": 440.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 18:30:07",
+        "table_stop": "2022-04-29 19:03:55",
+        "table_maxTempLF": 425.79,
+        "table_maxTempSTAIR": 438.28,
+        "table_maxTempLD": 440.25,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 21:12:07",
+        "table_stop": "2022-04-28 21:54:38",
+        "table_maxTempLF": 430.48,
+        "table_maxTempSTAIR": 424.44,
+        "table_maxTempLD": 410.25,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-28 22:54:18",
+        "table_stop": "2022-04-28 23:21:51",
+        "table_maxTempLF": 419.25,
+        "table_maxTempSTAIR": 403.39,
+        "table_maxTempLD": 442.92,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 08:07:49",
+        "table_stop": "2022-04-28 08:25:33",
+        "table_maxTempLF": 439.82,
+        "table_maxTempSTAIR": 414.53,
+        "table_maxTempLD": 443.88,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 07:32:07",
+        "table_stop": "2022-04-28 07:55:04",
+        "table_maxTempLF": 410.41,
+        "table_maxTempSTAIR": 402.39,
+        "table_maxTempLD": 422.46,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-28 05:49:21",
+        "table_stop": "2022-04-28 06:09:25",
+        "table_maxTempLF": 454.64,
+        "table_maxTempSTAIR": 413.18,
+        "table_maxTempLD": 414.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 11:06:26",
+        "table_stop": "2022-04-29 11:16:35",
+        "table_maxTempLF": 459.96,
+        "table_maxTempSTAIR": 405.43,
+        "table_maxTempLD": 418.22,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 12:16:19",
+        "table_stop": "2022-04-29 12:26:47",
+        "table_maxTempLF": 451.64,
+        "table_maxTempSTAIR": 415.47,
+        "table_maxTempLD": 420.93,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 20:43:05",
+        "table_stop": "2022-04-29 21:17:00",
+        "table_maxTempLF": 406.15,
+        "table_maxTempSTAIR": 432.53,
+        "table_maxTempLD": 441.37,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 19:04:02",
+        "table_stop": "2022-04-29 19:09:23",
+        "table_maxTempLF": 453.63,
+        "table_maxTempSTAIR": 403.58,
+        "table_maxTempLD": 407.17,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 2,
+        "table_start": "2022-04-29 09:59:33",
+        "table_stop": "2022-04-29 10:33:34",
+        "table_maxTempLF": 426.21,
+        "table_maxTempSTAIR": 438.52,
+        "table_maxTempLD": 421.63,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 13:14:52",
+        "table_stop": "2022-04-28 13:21:03",
+        "table_maxTempLF": 400.65,
+        "table_maxTempSTAIR": 412.01,
+        "table_maxTempLD": 427.47,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-28 01:56:21",
+        "table_stop": "2022-04-28 02:41:10",
+        "table_maxTempLF": 457.34,
+        "table_maxTempSTAIR": 403.39,
+        "table_maxTempLD": 446.67,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 04:56:18",
+        "table_stop": "2022-04-28 05:17:39",
+        "table_maxTempLF": 420.12,
+        "table_maxTempSTAIR": 422.94,
+        "table_maxTempLD": 416.16,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:59:35",
+        "table_stop": "2022-04-28 07:32:16",
+        "table_maxTempLF": 408.65,
+        "table_maxTempSTAIR": 434.09,
+        "table_maxTempLD": 438.12,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 02:32:19",
+        "table_stop": "2022-04-29 03:06:35",
+        "table_maxTempLF": 458.97,
+        "table_maxTempSTAIR": 425.45,
+        "table_maxTempLD": 401.43,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:34:51",
+        "table_stop": "2022-04-28 07:32:31",
+        "table_maxTempLF": 448.64,
+        "table_maxTempSTAIR": 410.49,
+        "table_maxTempLD": 403.93,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:34:05",
+        "table_stop": "2022-04-28 01:35:48",
+        "table_maxTempLF": 411.65,
+        "table_maxTempSTAIR": 432.84,
+        "table_maxTempLD": 426.43,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 12:04:59",
+        "table_stop": "2022-04-28 12:33:07",
+        "table_maxTempLF": 402.35,
+        "table_maxTempSTAIR": 436.91,
+        "table_maxTempLD": 448.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 08:53:39",
+        "table_stop": "2022-04-28 09:38:01",
+        "table_maxTempLF": 439.14,
+        "table_maxTempSTAIR": 415.43,
+        "table_maxTempLD": 447.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 06:42:12",
+        "table_stop": "2022-04-28 06:48:35",
+        "table_maxTempLF": 408.24,
+        "table_maxTempSTAIR": 410.05,
+        "table_maxTempLD": 414.04,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 00:24:43",
+        "table_stop": "2022-04-28 01:02:46",
+        "table_maxTempLF": 416.24,
+        "table_maxTempSTAIR": 407.43,
+        "table_maxTempLD": 417.97,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 03:15:14",
+        "table_stop": "2022-04-29 04:11:35",
+        "table_maxTempLF": 423.67,
+        "table_maxTempSTAIR": 437.55,
+        "table_maxTempLD": 420.74,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 18:50:44",
+        "table_stop": "2022-04-29 19:25:23",
+        "table_maxTempLF": 439.94,
+        "table_maxTempSTAIR": 417.08,
+        "table_maxTempLD": 406.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 04:17:55",
+        "table_stop": "2022-04-28 05:10:58",
+        "table_maxTempLF": 400.93,
+        "table_maxTempSTAIR": 431.02,
+        "table_maxTempLD": 403.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 13:19:35",
+        "table_stop": "2022-04-29 13:45:04",
+        "table_maxTempLF": 429.29,
+        "table_maxTempSTAIR": 439.91,
+        "table_maxTempLD": 433.25,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 11:28:06",
+        "table_stop": "2022-04-28 11:47:15",
+        "table_maxTempLF": 426.57,
+        "table_maxTempSTAIR": 423.55,
+        "table_maxTempLD": 404.15,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-28 01:23:21",
+        "table_stop": "2022-04-28 02:07:44",
+        "table_maxTempLF": 449.54,
+        "table_maxTempSTAIR": 436.52,
+        "table_maxTempLD": 417.19,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 01:00:10",
+        "table_stop": "2022-04-29 01:33:40",
+        "table_maxTempLF": 426.08,
+        "table_maxTempSTAIR": 404.34,
+        "table_maxTempLD": 431.04,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 18:26:32",
+        "table_stop": "2022-04-28 18:30:11",
+        "table_maxTempLF": 431.12,
+        "table_maxTempSTAIR": 432.39,
+        "table_maxTempLD": 416.93,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:20:16",
+        "table_stop": "2022-04-28 02:06:17",
+        "table_maxTempLF": 414.91,
+        "table_maxTempSTAIR": 408.92,
+        "table_maxTempLD": 439.71,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 23:25:10",
+        "table_stop": "2022-04-30 00:21:02",
+        "table_maxTempLF": 406.17,
+        "table_maxTempSTAIR": 430.54,
+        "table_maxTempLD": 405.19,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 16:41:48",
+        "table_stop": "2022-04-29 17:00:37",
+        "table_maxTempLF": 450.39,
+        "table_maxTempSTAIR": 431.58,
+        "table_maxTempLD": 418.55,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 10:13:03",
+        "table_stop": "2022-04-29 10:16:22",
+        "table_maxTempLF": 445.22,
+        "table_maxTempSTAIR": 421.18,
+        "table_maxTempLD": 424.01,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 5,
+        "table_start": "2022-04-29 23:58:14",
+        "table_stop": "2022-04-30 00:21:29",
+        "table_maxTempLF": 435.31,
+        "table_maxTempSTAIR": 409.53,
+        "table_maxTempLD": 443.81,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 20:58:41",
+        "table_stop": "2022-04-28 21:14:29",
+        "table_maxTempLF": 449.95,
+        "table_maxTempSTAIR": 416.74,
+        "table_maxTempLD": 443.68,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 06:48:40",
+        "table_stop": "2022-04-29 06:50:23",
+        "table_maxTempLF": 455.82,
+        "table_maxTempSTAIR": 424.63,
+        "table_maxTempLD": 442.83,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-29 02:36:07",
+        "table_stop": "2022-04-29 03:17:10",
+        "table_maxTempLF": 439.43,
+        "table_maxTempSTAIR": 408.81,
+        "table_maxTempLD": 406.21,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 1,
+        "table_start": "2022-04-28 07:31:30",
+        "table_stop": "2022-04-28 07:59:31",
+        "table_maxTempLF": 415.44,
+        "table_maxTempSTAIR": 437.79,
+        "table_maxTempLD": 447.25,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 13:49:41",
+        "table_stop": "2022-04-29 14:45:47",
+        "table_maxTempLF": 413.38,
+        "table_maxTempSTAIR": 439.18,
+        "table_maxTempLD": 424.77,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 07:58:12",
+        "table_stop": "2022-04-28 07:59:27",
+        "table_maxTempLF": 422.35,
+        "table_maxTempSTAIR": 415.19,
+        "table_maxTempLD": 421.27,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 3,
+        "table_start": "2022-04-28 07:29:50",
+        "table_stop": "2022-04-28 07:40:19",
+        "table_maxTempLF": 449.93,
+        "table_maxTempSTAIR": 439.93,
+        "table_maxTempLD": 400.29,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 17:37:53",
+        "table_stop": "2022-04-29 17:57:17",
+        "table_maxTempLF": 402.18,
+        "table_maxTempSTAIR": 439.39,
+        "table_maxTempLD": 424.41,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-29 20:52:31",
+        "table_stop": "2022-04-29 20:52:46",
+        "table_maxTempLF": 445.26,
+        "table_maxTempSTAIR": 403.27,
+        "table_maxTempLD": 411.84,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": 6,
+        "table_start": "2022-04-29 09:46:59",
+        "table_stop": "2022-04-29 10:23:24",
+        "table_maxTempLF": 431.43,
+        "table_maxTempSTAIR": 411.12,
+        "table_maxTempLD": 446.52,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": 8,
+        "table_start": "2022-04-29 05:31:29",
+        "table_stop": "2022-04-29 06:07:25",
+        "table_maxTempLF": 424.42,
+        "table_maxTempSTAIR": 439.14,
+        "table_maxTempLD": 403.07,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:01:30",
+        "table_stop": "2022-04-29 21:50:18",
+        "table_maxTempLF": 417.02,
+        "table_maxTempSTAIR": 425.42,
+        "table_maxTempLD": 432.31,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 15:44:51",
+        "table_stop": "2022-04-29 16:21:43",
+        "table_maxTempLF": 413.14,
+        "table_maxTempSTAIR": 428.32,
+        "table_maxTempLD": 426.19,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 7,
+        "table_start": "2022-04-29 00:26:01",
+        "table_stop": "2022-04-29 01:08:41",
+        "table_maxTempLF": 440.87,
+        "table_maxTempSTAIR": 416.33,
+        "table_maxTempLD": 423.05,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 01:13:11",
+        "table_stop": "2022-04-28 01:14:01",
+        "table_maxTempLF": 400.91,
+        "table_maxTempSTAIR": 430.21,
+        "table_maxTempLD": 441.56,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-28 10:12:44",
+        "table_stop": "2022-04-28 10:26:18",
+        "table_maxTempLF": 427.67,
+        "table_maxTempSTAIR": 436.91,
+        "table_maxTempLD": 409.15,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 06:34:11",
+        "table_stop": "2022-04-29 07:32:57",
+        "table_maxTempLF": 420.49,
+        "table_maxTempSTAIR": 407.54,
+        "table_maxTempLD": 445.32,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T130059"
+    },
+    {
+        "table_bucketNumber": "",
+        "table_start": "2022-04-29 21:36:51",
+        "table_stop": "2022-04-29 22:26:19",
+        "table_maxTempLF": 446.39,
+        "table_maxTempSTAIR": 432.04,
+        "table_maxTempLD": 408.21,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T171059"
+    },
+    {
+        "table_bucketNumber": 4,
+        "table_start": "2022-04-29 14:47:54",
+        "table_stop": "2022-04-29 14:53:50",
+        "table_maxTempLF": 404.05,
+        "table_maxTempSTAIR": 426.11,
+        "table_maxTempLD": 422.68,
+        "table_shootingTime": "2022-04-29 08:08:52",
+        "table_itemName": "20220425_T193325"
+    }
+]

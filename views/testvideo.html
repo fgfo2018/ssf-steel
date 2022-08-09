@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <video src="" id="videoList" loop controls muted preload="auto" width="100%"></video>
+    <script>
+        var video = document.getElementById("videoList")
+        var req = new XMLHttpRequest();
+        req.open('GET', 'http://127.0.0.1:5000/download/20220502_T153952.mp4', true);
+        req.responseType = 'blob';
+        req.onload = function () {
+            // Onload is triggered even on 404
+            // so we need to check the status code
+            if (this.status === 200) {
+                var videoBlob = this.response;
+                var vid = URL.createObjectURL(videoBlob); // IE10+
+                // Video is now downloaded
+                // and we can set it as source on the video element
+					console.log('ok')
+                video.src = vid;
+            }
+        }
+        req.onerror = function () {
+            // Error
+        }
+        req.send();
+    </script>
+</body>
+
+</html>

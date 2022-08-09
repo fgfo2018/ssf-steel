@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>dataScraping</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/jqurey.number.js"></script>
+	<!-- echarts -->
+	<script src="./js/echarts.min.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+	<link rel="stylesheet" href="./css/daterangepicker.css">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<script src="https://kit.fontawesome.com/a04ef755a4.js" crossorigin="anonymous"></script>
+	<!-- BS Table -->
+	<script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+	<script src="https://unpkg.com/bootstrap-table@1.15.5/dist/extensions/export/bootstrap-table-export.min.js">
+	</script>
+	<!-- JS Exports plugin -->
+	<script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+	<script src="https://unpkg.com/tableexport.jquery.plugin/libs/jsPDF/jspdf.min.js"></script>
+	<script src="https://unpkg.com/tableexport.jquery.plugin/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+	<script src="./js/moment.min.js"></script>
+	<script src="./js/daterangepicker.js"></script>
+
+</head>
+
+<body style="background-color: #e2e2e2;">
+	<nav class="navbar sticky-top navbar-expand-lg navbar-dark  bg-gradient" style="background-color: #262626;">
+		<div class="container-fluid" style="">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">即時監控</a>
+				</li>
+				<li class="nav-item">
+					<a href="dataScraping.html" class="nav-link">資料分析</a>
+				</li>
+				<li class="nav-item">
+					<a href="FrameDetection.html" class="nav-link">檢測框調整</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid mt-3 mr-0">
+		<div class="row ">
+			<div class="col-md-6">
+				<!-- 左一---------------------------------------------------------------------------------------------- -->
+				<div class="card shadow" style="height:874px;width:942px">
+					<div class="card-header title py-1" style="font-size: 14px;font-weight: 900;">
+						<div class="row g-1 align-items-center">
+							<div class="col-auto">
+								<div class="col-form-label subtitle p-0">資料報表</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-body" style="font-size: 12px;">
+						<div class="table-responsive">
+							<div class="toolbar">
+								<div class="row">
+									<div class="col-12">
+										<div class="row">
+											<div class="col-6">
+												<div class="form-floating">
+													<input type="number" class="form-control f_tr"
+														id="floatingInputGrid" placeholder="第一段警報溫度" value="">
+													<label for="floatingInputGrid">第一段警報溫度</label>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="form-floating">
+													<input type="number" class="form-control s_tr"
+														id="floatingInputGrid" placeholder="第一段警報溫度" value="">
+													<label for="floatingInputGrid">第二段警報溫度</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 pt-1">
+										<div class="form-floating">
+											<input name="dates" class="form-control" id="floatingInputGrid" />
+											<label for="floatingInputGrid">選擇資料日期範圍</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<table id="table2" data-height="807" data-toolbar=".toolbar" data-show-export="true"
+								data-pagination="false" data-click-to-select="true" data-toolbar="#toolbar"
+								data-show-toggle="true" data-show-columns="true" data-sortable="true"
+								data-toggle="table2" data-search="true" data-live-search="true" data-show-refresh="true"
+								data-unique-id="id">
+								<thead>
+									<form class="data-report">
+										<button hidden="true" type="submit"></button>
+									</form>
+								</thead>
+							</table>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<!-- 下1---------------------------------------------------------------------------------------------- -->
+						<div class="card shadow" style="height:296px;">
+							<div class="card-header title py-1" style="font-size: 14px;font-weight: 900;">
+								<div class="row g-3 align-items-center">
+									<div class="col-auto">
+										<div class="col-form-label subtitle p-0">錄影回放</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-0 position-relative">
+								<div class="video-loading">
+									<div>影像載入中...</div>
+								</div>
+								<div class="video-loading-bg"></div>
+								<div class="row align-items-center tri subtitle mx-4 mb-1 pt-1">
+									<div class="col-4">
+										&nbsp;&nbsp;&nbsp;L/F 副料區
+									</div>
+									<div class="col-4">
+										&nbsp;&nbsp;&nbsp;出鋼室地下樓梯
+									</div>
+									<div class="col-4">
+										&nbsp;&nbsp;&nbsp;L/D 2F平台
+									</div>
+								</div>
+								<video id="videoList" loop controls muted preload src="" class="video2 imgCenter">
+								</video>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 ">
+						<!-- 下1---------------------------------------------------------------------------------------------- -->
+						<div class="card mt-3 shadow " style="height:273px;">
+							<div class="card-header title py-1" style="font-size: 14px;font-weight: 900;">
+								<div class="row g-3 align-items-center">
+									<div class="col-auto">
+										<div class="col-form-label subtitle p-0">趨勢圖</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="card-body p-0 ">
+								<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+								<div id="main" style="width: 920px;height:290px;"></div>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<!-- 下1---------------------------------------------------------------------------------------------- -->
+						<div class="card mt-3 shadow" style="height:273px;">
+							<div class="card-header title py-1" style="font-size: 14px;font-weight: 900;">
+								<div class="row g-3 align-items-center">
+									<div class="col-auto">
+										<div class="col-form-label subtitle p-0">吊起桶數</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-0 ">
+
+								<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+								<div id="main2" style="width: 920px;height:228px;padding-bottom: 0px;">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="position-fixed bottom-0 end-0 p-3 dataScraping-message" style="z-index: 11">
+		
+	</div>
+	<script type="text/javascript">
+		var toastLiveExample001 = document.getElementById("liveToast");
+	</script>
+	<script src="./js/dataScraping.js"></script>
+	<script src="./js/myChart.js"></script>
+</body>
+
+</html>
