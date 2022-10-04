@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #img {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+
+        #img>img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="img">
+        <img src="#" id="img0" />
+        <img src="#" id="img1" />
+        <img src="#" id="img2" />
+        <div>
+            fps:<span id="fps1">-</span><br />
+            (Data totle/s:<span id="datatotle">-</span>)<br />
+            資料傳輸量:<span id="datas">-</span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        connect()
+        var se = true
+        var fps1 = 0
+        var nowdate = null
+        var end = null
+        var datas = 0
+
+        function connect() {
+            console.log('連線中')
+            // var ws = new WebSocket("ws://192.168.0.171:8765");
+            var ws = new WebSocket("ws://192.168.0.173:3000/server1");
+            ws.onopen = () => {
+                console.log('連線成功')
+            }
+
+            ws.onclose = () => {
+                console.log('連線中斷')
+                setTimeout(() => {
+                    console.log('重新連線')
+                    connect()
+                }, 1000);
+            }
+
+            //接收 Server 發送的訊息
+            ws.onmessage = event => {
+                var data = JSON.parse(event.data)
+                // console.log(JSON.parse(data))
+                data.forEach((index, val) => {
+                    var img = document.getElementById(`img${val}`);
+                    img.src = 'data:image/jpeg;base64,' + index.img
+                    var dataSize = imageSize('data:image/jpeg;base64,' + index.img)
+                    datas = datas + dataSize
+                })
+                var nowTime = new Date();
+                nowTime = nowTime.getTime()
+                if (se) {
+                    nowdate = new Date();
+                    nowdate.setSeconds(nowdate.getSeconds() + 1)
+                    end = nowdate.getTime()
+                    se = false
+                }
+                if (nowTime <= end) {
+                    fps1 = fps1 + 1
+                } else {
+                    document.getElementById('fps1').innerHTML = fps1
+                    document.getElementById('datatotle').innerHTML = fps1 * 3
+                    datas = parseFloat(datas) * 100
+                    document.getElementById('datas').innerHTML = formatBytes(parseFloat(datas), decimals = 2)
+                    se = true
+                    // start1 = new Date();
+                    // end1 = start1.setSeconds(start1.getSeconds() + 1)
+                    fps1 = 0
+                    datas = 0
+                }
+                // console.log(end - nowTime, fps1)
+                // id0.src = 'data:image/jpeg;base64,' + data
+                // id.src = 'data:image/jpeg;base64,' + event.data
+                // console.log(event.data)
+            }
+        }
+
+        function imageSize(base64Str) {
+            const indexBase64 = base64Str.indexOf('base64,');
+            if (indexBase64 < 0) return -1;
+            const str = base64Str.substr(indexBase64 + 6);
+            return (str.length * 0.75).toFixed(2);
+        }
+
+        function formatBytes(bytes, decimals = 2) {
+            if (!+bytes) return '0 Bytes'
+            const k = 1024
+            const dm = decimals < 0 ? 0 : decimals
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+            const i = Math.floor(Math.log(bytes) / Math.log(k))
+            return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
+        }
+    </script>
+</body>
+
+</html>

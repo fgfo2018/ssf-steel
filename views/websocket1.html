@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="#" id="img0" />
+    <img src="#" id="img1" />
+    <script type="text/javascript">
+        var arr = [8765, 8766]
+        var e = 0
+        arr.forEach((index) => {
+            connect(index, e)
+            e = e + 1
+        })
+
+        function connect(index, e) {
+            console.log(e)
+            var ws = new WebSocket(`ws://192.168.0.171:${index}`);
+
+            var id = document.getElementById(`img${e}`)
+            var test = [{
+                    cam_id: '0',
+                    img: '12sdvsdv'
+                },
+                {
+                    cam_id: '1',
+                    img: '12sdvsdv'
+                },
+                {
+                    cam_id: '2',
+                    img: '12sdvsdv'
+                }
+            ]
+            ws.onopen = () => {
+                console.log('open connection')
+            }
+
+            ws.onclose = () => {
+                console.log('close connection')
+                setTimeout(() => {
+                    console.log('重新連線')
+                    // connect()
+                }, 3000)
+            }
+
+            //接收 Server 發送的訊息
+            ws.onmessage = event => {
+                var data = event.data
+                // console.log(data)
+                // console.log(JSON.parse(data))
+                // if(data.cam)
+                id.src = 'data:image/jpeg;base64,' + event.data
+                // console.log(event.data)
+            }
+        }
+    </script>
+</body>
+
+</html>

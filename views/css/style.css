@@ -356,3 +356,43 @@ tr.active {
   font-size: .875rem;
   font-family: var(--bs-body-font-family);
 }
+
+._7fffd4 {
+  background-color: #7fffd4
+}
+
+._ffc87f {
+  background-color: #ffc87f;
+  animation-name: example2;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+._ff5452 {
+  background-color: #ff5452;
+  animation-name: example1;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  color: #fff;
+}
+
+@keyframes example1 {
+  0% {
+    background-color: #ffa1a0;
+  }
+
+  100% {
+    background-color: #ff5452;
+  }
+}
+@keyframes example2 {
+  0% {
+    background-color: #ffe0b7;
+  }
+
+  100% {
+    background-color: #ffc87f;
+  }
+}

@@ -45,6 +45,38 @@ function mToday() {
     });
     return m;
 }
+
+// ping
+app.get('/checkPort', function (req, res) {
+    var net = require('net');
+    var sock = new net.Socket();
+    var hosts = [
+        ['localhost', 8554],
+    ];
+    hosts.forEach(function (item) {
+        sock.setTimeout(2500);
+        sock.on('connect', function () {
+            res.send({
+                status: true
+            })
+            console.log("連線成功")
+            sock.destroy();
+        }).on('error', function (e) {
+            console.log("連線不成功1")
+            res.send({
+                status: false
+            })
+        }).on('timeout', function (e) {
+            console.log("連線不成功2")
+            res.send({
+                status: false
+            })
+        }).connect(item[1], item[0]);
+    })
+    
+})
+// ping end
+
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/views/index.html');
 });
@@ -74,11 +106,11 @@ app.post('/api/analysis/setnumber', function (req, res) {
     output.forEach(function (item) {
         data.push(item.name)
     })
-    id.forEach(function(item){
-        
+    id.forEach(function (item) {
+
         console.log(data.indexOf(item.name))
     })
-    
+
     // saveDir(id)
     res.send({
         success: true,
@@ -116,7 +148,8 @@ const getSpotsData = () => {
     // console.log(JSON.parse(jsonData))
     return JSON.parse(jsonData)
 }
-const saveLogData = (content) => {
+
+function putLOG(content) {
     const path = './log.txt'
     try {
         if (!fs.existsSync(path)) {
@@ -134,6 +167,7 @@ const saveLogData = (content) => {
     fs.writeFile(path, text, function (err) {
         if (err) return console.log(err);
     });
+    return true;
 }
 
 function mToday() {
@@ -142,3 +176,38 @@ function mToday() {
     });
     return m;
 }
+
+
+var arr = []
+
+function saveLogData(content) {
+    arr.push(content)
+    console.log(arr)
+}
+var pustatus = true
+setInterval(() => {
+    if (arr.length > 0 && pustatus) {
+        pustatus = false
+        var tp = putLOG(arr[0])
+        arr.shift();
+        pustatus = tp
+    }
+}, 200)
+
+var system1 = `[system info][${mToday()}]:系統正常啟動`
+saveLogData(system1)
+setInterval(() => {
+    var data = `[system info][${mToday()}]:System is normal`
+    saveLogData(data)
+}, 0.1 * 60 * 1000)
+
+var exit1 = false;
+process.on('SIGINT', () => {
+    var data = `[system info][${mToday()}]:系統程序退出`
+    exit1 = putLOG(data)
+    setInterval(() => {
+        if (exit1) {
+            process.exit(0);
+        }
+    }, 10)
+})

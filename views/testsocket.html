@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/socket.io.js"></script>
+  <style>
+    .dd {
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dd">
+    <img id="img1" src="#" style="width: 300px;height: 300px">
+    <img id="img2" src="#" style="width: 300px;height: 300px">
+    <img id="img3" src="#" style="width: 300px;height: 300px">
+    <div>FPS:<div id="fps1">-</div></div>
+    <div>FPS:<div id="fps2">-</div></div>
+    <div>FPS:<div id="fps3">-</div></div>
+  </div>
+
+  <script test="test" type="text/javascript">
+    const socket = io('192.168.0.171:8000', {
+      transports: ['websocket', 'polling', 'flashsocket']
+    })
+    var imgid1 = document.getElementById('img1')
+    var imgid2 = document.getElementById('img2')
+    var imgid3 = document.getElementById('img3')
+    // const socket = io('192.168.0.116:9999')
+    var fps1 = 0
+    socket.on("connect", () => {
+      console.log(socket.id); // x8WIv7-mJelg7on_ALbx
+      socket.emit("my_message", 'test');
+      
+      socket.on("img1", (data) => {
+        console.log(data)
+        imgid1.src = 'data:image/jpeg;base64,' + data
+        console.log(fps)
+        
+      });
+      socket.on("img2", (data) => {
+        console.log(data)
+        imgid2.src = 'data:image/jpeg;base64,' + data
+      });
+      socket.on("img3", (data) => {
+        console.log(data)
+        imgid3.src = 'data:image/jpeg;base64,' + data
+      });
+    });
+  </script>
+</body>
+
+</html>

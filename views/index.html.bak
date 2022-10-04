@@ -13,65 +13,10 @@
     crossorigin="anonymous"></script>
   <script src="./js/bootstrap.js"></script>
   <script src="./js/jqurey.number.js"></script>
-  <script src="./js/nosleep.js"></script>
-  <style>
-    .consoleMjpg {
-      /* display: none; */
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #000000d9;
-      z-index: 9999;
-      width: 200px;
-      color: #fff;
-      padding: 6px;
-    }
 
-    .consoleMjpg span {
-      color: #00ff0d;
-    }
-
-    .canvas-rtsp {
-      width: 586px !important;
-    }
-
-    .ui-skeleton-loaders {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgb(44, 44, 44);
-      /* background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%); */
-      background: linear-gradient(102deg, #d7d7d7 11%, #f3f3f3 28%, #d7d7d7 33%);
-      background-size: 200% 100%;
-      z-index: 1;
-      width: 100%;
-      height: 491px;
-      animation: 1s shine linear infinite;
-      pointer-events: none;
-      opacity: 1;
-      transition: opacity 0.2s;
-      transition-delay: 0.5s;
-    }
-
-    @keyframes shine {
-      to {
-        background-position-x: -200%;
-      }
-    }
-
-    .card-body-custom {
-      height: 505px
-    }
-  </style>
 </head>
 
 <body style="background-color: #e2e2e2;">
-  <div class="consoleMjpg d-none" id="consoleMjpg">
-    偵錯模式:(專業模式)<br />
-    fps:<span id="fps1">-</span><br />
-    (Data totle/s:<span id="datatotle">-</span>)<br />
-    資料傳輸量:<span id="datas">-</span>
-  </div>
   <div class="loading_bar"></div>
   <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark darken py-0 shadow-sm">
     <div class="container-fluid">
@@ -125,7 +70,7 @@
         <!-- 上1 -->
         <div class="card shadow">
           <div class="card-header titleTop py-1 text-center">L/F 副料區</div>
-          <div class="card-body pt-0 card-body-custom">
+          <div class="card-body pt-0">
             <div class="box1 text-center">
               <div class="text-center subtitle p-0">min</div>
               <input id="" type="float" disabled value="" class="subtitle text-center status_LF_colorbar_min"
@@ -138,9 +83,7 @@
                 name="status_LF_colorbar_max" style="width:40px;height:21px">
             </div>
             <div class="position-relative">
-              <!-- <img src="static/loading.png" id="rtsp_image01" class="imgCenter" alt="..." /> -->
-              <div class="ui-skeleton-loaders" id="ui-skeleton-loaders"></div>
-              <canvas class="canvas-rtsp" id="rtsp_image01"></canvas>
+              <img src="static/loading.png" id="rtsp_image01" class="imgCenter" alt="..." />
               <div id="rtsp-error01">
               </div>
             </div>
@@ -155,7 +98,7 @@
         <!-- 上2 -->
         <div class="card shadow">
           <div class="card-header titleTop py-1 text-center">出鋼室地下樓梯</div>
-          <div class="card-body pt-0 card-body-custom">
+          <div class="card-body pt-0">
             <div class="box1 text-center">
               <div class="text-center subtitle p-0">min</div>
               <input id="" type="float" disabled value="" class="subtitle text-center status_STAIR_colorbar_min"
@@ -168,9 +111,7 @@
                 name="status_STAIR_colorbar_max" style="width:40px;height:21px">
             </div>
             <div class="position-relative">
-              <!-- <img src="static/loading.png" id="rtsp_image02" class="imgCenter" alt="..." /> -->
-              <div class="ui-skeleton-loaders" id="ui-skeleton-loaders"></div>
-              <canvas class="canvas-rtsp" id="rtsp_image02"></canvas>
+              <img src="static/loading.png" id="rtsp_image02" class="imgCenter" alt="..." />
               <div id="rtsp-error02">
               </div>
             </div>
@@ -183,7 +124,7 @@
         <!-- 上3 -->
         <div class="card shadow">
           <div class="card-header titleTop py-1 text-center">L/D 2F平台</div>
-          <div class="card-body pt-0 card-body-custom">
+          <div class="card-body pt-0">
             <div class="box1 text-center">
               <div class="text-center subtitle p-0">min</div>
               <input id="" type="float" disabled value="" class="subtitle text-center status_LD_colorbar_min"
@@ -195,11 +136,8 @@
               <input id="" type="float" disabled value="" class="subtitle text-center status_LD_colorbar_max"
                 name="status_LD_colorbar_max" style="width:40px;height:21px">
             </div>
-            <div class="position-relative">
-              <!-- <img src="static/loading.png" id="rtsp_image03" class="imgCenter"
-                alt="..." /> -->
-              <div class="ui-skeleton-loaders" id="ui-skeleton-loaders"></div>
-              <canvas class="canvas-rtsp" id="rtsp_image03"></canvas>
+            <div class="position-relative"> <img src="static/loading.png" id="rtsp_image03" class="imgCenter"
+                alt="..." />
               <div id="rtsp-error03">
               </div>
             </div>
@@ -705,7 +643,6 @@
           dataType: "json",
           success: function (response) {
             var videos = response
-            console.log(videos)
             var name = [];
             // 初始化選單
             $('#videoSelect').html('')
@@ -760,117 +697,6 @@
       }
     });
   </script>
-  <script type="text/javascript" language=JavaScript charset="UTF-8">
-    document.onkeydown = function (event) {
-      var id = document.getElementById('consoleMjpg')
-      var e = event || window.event || arguments.callee.caller.arguments[0];
-      if (e && e.keyCode == 192) { // 按 ` 
-        if (id.classList.contains('d-none')) {
-          id.classList.remove('d-none')
-        } else {
-          id.classList.add('d-none')
-        }
-      }
-    };
-  </script>
-  <script type="text/javascript">
-    connect()
-    var se = true
-    var fps1 = 0
-    var nowdate = null
-    var end = null
-    var datas = 0
-
-    function connect() {
-      const rtsperror1 = document.getElementById('rtsp-error01')
-      const rtsperror2 = document.getElementById('rtsp-error02')
-      const rtsperror3 = document.getElementById('rtsp-error03')
-      console.log('連線中')
-      var ws = new WebSocket("ws://127.0.0.1:8765");
-      // var ws = new WebSocket("ws://192.168.0.173:3000/server1");
-      ws.onopen = () => {
-        console.log('連線成功')
-      }
-
-      ws.onclose = () => {
-        console.log('連線中斷')
-        rtsperror1.style.opacity = 1
-        rtsperror2.style.opacity = 1
-        rtsperror3.style.opacity = 1
-        setTimeout(() => {
-          console.log('重新連線')
-          connect()
-        }, 1000);
-      }
-
-      //接收 Server 發送的訊息
-      ws.onmessage = event => {
-        var loading = document.querySelectorAll('.ui-skeleton-loaders')
-        loading.forEach((index) => {
-          // console.log(index)
-          index.classList.add("d-none");
-        })
-        // loading.classList.add("d-none");
-        rtsperror1.style.opacity = 0
-        rtsperror2.style.opacity = 0
-        rtsperror3.style.opacity = 0
-        var data = JSON.parse(event.data)
-        // console.log(JSON.parse(data))
-        data.forEach((index, val) => {
-          const canvas = document.getElementById(`rtsp_image0${val+1}`)
-          var img = new Image()
-          var ctx = canvas.getContext('2d')
-          img.onload = function () {
-            canvas.width = this.naturalWidth
-            canvas.height = this.naturalHeight
-            // URL.revokeObjectURL(url)
-            ctx.drawImage(img, 0, 0, this.width, this.height)
-          }
-          img.src = 'data:image/jpeg;base64,' + index.img
-          var dataSize = imageSize('data:image/jpeg;base64,' + index.img)
-          datas = datas + dataSize
-        })
-        var nowTime = new Date();
-        nowTime = nowTime.getTime()
-        if (se) {
-          nowdate = new Date();
-          nowdate.setSeconds(nowdate.getSeconds() + 1)
-          end = nowdate.getTime()
-          se = false
-        }
-        // console.log(end - nowTime, fps1)
-        if (nowTime <= end) {
-          fps1 = fps1 + 1
-        } else {
-          document.getElementById('fps1').innerHTML = fps1
-          document.getElementById('datatotle').innerHTML = fps1 * 3
-          datas = parseFloat(datas)
-          document.getElementById('datas').innerHTML = formatBytes(parseFloat(datas), decimals = 2)
-          se = true
-          // start1 = new Date();
-          // end1 = start1.setSeconds(start1.getSeconds() + 1)
-          fps1 = 0
-          datas = 0
-        }
-      }
-    }
-
-    function imageSize(base64Str) {
-      const indexBase64 = base64Str.indexOf('base64,');
-      if (indexBase64 < 0) return -1;
-      const str = base64Str.substr(indexBase64 + 6);
-      return (str.length * 0.75).toFixed(2);
-    }
-
-    function formatBytes(bytes, decimals = 2) {
-      if (!+bytes) return '0 Bytes'
-      const k = 1024
-      const dm = decimals < 0 ? 0 : decimals
-      const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
-      const i = Math.floor(Math.log(bytes) / Math.log(k))
-      return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
-    }
-  </script>
 
   <script type="text/javascript">
     var config = getConfig();
@@ -891,11 +717,9 @@
       3: config.web_socket_communication03
     }
     for (var i = 1; i <= 3; i++) {
-      // transcoding(i, configSocket[i])
+      transcoding(i, configSocket[i])
     }
 
-
-    // transconding 為socket.io備份
     function transcoding(i, configSocket) {
       var socket1 = io(configSocket);
       const img1 = document.getElementById('rtsp_image0' + i)
@@ -983,7 +807,7 @@
         // rtspstatus01.classList.remove('d-none') //偵錯用
       });
     }
-    // transconding 為socket.io備份
+
 
     // L/F 副料區end
     // var socket2 = io(config.web_socket_communication02);
@@ -1360,25 +1184,15 @@
               ]
             for (var i = 0; i < machine_temperature.length; i++) {
               var temperature = $.number(machine_temperature[i], 1)
-              // temperature = 56
               if (temperature < 55) {
                 $(machine_temperature_this_div[i]).val(temperature)
-                // $(machine_temperature_this_div[i]).css("background-color", "#7fffd4")
-                $(machine_temperature_this_div[i]).addClass("_7fffd4")
-                $(machine_temperature_this_div[i]).removeClass("_ffc87f")
-                $(machine_temperature_this_div[i]).removeClass("_ff5452")
+                $(machine_temperature_this_div[i]).css("background-color", "#7fffd4")
               } else if (temperature >= 55 && temperature < 60) {
                 $(machine_temperature_this_div[i]).val(temperature)
-                // $(machine_temperature_this_div[i]).css("background-color", "#ffc87f")
-                $(machine_temperature_this_div[i]).removeClass("_7fffd4")
-                $(machine_temperature_this_div[i]).addClass("_ffc87f")
-                $(machine_temperature_this_div[i]).removeClass("_ff5452")
+                $(machine_temperature_this_div[i]).css("background-color", "#ffc87f")
               } else if (temperature >= 60) {
                 $(machine_temperature_this_div[i]).val(temperature)
-                // $(machine_temperature_this_div[i]).css("background-color", "#ff5452")
-                $(machine_temperature_this_div[i]).removeClass("_7fffd4")
-                $(machine_temperature_this_div[i]).removeClass("_ffc87f")
-                $(machine_temperature_this_div[i]).addClass("_ff5452")
+                $(machine_temperature_this_div[i]).css("background-color", "#ff5452")
               }
             }
             // ~~~~ 熱像儀主機回放 end ~~~~
