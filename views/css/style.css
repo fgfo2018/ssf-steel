@@ -108,7 +108,9 @@
   /* margin-top: 0px; */
   /* background-color: rgb(177, 177, 177); */
 }
-
+.canvas-rtsp{
+  cursor: crosshair;
+}
 .tri {
   /* margin-top: 25px; */
   padding-top: 14px;
@@ -395,4 +397,11 @@ tr.active {
   100% {
     background-color: #ffc87f;
   }
+}
+
+.konvaCavnas{
+  position: absolute;
+  bottom:6px;
+  left:0;
+  cursor: crosshair;
 }
