@@ -229,7 +229,7 @@
 
                 <select id="videoSelect" class="subtitle" style="border: 1px solid gainsboro;">
                 </select>
-
+                <button id="autonew" style="display:none;" title="目前你已鎖定影像，請點選此按鈕解除鎖定，程式將自動更新最新影像">AUTO</button>
               </div>
             </div>
           </div>
@@ -247,8 +247,10 @@
             </div>
             <!-- <div class="gap"></div>
             <div class="gap2"></div> -->
-            <video id="videoList" loop controls muted preload src="static/mock_vod/.mp4" class="video imgCenter">
-            </video>
+            <!-- <video id="videoList" loop controls muted preload src="static/mock_vod/.mp4" class="video imgCenter">
+            </video> -->
+            <!-- <button id="play">Play</button> -->
+            <div id="videoListKonva"></div>
 
           </div>
         </div>
@@ -685,21 +687,243 @@
   <script type="text/javascript">
     //下1選擇影像
     $(document).ready(function () {
+      function getPixelColor(x, y, ctxdata) {
+        var pxData = ctxdata.getImageData(x, y, 1, 1)
+        return [pxData.data[0], pxData.data[1], pxData.data[2]]
+      }
+      patterns()
+      var ex = 0
+      var ey = 0
+      var ew = 0
+      var eh = 0
+      // 讀取溫度調，記錄溫度
+      // save color bar
+      var patternsmetadata = []
+      // save moues Loction
+      var pointX = 0
+      var pointY = 0
+      // save pixel color
+      var colorPixel = [null, null, null]
+      var imgw = 0
+      var imgh = 0
+      // var patternsmetadata1 = 
+      // console.log(patternsmetadata1)
+      function patterns() {
+        var patternsData = []
+        var patternsTemp = []
+        var p = document.createElement('canvas')
+        var pctx = p.getContext('2d')
+        var img = new Image()
+        img.src = '/static/pattern_resize/rainbow.png'
+        img.onload = function () {
+          p.width = this.width
+          p.height = this.height
+          pctx.drawImage(img, 0, 0, this.width, this.height)
+          var Tmax = 600
+          var Tmin = 100
+          console.log(this.height)
+          var tp = []
+          for (var i = 0; i < this.height; i++) {
+            var ex = true
+            // var temp = Tmin + avgtemperature * i
+            var ecolor = getPixelColor(0, i, pctx)
+            if (tp.length > 0) {
+              if (
+                tp[0] === ecolor[0] &&
+                tp[1] === ecolor[1] &&
+                tp[2] === ecolor[2]
+              ) {
+                ex = false
+              }
+            }
+            if (ex) {
+              patternsTemp.push({
+                R: ecolor[0],
+                G: ecolor[1],
+                B: ecolor[2],
+                // temperature: temp,
+              })
+              // console.log(i, ecolor)
+            }
+            tp = [ecolor[0], ecolor[1], ecolor[2]]
+          }
+          var avgtemperature = (Tmax - Tmin) / patternsTemp.length
+          patternsTemp.forEach((val, index) => {
+            var temp = Tmin + avgtemperature * index
+            patternsData.push({
+              R: val.R,
+              G: val.G,
+              B: val.B,
+              temperature: temp,
+            })
+            // console.log(index, val.R, val.G, val.B, temp)
+          })
+          // console.log(patternsData)
+          patternsmetadata = patternsData
+        }
+      }
+      // end
+      // console.log(patternsData)
+      // setInterval(() =>{
+      //   console.log(patternsmetadata)
+      // },1000)
+      // Konva
+      var stage = new Konva.Stage({
+        container: 'videoListKonva',
+        width: 953,
+        height: 245,
+      });
+      var layer = new Konva.Layer();
+      stage.add(layer);
+      const canvas1 = layer.getCanvas()._canvas;
+      canvas1.id = 'videoListKonvaC';
+      var videok = document.createElement('video');
+      videok.setAttribute('crossOrigin', '')
+      videok.muted = true;
+      videok.autoplay = true;
+      videok.loop = true;
+      // videok.src = 'http://127.0.0.1:5000/download/20220501_T162607.mp4'
+      var imagek = new Konva.Image({
+        image: videok,
+        // draggable: true,
+        x: 0,
+        y: 0,
+      });
+      layer.add(imagek);
+
+      var anim = new Konva.Animation(function () {
+        // do nothing, animation just need to update the layer
+        deawtem()
+      }, layer);
+      // videok.addEventListener('loadedmetadata', function (e) {
+      //   imagek.width(953);
+      //   imagek.height(245);
+      // });
+      anim.start();
+      var simpleText = new Konva.Text({
+        fontSize: 14,
+        fontStyle: 'bold',
+        fill: '#fff',
+        offsetX: -10,
+        offsetY: 28,
+        visible: false
+      });
+      layer.add(simpleText);
+      
+      stage.on('mousemove', (e) => {
+        ex = e.evt.layerX
+        ey = e.evt.layerY
+        ew = e.target.width()
+        eh = e.target.height()
+        // deawtem()
+      })
+
+      function deawtem() {
+        simpleText.visible(true)
+        // 計算邊緣
+        if (ey < 50) {
+          simpleText.offsetY(-12)
+        } else {
+          simpleText.offsetY(28)
+        }
+        var endw = ex / ew * 100
+        if (endw > 90) {
+          simpleText.offsetX(35)
+        } else {
+          simpleText.offsetX(-10)
+        }
+        // end
+        simpleText.x(ex)
+        simpleText.y(ey)
+        // simpleText.text(`000°C`)
+        // var cee = canvas1.getContext()
+        const ctx123 = layer.getContext();
+
+        // const imageData = ctx123.getImageData(0, 0, 1, 1);
+        var ecolor = getPixelColor(ex, ey, ctx123)
+        var rgb = [ecolor[0], ecolor[1], ecolor[2]]
+        var status = false
+        var end = 0
+        var temp = null
+        // console.log(rgb)
+        patternsmetadata.forEach((index) => {
+          if (rgb[1] <= 214 && rgb[0] <= 212) {
+            if (index.G >= rgb[1]) {
+              status = true
+            }
+          }
+          if (rgb[0] > 212) {
+            if (index.R > 212 && index.B >= rgb[2]) {
+              status = true
+            }
+          }
+
+          if (status && end === 0) {
+            // console.log(
+            //   'input',
+            //   rgb[0],
+            //   rgb[1],
+            //   rgb[2],
+            //   'output',
+            //   index.R,
+            //   index.G,
+            //   index.B,
+            //   index.temperature
+            // )
+            temp = index
+            end = end + 1
+          }
+        })
+        if (temp !== null) {
+          simpleText.text(`${temp.temperature.toFixed(0)}°C`)
+        }
+        // 點溫判斷
+        // pointX = e.evt.layerX / e.target.width()
+        // pointY = e.evt.layerY / e.target.height()
+        // var ecolor = getPixelColor(e.target.width() * pointX, e.target.height() * pointY, layer)
+        // console.log(ctx1)
+      }
+      stage.on('mouseout', (e) => {
+        simpleText.visible(false)
+      });
+      // videok.play();
+      // konva end
       var config = getConfig();
       var VideoTemp = null;
       url = config.web_video_initial;
-      getVideosList(url, initial = true, VideoTemp, config)
-      var videoL = document.getElementById("videoList")
+      var status = true
+      getVideosList(url, status, VideoTemp, config)
+      // var videoL = document.getElementById("videoList")
       $("#videosList").on("change", '#videoSelect', function () {
         var videoValue = $(this).val();
         VideoTemp = videoValue
-        $("#videoList").attr("src", videoValue)
-        videoL.play();
+        videok.src = videoValue
+        videok.addEventListener('loadedmetadata', function (e) {
+          imagek.width(953);
+          imagek.height(245);
+        });
+        videok.play();
+        status = false;
+        document.getElementById('autonew').style.display = 'unset';
+        // $("#videoList").attr("src", videoValue)
+        // videoL.play();
       })
+      var tempvideourl = null
+      document.getElementById('autonew').addEventListener('click', () => {
+        document.getElementById('autonew').style.display = 'none';
+        // $('#videoSelect').value(tempvideourl)
+        // document.getElementById("videoSelect").selectedIndex = 0;
+        // document.getElementById('videoSelect').value = tempvideourl;
+        status = true;
+        console.log('auto')
+        window.location.reload();
+      });
       var run = null;
+      var temp = null
       run = setInterval(function () {
         none = config.web_video_normal
-        getVideosList(none, initial = false, VideoTemp, config)
+        getVideosList(none, status, VideoTemp, config)
+        console.log(status)
       }, 1000)
 
       function getVideosList(url, initial, VideoTemp, config) {
@@ -736,14 +960,27 @@
                   data +
                   '</option>')
               }
-              if (z == 1 && initial == true) {
-                $('#videoList').attr("src", config.web_video_url_prefix + data)
-                videoL.play();
+
+              if (z == 1 && initial) {
+                if (data !== temp) {
+                  // $('#videoList').attr("src", config.web_video_url_prefix + data)
+                  // videoL.play();
+                  document.getElementById("videoSelect").selectedIndex = 0;
+                  tempvideourl = config.web_video_url_prefix + data
+                  videok.src = config.web_video_url_prefix + data
+                  videok.addEventListener('loadedmetadata', function (e) {
+                    imagek.width(953);
+                    imagek.height(245);
+                  });
+                  videok.play();
+                }
+                temp = data
               }
               z++
             })
           },
           error: function (thrownError) {}
+
         })
       }
 

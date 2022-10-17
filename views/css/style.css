@@ -405,3 +405,9 @@ tr.active {
   left:0;
   cursor: crosshair;
 }
+
+#recvideoplay{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
