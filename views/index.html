@@ -224,12 +224,26 @@
             <div class="row g-3 align-items-center">
               <div class="col-auto">
                 <div class="col-form-label subtitle p-0">錄影回放</div>
+
               </div>
               <div class="col-auto" id="videosList">
 
                 <select id="videoSelect" class="subtitle" style="border: 1px solid gainsboro;">
                 </select>
                 <button id="autonew" style="display:none;" title="目前你已鎖定影像，請點選此按鈕解除鎖定，程式將自動更新最新影像">AUTO</button>
+              </div>
+              <div class="col-auto ms-auto" id="video-control">
+                <div class="d-flex align-items-center" title="錄影回放影像控制">
+                  <div class="video-control-btn pause  ">
+                    <img src="/static/pause.png" class="video-control-btn-img" />
+                  </div>
+                  <input type="range" id="video-range" class="form-range mx-2" min="0" max="100" step="0.5"
+                    id="customRange3">
+                  <div>
+                    <span class="videoCurrentTime">00:00</span>/<span class="videoTotleTime">00:00</span>
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>
@@ -691,7 +705,23 @@
         var pxData = ctxdata.getImageData(x, y, 1, 1)
         return [pxData.data[0], pxData.data[1], pxData.data[2]]
       }
-      patterns()
+      // patterns()
+      var Tmax = 0
+      var Tmin = 0
+      var gettemplate = setInterval(() => {
+        var Tmax1 = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
+        if (isNaN(Tmax1)) {
+          console.log("Not a Number");
+        } else {
+          Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
+          Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
+          console.log(Tmax, Tmin)
+          patterns()
+          clearInterval(gettemplate)
+        }
+
+      })
+
       var ex = 0
       var ey = 0
       var ew = 0
@@ -719,9 +749,8 @@
           p.width = this.width
           p.height = this.height
           pctx.drawImage(img, 0, 0, this.width, this.height)
-          var Tmax = 600
-          var Tmin = 100
-          console.log(this.height)
+
+          console.log(Tmax, Tmin)
           var tp = []
           for (var i = 0; i < this.height; i++) {
             var ex = true
@@ -794,6 +823,7 @@
       var anim = new Konva.Animation(function () {
         // do nothing, animation just need to update the layer
         deawtem()
+        // console.log(videok.videoWidth)
       }, layer);
       // videok.addEventListener('loadedmetadata', function (e) {
       //   imagek.width(953);
@@ -809,17 +839,199 @@
         visible: false
       });
       layer.add(simpleText);
-      
+      // var circle = new Konva.Circle({
+      //   x: 0,
+      //   y: 0,
+      //   radius: 4,
+      //   fill: 'red',
+      //   stroke: 'black',
+      //   strokeWidth: 1,
+      // });
+      // layer.add(circle);
       stage.on('mousemove', (e) => {
         ex = e.evt.layerX
         ey = e.evt.layerY
         ew = e.target.width()
         eh = e.target.height()
+        // circle.x(e.evt.layerX)
+        // circle.y(e.evt.layerY)
         // deawtem()
+        simpleText.visible(true)
       })
 
+
+      stage.on('mouseout', (e) => {
+        simpleText.visible(false)
+      });
+      // videok.play();
+      // konva end
+      var config = getConfig();
+      var VideoTemp = null;
+      url = config.web_video_initial;
+      var status = true
+      getVideosList(url, status, VideoTemp, config)
+      var controlTemp = 0
+      // 影片控制
+      var playstatus = true
+      var VideoRange = $('#video-range')
+      var VideoStart = 0
+      var VideoTotleTime = 0
+      videok.addEventListener("timeupdate",
+        function (ev) {
+          VideoStart = ev.target.currentTime
+          VideoTotleTime = ev.target.duration
+          videoTimeDisplay(VideoStart, VideoTotleTime)
+          VideoRange.val((ev.target.currentTime / ev.target.duration) * 100)
+        });
+      var vtm = $('.video-control-btn-img')
+      $("#video-control").on("click", '.video-control-btn', function () {
+        if (playstatus) {
+          vtm.attr('src', '/static/play.png')
+          videok.pause();
+          playstatus = false
+        } else {
+          vtm.attr('src', '/static/pause.png')
+          videok.play();
+          playstatus = true
+        }
+      })
+      // 影片進度滑軌
+      var videoRailStatus = false
+      $("#video-control").on("mousedown", '#video-range', function () {
+        videok.pause();
+        videoRailStatus = true
+      })
+      $("#video-control").on("mousemove", '#video-range', function () {
+        if ($(this).val() !== controlTemp && videoRailStatus) {
+          var to = ($(this).val() * 0.01) * VideoTotleTime
+          videok.currentTime = to
+        }
+      })
+      $("#video-control").on("mouseup", '#video-range', function () {
+        if ($(this).val() !== controlTemp) {
+          var to = ($(this).val() * 0.01) * VideoTotleTime
+          videok.currentTime = to
+          vtm.attr('src', '/static/play.png')
+          playstatus = false
+        }
+        videoRailStatus = false
+        controlTemp = $(this).val()
+      })
+      // 影片控制 end
+
+      // 影片選取
+      $("#videosList").on("change", '#videoSelect', function () {
+        vtm.attr('src', '/static/pause.png')
+        playstatus = true
+        var videoValue = $(this).val();
+        VideoTemp = videoValue
+        blobVideo(videoValue)
+        // videok.src = videoValue
+        // videok.addEventListener('loadedmetadata', function (e) {
+        //   imagek.width(953);
+        //   imagek.height(245);
+        // });
+        // videok.play();
+        status = false;
+        document.getElementById('autonew').style.display = 'unset';
+        // $("#videoList").attr("src", videoValue)
+        // videoL.play();
+      })
+      var tempvideourl = null
+      document.getElementById('autonew').addEventListener('click', () => {
+        document.getElementById('autonew').style.display = 'none';
+        // $('#videoSelect').value(tempvideourl)
+        // document.getElementById("videoSelect").selectedIndex = 0;
+        // document.getElementById('videoSelect').value = tempvideourl;
+        status = true;
+        console.log('auto')
+        window.location.reload();
+      });
+      var run = null;
+      var temp = null
+      run = setInterval(function () {
+        none = config.web_video_normal
+        getVideosList(none, status, VideoTemp, config)
+        // console.log(status)
+      }, 1000)
+
+      function getVideosList(url, initial, VideoTemp, config) {
+        var initial = initial;
+        $.ajax({
+          type: "GET",
+          url: url,
+          dataType: "json",
+          success: function (response) {
+            var videos = response
+            var name = [];
+            // 初始化選單
+            $('#videoSelect').html('')
+            for (var i = 1; i <= Object.keys(videos).length; i++) {
+              arr = response[i].split("\\")
+              arr = arr[Object.keys(arr)[Object.keys(arr).length - 1]]
+              name.push(arr)
+            }
+            if (config.web_video_list_Sorting === "reverse") {
+              name = name.reverse()
+            }
+            var z = 1;
+            name.forEach(function (data) {
+              if (VideoTemp != null) {
+                VideoTemp = VideoTemp.split("/")
+                VideoTemp = VideoTemp[Object.keys(VideoTemp)[Object.keys(VideoTemp).length - 1]]
+              }
+              if (data === VideoTemp) {
+                $('#videoSelect').append('<option value="' + config.web_video_url_prefix + data +
+                  '" selected>' + data +
+                  '</option>')
+              } else {
+                $('#videoSelect').append('<option value="' + config.web_video_url_prefix + data + '">' +
+                  data +
+                  '</option>')
+              }
+
+              if (z == 1 && initial) {
+                if (data !== temp) {
+                  // $('#videoList').attr("src", config.web_video_url_prefix + data)
+                  // videoL.play();
+                  document.getElementById("videoSelect").selectedIndex = 0;
+                  tempvideourl = config.web_video_url_prefix + data
+                  blobVideo(config.web_video_url_prefix + data)
+                  // videok.src = config.web_video_url_prefix + data
+                  // videok.addEventListener('loadedmetadata', function (e) {
+                  //   imagek.width(953);
+                  //   imagek.height(245);
+                  // });
+                  // videok.play();
+                }
+                temp = data
+              }
+              z++
+            })
+          },
+          error: function (thrownError) {}
+
+        })
+      }
+
+      function getConfig() {
+        var rtn;
+        $.ajax({
+          url: '/config',
+          type: 'get',
+          async: false,
+          success: function (res) {
+            rtn = res;
+          },
+          error: function (res) {
+            rtn = false;
+          }
+        });
+        return rtn;
+      }
+
       function deawtem() {
-        simpleText.visible(true)
+
         // 計算邊緣
         if (ey < 50) {
           simpleText.offsetY(-12)
@@ -875,7 +1087,18 @@
           }
         })
         if (temp !== null) {
-          simpleText.text(`${temp.temperature.toFixed(0)}°C`)
+          var Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value) - 20
+          var Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
+          var temperature1 = temp.temperature.toFixed(0)
+          // var temperature1 = 480
+          if (temperature1 <= Tmin) {
+            temperature1 = '< ' + Tmin
+          }
+          if (temperature1 >= Tmax) {
+            var maxsum = Tmax + 20
+            temperature1 = '> ' + maxsum
+          }
+          simpleText.text(`${temperature1}°C`)
         }
         // 點溫判斷
         // pointX = e.evt.layerX / e.target.width()
@@ -883,121 +1106,79 @@
         // var ecolor = getPixelColor(e.target.width() * pointX, e.target.height() * pointY, layer)
         // console.log(ctx1)
       }
-      stage.on('mouseout', (e) => {
-        simpleText.visible(false)
-      });
-      // videok.play();
-      // konva end
-      var config = getConfig();
-      var VideoTemp = null;
-      url = config.web_video_initial;
-      var status = true
-      getVideosList(url, status, VideoTemp, config)
-      // var videoL = document.getElementById("videoList")
-      $("#videosList").on("change", '#videoSelect', function () {
-        var videoValue = $(this).val();
-        VideoTemp = videoValue
-        videok.src = videoValue
-        videok.addEventListener('loadedmetadata', function (e) {
-          imagek.width(953);
-          imagek.height(245);
-        });
-        videok.play();
-        status = false;
-        document.getElementById('autonew').style.display = 'unset';
-        // $("#videoList").attr("src", videoValue)
-        // videoL.play();
-      })
-      var tempvideourl = null
-      document.getElementById('autonew').addEventListener('click', () => {
-        document.getElementById('autonew').style.display = 'none';
-        // $('#videoSelect').value(tempvideourl)
-        // document.getElementById("videoSelect").selectedIndex = 0;
-        // document.getElementById('videoSelect').value = tempvideourl;
-        status = true;
-        console.log('auto')
-        window.location.reload();
-      });
-      var run = null;
-      var temp = null
-      run = setInterval(function () {
-        none = config.web_video_normal
-        getVideosList(none, status, VideoTemp, config)
-        console.log(status)
-      }, 1000)
+      // 影片本地化
+      function blobVideo(url) {
+        // console.log(url);
+        // $('.video-loading>div').html('影像載入中...')
+        // $('.video-loading').css('opacity', 1)
+        // $('.video-loading-bg').css('opacity', 1)
+        // $('.video-loading-bg').css('width', '75%')
+        // var video = document.getElementById("videoList")
+        var req = new XMLHttpRequest();
+        req.open('GET', url, true);
+        req.responseType = 'blob';
+        req.onload = function () {
+          if (this.status === 200) {
+            var videoBlob = this.response;
+            // console.log(videoBlob)
+            var vid = URL.createObjectURL(videoBlob);
+            console.log(vid)
+            videok.src = vid
+            videok.addEventListener('loadedmetadata', function (e) {
+              imagek.width(953);
+              imagek.height(245);
+            });
+            videok.play();
+            // if (videoBlob.type === 'text/html') {
+            //   $('.video-loading-bg').css('width', '100%')
+            //   $('.video-loading>div').html('該區段並無找到錄製影像')
+            // } else {
+            //   setTimeout(function () {
+            //     $('.video-loading-bg').css('width', '100%')
+            //     setTimeout(function () {
+            //       $('.video-loading-bg').css('width', '0%')
+            //       $('.video-loading').css('opacity', 0)
+            //       $('.video-loading-bg').css('opacity', 0)
+            //     }, 300)
+            //   }, 1000)
+            // }
 
-      function getVideosList(url, initial, VideoTemp, config) {
-        var initial = initial;
-        $.ajax({
-          type: "GET",
-          url: url,
-          dataType: "json",
-          success: function (response) {
-            var videos = response
-            var name = [];
-            // 初始化選單
-            $('#videoSelect').html('')
-            for (var i = 1; i <= Object.keys(videos).length; i++) {
-              arr = response[i].split("\\")
-              arr = arr[Object.keys(arr)[Object.keys(arr).length - 1]]
-              name.push(arr)
-            }
-            if (config.web_video_list_Sorting === "reverse") {
-              name = name.reverse()
-            }
-            var z = 1;
-            name.forEach(function (data) {
-              if (VideoTemp != null) {
-                VideoTemp = VideoTemp.split("/")
-                VideoTemp = VideoTemp[Object.keys(VideoTemp)[Object.keys(VideoTemp).length - 1]]
-              }
-              if (data === VideoTemp) {
-                $('#videoSelect').append('<option value="' + config.web_video_url_prefix + data +
-                  '" selected>' + data +
-                  '</option>')
-              } else {
-                $('#videoSelect').append('<option value="' + config.web_video_url_prefix + data + '">' +
-                  data +
-                  '</option>')
-              }
-
-              if (z == 1 && initial) {
-                if (data !== temp) {
-                  // $('#videoList').attr("src", config.web_video_url_prefix + data)
-                  // videoL.play();
-                  document.getElementById("videoSelect").selectedIndex = 0;
-                  tempvideourl = config.web_video_url_prefix + data
-                  videok.src = config.web_video_url_prefix + data
-                  videok.addEventListener('loadedmetadata', function (e) {
-                    imagek.width(953);
-                    imagek.height(245);
-                  });
-                  videok.play();
-                }
-                temp = data
-              }
-              z++
-            })
-          },
-          error: function (thrownError) {}
-
-        })
-      }
-
-      function getConfig() {
-        var rtn;
-        $.ajax({
-          url: '/config',
-          type: 'get',
-          async: false,
-          success: function (res) {
-            rtn = res;
-          },
-          error: function (res) {
-            rtn = false;
           }
-        });
-        return rtn;
+        }
+        req.onerror = function () {
+          // Error
+        }
+        req.send();
+      }
+      // 影片時間顯示
+      function videoTimeDisplay(VideoStart, VideoTotleTime) {
+        var totle = VideoTotleTime.toFixed(0)
+        var currentTime = VideoStart.toFixed(0)
+        $('.videoCurrentTime').html(getDuration(currentTime))
+        $('.videoTotleTime').html(getDuration(totle))
+        // console.log(totle, currentTime)
+      }
+      // 秒 轉 分、時、天，並且隱藏時間未到的單位
+      function getDuration(second) {
+        var days = Math.floor(second / 86400);
+        var hours = Math.floor((second % 86400) / 3600);
+        var minutes = Math.floor(((second % 86400) % 3600) / 60);
+        var seconds = Math.floor(((second % 86400) % 3600) % 60);
+        if (second < 60) {
+          var duration = ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2);
+        } else if (second >= 60 && second < 3600) {
+          var duration = ("0" + hours).slice(-2) + ":" + ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-
+            2);
+        } else if (second >= 3600 && second < 86400) {
+          var duration = ("0" + hours).slice(-2) + ":" + ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-
+            2);
+        } else if (second >= 86400) {
+          var duration = ("0" + days).slice(-2) + ":" + ("0" + hours).slice(-2) + ":" + ("0" + minutes).slice(-2) +
+            ":" +
+            ("0" +
+              seconds).slice(-2);
+        }
+        return duration;
       }
     });
   </script>
@@ -1251,6 +1432,10 @@
 
         const canvas1 = document.getElementById(`rtsp_image0` + name)
         var ctx1 = canvas1.getContext('2d')
+        var anim = new Konva.Animation(function () {
+          // console.log('ok')
+        }, layer);
+        anim.start();
         stage.on('mousemove', (e) => {
           // circle.visible(true)
           simpleText.visible(true)

@@ -1,1 +1,315 @@
-function _0xff57(_0x4965e8,_0x9abcd3){var _0x1fa9d8=_0x1fa9();return _0xff57=function(_0xff576,_0x395147){_0xff576=_0xff576-0x1a3;var _0x10ae3d=_0x1fa9d8[_0xff576];return _0x10ae3d;},_0xff57(_0x4965e8,_0x9abcd3);}function _0x1fa9(){var _0x4f6e58=['480884OfvjUu','3zDGgAY','99nRDRkP','j\x20C=A;$.I({B:\x22/C\x22,F:\x221M\x22,1a:!1,J:k(t){C=t},K:k(t){1N=!1}});1b\x20B=C.1O;j\x20L=1P.1Q(1R.1S(\x221T\x22)),M=A;1c={1U:{1V:!0},1d:{1W:{N:\x22#1X\x22,1Y:12,1Z:1e},x:\x221f\x22},24:{25:\x22O\x22},27:!1,28:{P:\x2229%\x22,O:\x2220%\x22,Q:\x222a%\x22,2b:\x222c\x22},2d:{F:\x221g\x22,D:\x22(2e)\x22,z:[\x220\x22,\x221\x22,\x222\x22,\x223\x22,\x224\x22,\x225\x22,\x226\x22,\x227\x22,\x228\x22,\x229\x22,\x2210\x22,\x2211\x22,\x2212\x22,\x2213\x22,\x2214\x22,\x2215\x22,\x2216\x22,\x2217\x22,\x2218\x22,\x2219\x22,\x2220\x22,\x2221\x22,\x2222\x22,\x2223\x22],1h:{E:!0}},2f:{F:\x221g\x22,z:[0,10,20,30,2g,1e],D:\x22(m)\x22,1h:{E:!0}},1i:{E:!0,2h:0,2i:!0,2j:\x222k\x22,O:\x222l\x22,1f:\x2230\x22,2m:\x2215%\x22,N:[\x22#2n\x22,\x22#2o\x22,\x22#2p\x22,\x22#2q\x22,\x22#2r\x22]},1j:[{D:\x22\x22,F:\x222s\x22,2t:{E:!0,2u:{E:!0,2v:k(t){R\x200==t.z[2]?\x22{a|\x22+t.z[3]+\x22}\x22:1==t.z[2]?\x22{b|\x22+t.z[3]+\x22}\x22:2==t.z[2]?\x22{c|\x22+t.z[3]+\x22}\x22:2w\x200},2x:{a:{N:\x22#2y\x22},b:{1k:\x22#2z\x22,P:\x2226\x22,Q:\x223\x22,1l:\x220\x22,1m:\x220\x22,1n:\x221o\x22},c:{1k:\x22#2A\x22,P:\x2226\x22,Q:\x223\x22,1l:\x220\x22,1m:\x220\x22,1n:\x221o\x22}}}},2B:{2C:{2D:10,2E:\x222F(0,\x200,\x200,\x200.5)\x22}}}]},L.1p(1c),$(\x22.1q-1r\x22).1s(\x221t\x22,\x222G\x22,k(){1u.D}),$(2H).2I(k(t){13===t.2J&&G(B)}),G(B);j\x20S=A;k\x20G(t,e){T(A!=e)j\x20a=q\x20y(e);1v\x20j\x20a=q\x20y;j\x20n=a.1w()+\x22-\x22+(\x22\x22+(a.1x()+1)).1y(2,\x220\x22)+\x22-\x22+a.1z().2K().1y(2,\x220\x22),r={2L:n+\x22\x20U:U:U\x22,2M:n+\x22\x2023:1A:1A\x22};r=2N.2O(r),$.I({B:t,1B:\x222P\x22,z:r,1C:\x22V\x22,2Q:\x222R/V;\x202S=2T-8\x22,J:k(t){j\x20t=1D(t,e),a=[];t.1E(k(t){a.1F(t[3])}),a=2U.1G(...a),t=t.2V(k(t){R[t[0],t[1],t[2],t[3]]}),L.1p({1i:{1G:a},1d:{2W:\x22統計日期:\x22+n},1j:[{D:\x22\x22,z:t}]})},K:k(t){2X.2Y(t)}})}k\x201D(t,e){j\x20a=A,n=A;$.I({B:C.2Z,1C:\x22V\x22,1B:\x2231\x22,1a:!1,J:k(t){a=t.32,n=t.33},K:k(t){}});j\x20r=[];T(A!=e)j\x20i=q\x20y(e);1v\x20j\x20i=q\x20y;j\x20l=i.1w(),o=i.1x(),s=i.1z(),c=10;0===c?c=1:c>1H&&(c=1H),1I=34/c+1;35(j\x20u=A,m=A,p=1;p<1I;p++){j\x20h=q\x20y(l,o,s),f=q\x20y(l,o,s);1==p?u=q\x20y(h):(u=q\x20y(u),u=f.1J(f.W()+(p-1)*c),u=q\x20y(u)),H=h.1J(h.W()+p*c),H=q\x20y(H);j\x20g=0,d=u.36(),w=u.W(),v=0;t.1E(k(t){j\x20e=q\x20y(t.1K);e>u&&e<H&&(t.X>a&&t.X<n||t.Y>a&&t.Y<n||t.Z>a&&t.Z<n?v=1:(t.X>=n||t.Y>=n||t.Z>=n)&&(v=2),g++)}),1L=[d,w/10,v,g],r.1F(1L)}R\x20r}$(\x22.1q-1r\x22).1s(\x221t\x22,\x2237\x22,k(){j\x20t=38($(1u).39(\x22z-3a\x22))+1;T(!3b(t)&&S!==t){A!==M&&3c(M);1b\x20a=$(\x22#3d\x22).3e(\x223f\x22,t);j\x20e=q\x20y(a.1K);G(B,e)}S=t});','replace','64490YNjaJX','82292AdqJGR','fromCharCode','165CljMKt','split','6STTZmz','4334550GAaZap','707176LfaUqg','1421076jAMCOH','37kDWAIu','13279400cZWvxz'];_0x1fa9=function(){return _0x4f6e58;};return _0x1fa9();}var _0x357559=_0xff57;(function(_0x401f68,_0x77078b){var _0x46b6e7=_0xff57,_0x412b32=_0x401f68();while(!![]){try{var _0x11ae5b=-parseInt(_0x46b6e7(0x1b2))/0x1*(-parseInt(_0x46b6e7(0x1a9))/0x2)+-parseInt(_0x46b6e7(0x1a5))/0x3*(parseInt(_0x46b6e7(0x1a4))/0x4)+-parseInt(_0x46b6e7(0x1af))/0x5+-parseInt(_0x46b6e7(0x1ae))/0x6*(parseInt(_0x46b6e7(0x1aa))/0x7)+-parseInt(_0x46b6e7(0x1b0))/0x8*(-parseInt(_0x46b6e7(0x1a6))/0x9)+parseInt(_0x46b6e7(0x1a3))/0xa+parseInt(_0x46b6e7(0x1ac))/0xb*(-parseInt(_0x46b6e7(0x1b1))/0xc);if(_0x11ae5b===_0x77078b)break;else _0x412b32['push'](_0x412b32['shift']());}catch(_0x482a21){_0x412b32['push'](_0x412b32['shift']());}}}(_0x1fa9,0xaf53c),eval(function(_0x48d85c,_0x2213cc,_0x45671e,_0x5af4aa,_0x46eca9,_0x17181a){var _0x4a9a84=_0xff57;_0x46eca9=function(_0x52a283){var _0x3dc233=_0xff57;return(_0x52a283<_0x2213cc?'':_0x46eca9(parseInt(_0x52a283/_0x2213cc)))+((_0x52a283=_0x52a283%_0x2213cc)>0x23?String[_0x3dc233(0x1ab)](_0x52a283+0x1d):_0x52a283['toString'](0x24));};if(!''[_0x4a9a84(0x1a8)](/^/,String)){while(_0x45671e--)_0x17181a[_0x46eca9(_0x45671e)]=_0x5af4aa[_0x45671e]||_0x46eca9(_0x45671e);_0x5af4aa=[function(_0x1c475d){return _0x17181a[_0x1c475d];}],_0x46eca9=function(){return'\x5cw+';},_0x45671e=0x1;};while(_0x45671e--)if(_0x5af4aa[_0x45671e])_0x48d85c=_0x48d85c[_0x4a9a84(0x1a8)](new RegExp('\x5cb'+_0x46eca9(_0x45671e)+'\x5cb','g'),_0x5af4aa[_0x45671e]);return _0x48d85c;}(_0x357559(0x1a7),0x3e,0xca,'|||||||||||||||||||var|function||||||new||||||||Date|data|null|url|config|name|show|type|getData|NewTime|ajax|success|error|myChart|Interval|color|top|height|width|return|clickSum|if|00|json|getMinutes|table_maxTempLF|table_maxTempSTAIR|table_maxTempLD|||||||||||async|const|option|title|50|right|category|splitArea|visualMap|series|backgroundColor|shadowOffsetY|shadowOffsetX|align|center|setOption|table|responsive|on|click|this|else|getFullYear|getMonth|padStart|getDate|59|method|dataType|listinterval|forEach|push|max|60|setinterval|setMinutes|table_start|array|get|rtn|web_dataScraping_refresh|echarts|init|document|getElementById|main2|aria|enabled|textStyle|6f6f6f|fontSize|lineHeight|||||tooltip|position||animation|grid|72|80|left|48|xAxis|hr|yAxis|40|min|calculable|orient|vertical|45|bottom|7E6E68|907D76|A99792|BBACA9|D0C8C7|heatmap|label|normal|formatter|void|rich|E3DCD3|811C21|B56666|emphasis|itemStyle|shadowBlur|shadowColor|rgba|button|window|keypress|which|toString|table_timeselectStart|table_timeselectStop|JSON|stringify|POST|contentType|application|charset|utf|Math|map|text|console|log|web_data_initial||GET|setting_first_alarm_temperature|setting_second_alarm_temperature|1440|for|getHours|tr|parseInt|attr|index|isNaN|clearInterval|table2|bootstrapTable|getRowByUniqueId'[_0x357559(0x1ad)]('|'),0x0,{})));
+const url = 'http://127.0.0.1:5000/api/analysis/refresh'
+var myChart = echarts.init(document.getElementById('main2'));
+// prettier-ignore
+// (x, y , 0:沒事 1:有事, 拉了幾桶(3桶/hr))
+var Interval = null
+option = {
+    aria: {
+        enabled: true
+    },
+    title: {
+        textStyle: {
+            color: '#6f6f6f',
+            fontSize: 12,
+            lineHeight: 50,
+        },
+        x: 'right'
+    },
+    tooltip: {
+        position: 'top'
+    },
+    animation: false,
+    grid: {
+        height: '72%',
+        top: '20%',
+        width: '80%',
+        // width: '91%',
+        left: '48',
+    },
+    xAxis: {
+        type: 'category',
+        name: '(hr)',
+        data: ['0', '1', '2', '3', '4', '5', '6',
+            '7', '8', '9', '10', '11',
+            '12', '13', '14', '15', '16', '17',
+            '18', '19', '20', '21', '22', '23'
+        ],
+        splitArea: {
+            show: true
+        }
+    },
+
+    yAxis: {
+        type: 'category',
+        data: [0, 10, 20, 30, 40, 50],
+        name: '(m)',
+        splitArea: {
+            show: true,
+        },
+    },
+    visualMap: {
+        show: true,
+        min: 0,
+        // max: 5,
+        calculable: true,
+        // orient: 'horizontal',
+        orient: 'vertical',
+        top: '45',
+        right: '30',
+        bottom: '15%',
+        color: ['#7E6E68', '#907D76', '#A99792', '#BBACA9', '#D0C8C7']
+    },
+    series: [{
+        name: '',
+        type: 'heatmap',
+        label: {
+            show: true,
+            normal: {
+                show: true,
+                formatter: function (params) {
+                    if (params.data['2'] == 0) {
+                        return '{a|' + params.data['3'] + '}';
+                    } else if (params.data['2'] == 1) {
+                        return '{b|' + params.data['3'] + '}';
+                    } else if (params.data['2'] == 2) {
+                        return '{c|' + params.data['3'] + '}';
+                    }
+                },
+                rich: {
+                    a: {
+                        //  backgroundColor:'#fff',
+                        color: '#E3DCD3'
+                    },
+                    b: {
+                        backgroundColor: '#811C21',
+                        height: '26',
+                        width: '3',
+                        shadowOffsetY: '0',
+                        shadowOffsetX: '0',
+                        align: 'center',
+                    },
+                    c: {
+                        backgroundColor: '#B56666',
+                        height: '26',
+                        width: '3',
+                        shadowOffsetY: '0',
+                        shadowOffsetX: '0',
+                        align: 'center',
+                    },
+                }
+            }
+        },
+        emphasis: {
+            itemStyle: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+        }
+    }]
+};
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+//初始化資料報表
+
+$('.table-responsive').on('click', 'button', function () {
+    if (this.name === "refresh") {
+        // getData(url)
+    }
+})
+$(window).keypress(function (event) {
+    if (event.which === 13) {
+        getData(url)
+    }
+})
+getData(url)
+// 判斷表單點到的日期
+var clickSum = null;
+$('.table-responsive').on('click', 'tr', function () {
+    var id = parseInt($(this).attr("data-index")) + 1
+    if (!isNaN(id)) { // 判斷id是否有數字
+
+        if (clickSum !== id) { // 判斷是否點擊同一列
+            if (Interval !== null) {
+                clearInterval(Interval)
+            }
+            const data = $('#table2').bootstrapTable(
+                'getRowByUniqueId',
+                id)
+            var clickdata = new Date(data.table_start)
+            getData(url, clickdata)
+        }
+    }
+    clickSum = id
+})
+
+function getData(url, clickdata) {
+    // var date_range = $('#date_range').val();
+    // console.log(date_range)
+    // console.log($('input[name="dates"]').data('daterangepicker').endDate)
+    if (clickdata != undefined) {
+        // console.log(clickdata)
+        var date = new Date(clickdata)
+    } else {
+        var date = new Date()
+    }
+    var time = date.getFullYear() +
+        "-" +
+        (date.getMonth() + 1).toString().padStart(2, '0') +
+        "-" +
+        date.getDate().toString().padStart(2, '0')
+    var range = {
+        "table_timeselectStart": time + " 00:00:00",
+        "table_timeselectStop": time + " 23:59:59"
+    }
+    // console.log(range)
+
+    range = JSON.stringify(range)
+    $.ajax({
+        url: url,
+        method: 'POST',
+        data: range,
+        dataType: "json",
+        contentType: 'application/json; charset=utf-8',
+        success: function (data) {
+            var data = listinterval(data, clickdata)
+            // 判斷時段中拉起桶數的最大值
+            var max = []
+            data.forEach(function (item) {
+                max.push(item[3])
+            })
+            max = Math.max(...max)
+            // 判斷時段中拉起桶數的最大值 end
+            data = data.map(function (item) {
+                return [item[0], item[1], item[2], item[3]];
+            })
+            myChart.setOption({
+                visualMap: {
+                    max: max
+                },
+                title: {
+                    text: '統計日期:' + time,
+                },
+                series: [{
+                    name: '',
+                    data: data,
+                }]
+            });
+        },
+        error: function (err) {
+            console.log(err)
+        },
+    })
+}
+// -------時間計算器
+// setInterval(function () {
+// 	jQuery.ajax({
+// 		url: '/list',
+// 		method: 'GET',
+// 		dataType: "json",
+// 		success: function (res) {
+// 			var data = listinterval(res)
+// 			data = data.map(function (item) {
+// 				return [item[0], item[1], item[2], item[3]];
+// 			})
+// 			myChart.setOption({
+// 				series: [{
+// 					name: '',
+// 					data: data,
+// 				}]
+// 			});
+// 		},
+// 		error: function (err) {
+// 			console.log(err)
+// 		},
+// 	})
+// }, 500)
+// 時間篩選
+function listinterval(res, clickdata) {
+    // 撈取警報溫度
+    var f_tr = null;
+    var s_tr = null;
+    $.ajax({
+        url: 'http://localhost:5000/api/data/normal',
+        dataType: "json",
+        method: 'GET',
+        async: false, // 關閉非同步作業
+        success: function (res) {
+            f_tr = res.setting_first_alarm_temperature
+            s_tr = res.setting_second_alarm_temperature
+        },
+        error: function (err) {}
+    })
+
+    // 宣告陣列
+    var output = []
+    // 取得今天日期
+    if (clickdata != undefined) {
+        // console.log(clickdata)
+        var NowDate = new Date(clickdata)
+    } else {
+        var NowDate = new Date()
+    }
+    var NYear = NowDate.getFullYear()
+    var NMonth = NowDate.getMonth()
+    var NDate = NowDate.getDate()
+
+    // 設定間隔時間(設定範圍1~60，並且可除盡60)
+    var interval = 10
+    // 判斷interval 是否為合理範圍，否則將強制變動
+    if (interval === 0) {
+        interval = 1
+    } else if (interval > 60) {
+        interval = 60
+    }
+    // 計算間隔時間
+    setinterval = (1440 / interval) + 1
+    // 指標時間變數
+    var lastTime = null
+    var NewMin = null
+
+    // 間隔十分鐘
+    for (var i = 1; i < setinterval; i++) {
+        // 宣告日期
+        var today = new Date(NYear, NMonth, NDate)
+        var today1 = new Date(NYear, NMonth, NDate)
+        // 判斷初始，存入起始時間
+        if (i == 1) {
+            lastTime = new Date(today)
+        } else {
+            lastTime = new Date(lastTime)
+            lastTime = today1.setMinutes(today1.getMinutes() + ((i - 1) * interval))
+            lastTime = new Date(lastTime)
+        }
+        // 結束時間
+        NewTime = today.setMinutes(today.getMinutes() + (i * interval))
+        NewTime = new Date(NewTime)
+        // 判斷時間
+        var timeSum = 0;
+        var Hours = lastTime.getHours();
+        var Minutes = lastTime.getMinutes();
+        var status = 0
+        res.forEach(function (item) {
+            var listTime = new Date(item.table_start)
+            // 判斷間隔時間如果符合，就在此區段增加統計數
+            if (listTime > lastTime && listTime < NewTime) {
+                // 此區段如果有任何一桶有問題，則將狀態變更為1
+                if (item.table_maxTempLF > f_tr && item.table_maxTempLF < s_tr || item.table_maxTempSTAIR >
+                    f_tr &&
+                    item.table_maxTempSTAIR < s_tr || item.table_maxTempLD >
+                    f_tr && item.table_maxTempLD < s_tr) {
+                    status = 1
+                } else if (item.table_maxTempLF >= s_tr || item.table_maxTempSTAIR >= s_tr || item
+                    .table_maxTempLD >=
+                    s_tr) {
+                    status = 2
+                }
+                timeSum++
+            }
+        })
+        // 將區段統計結果新增到陣列中
+        array = [Hours, (Minutes / 10), status, timeSum]
+        output.push(array)
+    }
+    // 印出陣列
+    return output
+}
