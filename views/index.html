@@ -710,18 +710,15 @@
       var Tmin = 0
       var gettemplate = setInterval(() => {
         var Tmax1 = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
-        if (isNaN(Tmax1)) {
-          console.log("Not a Number");
-        } else {
+        if (!isNaN(Tmax1)) {
           Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
           Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
-          console.log(Tmax, Tmin)
+          // console.log(Tmax, Tmin)
           patterns()
           clearInterval(gettemplate)
         }
-
       })
-
+      var videoUrl = null
       var ex = 0
       var ey = 0
       var ew = 0
@@ -750,7 +747,7 @@
           p.height = this.height
           pctx.drawImage(img, 0, 0, this.width, this.height)
 
-          console.log(Tmax, Tmin)
+          // console.log(Tmax, Tmin)
           var tp = []
           for (var i = 0; i < this.height; i++) {
             var ex = true
@@ -925,7 +922,8 @@
         playstatus = true
         var videoValue = $(this).val();
         VideoTemp = videoValue
-        blobVideo(videoValue)
+        videoUrl = videoValue
+        blobVideo()
         // videok.src = videoValue
         // videok.addEventListener('loadedmetadata', function (e) {
         //   imagek.width(953);
@@ -944,7 +942,7 @@
         // document.getElementById("videoSelect").selectedIndex = 0;
         // document.getElementById('videoSelect').value = tempvideourl;
         status = true;
-        console.log('auto')
+        // console.log('auto')
         window.location.reload();
       });
       var run = null;
@@ -996,7 +994,9 @@
                   // videoL.play();
                   document.getElementById("videoSelect").selectedIndex = 0;
                   tempvideourl = config.web_video_url_prefix + data
-                  blobVideo(config.web_video_url_prefix + data)
+                  videoUrl = config.web_video_url_prefix + data
+                  blobVideo()
+                  // blobVideo('http://127.0.0.1:5000/download/20220501_T155224.mp4')
                   // videok.src = config.web_video_url_prefix + data
                   // videok.addEventListener('loadedmetadata', function (e) {
                   //   imagek.width(953);
@@ -1107,7 +1107,7 @@
         // console.log(ctx1)
       }
       // 影片本地化
-      function blobVideo(url) {
+      function blobVideo() {
         // console.log(url);
         // $('.video-loading>div').html('影像載入中...')
         // $('.video-loading').css('opacity', 1)
@@ -1115,20 +1115,27 @@
         // $('.video-loading-bg').css('width', '75%')
         // var video = document.getElementById("videoList")
         var req = new XMLHttpRequest();
-        req.open('GET', url, true);
+        req.open('GET', videoUrl, true);
         req.responseType = 'blob';
         req.onload = function () {
           if (this.status === 200) {
             var videoBlob = this.response;
-            // console.log(videoBlob)
-            var vid = URL.createObjectURL(videoBlob);
-            console.log(vid)
-            videok.src = vid
-            videok.addEventListener('loadedmetadata', function (e) {
-              imagek.width(953);
-              imagek.height(245);
-            });
-            videok.play();
+            if (videoBlob.type === 'video/mp4') {
+              console.log(videoBlob.type)
+              var vid = URL.createObjectURL(videoBlob);
+              // console.log(vid)
+              videok.src = vid
+              videok.addEventListener('loadedmetadata', function (e) {
+                imagek.width(953);
+                imagek.height(245);
+              });
+              videok.play();
+            } else {
+              console.log('非影片類型，重新呼叫影片...')
+              setTimeout(() => {
+                blobVideo()
+              }, 3000)
+            }
             // if (videoBlob.type === 'text/html') {
             //   $('.video-loading-bg').css('width', '100%')
             //   $('.video-loading>div').html('該區段並無找到錄製影像')
@@ -1146,6 +1153,10 @@
           }
         }
         req.onerror = function () {
+          console.log('網址無法呼叫')
+          setTimeout(() => {
+            blobVideo()
+          }, 3000)
           // Error
         }
         req.send();
@@ -1197,8 +1208,28 @@
   </script>
   <script type="text/javascript">
     window.onload = function () {
+      var config = getConfig();
 
+      function getConfig() {
+        var rtn;
+        $.ajax({
+          url: '/config',
+          type: 'get',
+          async: false,
+          success: function (res) {
+            rtn = res;
+          },
+          error: function (res) {
+            rtn = false;
+          }
+        });
+        return rtn;
+      }
       connect()
+      var ex = 0
+      var ey = 0
+      var ew = 0
+      var eh = 0
       var se = true
       var fps1 = 0
       var nowdate = null
@@ -1218,7 +1249,7 @@
       // var prevList = []
       imageModel.addEventListener('change', (event) => {
         imageModelvalue = event.target.value
-        console.log(event.target.value)
+        // console.log(event.target.value)
         patterns()
       });
       // setInterval(() => {
@@ -1236,6 +1267,19 @@
       // save color bar 
       var patternsmetadata = []
       // 判斷溫度條
+      var Tmax = 0
+      var Tmin = 0
+      var gettemplate = setInterval(() => {
+        var Tmax1 = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
+        if (!isNaN(Tmax1)) {
+          Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
+          Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
+          // console.log(Tmax, Tmin)
+          patterns()
+          clearInterval(gettemplate)
+        }
+      })
+
       function patterns() {
         var patternsData = []
         var patternsTemp = []
@@ -1251,14 +1295,14 @@
         } else if (imageModelvalue === '4') {
           img.src = '/static/pattern_resize/rainbow_HC.png'
         }
-        console.log(img.src)
+        // console.log(img.src)
         // img.src = '/pattern_resize/testbar.png'
         img.onload = function () {
           p.width = this.width
           p.height = this.height
           pctx.drawImage(img, 0, 0, this.width, this.height)
-          var Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
-          var Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
+          // var Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
+          // var Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
           // console.log(parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value))
           var tp = []
           for (var i = 0; i < this.height; i++) {
@@ -1299,27 +1343,28 @@
           // console.log(patternsData)
           patternsmetadata = patternsData
         }
-        console.log(patternsmetadata)
+        // console.log(patternsmetadata)
       }
 
       function connect() {
         const rtsperror1 = document.getElementById('rtsp-error01')
         const rtsperror2 = document.getElementById('rtsp-error02')
         const rtsperror3 = document.getElementById('rtsp-error03')
-        console.log('連線中')
+        console.log('正在建立與後台之間的連線協定...')
         // var ws = new WebSocket("ws://127.0.0.1:8765");
-        var ws = new WebSocket("ws://192.168.0.173:6188/server1");
+        var ws = new WebSocket(config.web_socket_url);
         ws.onopen = () => {
-          console.log('連線成功')
+          console.log('與後台之間的連線協定建立成功!')
+          console.log('功能運作正常!!!')
         }
 
         ws.onclose = () => {
-          console.log('連線中斷')
+          console.log('與後台中斷連線...')
           rtsperror1.style.opacity = 1
           rtsperror2.style.opacity = 1
           rtsperror3.style.opacity = 1
           setTimeout(() => {
-            console.log('重新連線')
+            console.log('正在嘗試與後台重新建立連線中....')
             connect()
           }, 1000);
         }
@@ -1434,21 +1479,39 @@
         var ctx1 = canvas1.getContext('2d')
         var anim = new Konva.Animation(function () {
           // console.log('ok')
+          judegTemperature()
         }, layer);
         anim.start();
+
         stage.on('mousemove', (e) => {
-          // circle.visible(true)
+          ex = e.evt.layerX
+          ey = e.evt.layerY
+          ew = e.target.width()
+          eh = e.target.height()
           simpleText.visible(true)
+        });
+        stage.on('mouseout', (e) => {
+          // circle.visible(false)
+          simpleText.visible(false)
+          // setTimeout(() => {
+          // console.log('滑鼠離開');
+          // }, 3000)
+        });
+        layer.add(circle);
+        layer.add(simpleText);
+        stage.add(layer);
+
+        function judegTemperature() {
           var IM = imageModelvalue
           // 1 = 彩虹(rainbow) 2 = 熔岩(lava) 3 = 灰階(grayscale) 4 = 影像(rainbow_HC)
-          if (e.evt.layerY < 50) {
+          if (ey < 50) {
             simpleText.offsetY(-12)
             circle.offsetY(-20)
           } else {
             simpleText.offsetY(28)
             circle.offsetY(20)
           }
-          var endw = e.evt.layerX / width * 100
+          var endw = ex / width * 100
           if (endw > 90) {
             simpleText.offsetX(35)
             circle.offsetX(20)
@@ -1457,12 +1520,12 @@
             circle.offsetX(-26)
           }
           // if (e.evt.layerX < 800) {}
-          pointX = e.evt.layerX / width
-          pointY = e.evt.layerY / height
-          circle.x(e.evt.layerX)
-          circle.y(e.evt.layerY)
-          simpleText.x(e.evt.layerX)
-          simpleText.y(e.evt.layerY)
+          pointX = ex / width
+          pointY = ey / height
+          circle.x(ex)
+          circle.y(ey)
+          simpleText.x(ex)
+          simpleText.y(ey)
 
           // console.log(imgw,imgh)
           var ecolor = getPixelColor(imgw * pointX, imgh * pointY, ctx1)
@@ -1518,7 +1581,7 @@
                 end = end + 1
               }
             } else if (IM === '3') {
-              console.log('ok')
+              // console.log('ok')
               if (index.R >= rgb[0]) {
                 status = true
               }
@@ -1549,7 +1612,7 @@
             var Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value) - 20
             var Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
 
-            console.log(Tmax, Tmin)
+            // console.log(Tmax, Tmin)
             var temperature1 = temp.temperature.toFixed(0)
             // var temperature1 = 480
             if (temperature1 <= Tmin) {
@@ -1561,19 +1624,11 @@
             }
             simpleText.text(`${temperature1}°C`)
           }
-        });
-        stage.on('mouseout', (e) => {
-          // circle.visible(false)
-          simpleText.visible(false)
-          // setTimeout(() => {
-          console.log('滑鼠離開');
-          // }, 3000)
-        });
-        layer.add(circle);
-        layer.add(simpleText);
-        stage.add(layer);
+        }
         return stage;
       }
+
+
 
       function getPixelColor(x, y, ctxdata) {
         var pxData = ctxdata.getImageData(x, y, 1, 1)
@@ -1696,7 +1751,7 @@
           })
         }
         stay01++
-        console.log(stay01)
+        // console.log(stay01)
       }, 1000)
 
       socket1.on("disconnect", (reason) => {
@@ -1884,7 +1939,7 @@
               dataType: 'json',
               contentType: 'application/json; charset=utf-8',
               success: function (response) {
-                console.log(response)
+                // console.log(response)
                 if (response.setting_atmospheric_temperature) {
                   toast2.hide()
                   setTimeout(function () {
@@ -1979,7 +2034,7 @@
         // 量測範圍
         var setting_colorbar_min = $(".setting_colorbar_min");
         var setting_colorbar_max = $(".setting_colorbar_max");
-        console.log(setting_colorbar_min + "," + setting_colorbar_max)
+        // console.log(setting_colorbar_min + "," + setting_colorbar_max)
         if (parseFloat(setting_colorbar_min.val()) > parseFloat(setting_colorbar_max.val())) {
           setting_colorbar_min.addClass("is-error")
           setting_colorbar_max.addClass("is-error")
