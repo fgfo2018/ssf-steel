@@ -24,10 +24,10 @@
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="https://kit.fontawesome.com/a04ef755a4.js" crossorigin="anonymous"></script>
 	<!-- BS Table -->
 	<script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
@@ -191,10 +191,38 @@
 		</div>
 	</div>
 	<div class="position-fixed bottom-0 end-0 p-3 dataScraping-message" style="z-index: 11">
-		
+
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9999999999;">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">確認刪除?</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					此操作將<b>永久刪除</b>下列檔案:<br />
+					1. <b><span class="videotimename"></span>.mp4</b>
+					<br />
+					2. <b><span class="videotimename1"></span>時段相關資料</b>
+					<br /><br />
+					<b>請注意該動作無法回復，請謹慎操作</b>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" id="btnDeleteVidoeclo">取消</button>
+					<button type="button" class="btn btn-danger" id="btnDeleteVidoe"><span></span> 刪除</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript">
 		var toastLiveExample001 = document.getElementById("liveToast");
+		// var myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+		// setTimeout(()=>{
+		// 	console.log('open')
+		// 	myModal.show()
+		// },1000)
 	</script>
 	<script src="./js/dataScraping.js"></script>
 	<script src="./js/myChart.js"></script>

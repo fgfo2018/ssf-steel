@@ -21,5 +21,14 @@
     "web_dataScraping_refresh": "http://127.0.0.1:5000/api/analysis/refresh",
     "web_dataScraping_setnumber": "http://127.0.0.1:5000/api/analysis/setnumber",
     "web_dataScraping_download": "http://127.0.0.1:5000/download/",
-    "web_socket_url": "ws://192.168.0.173:6188/server1"
+    "web_socket_url": "ws://192.168.0.173:6188/server1",
+    "DetectionFrameInit":"http://127.0.0.1:5000/api/DetectionFrame/initial",
+    "DetectionFramechange": "http://127.0.0.1:5000/api/DetectionFrame/change",
+    "DOchange": "http://127.0.0.1:5000/api/DO/change",
+    "apiDataChanged":"http://127.0.0.1:5000/api/data/changed",
+    "analysisSetnumber":"http://127.0.0.1:5000/api/analysis/setnumber",
+    "dataNormal":"http://127.0.0.1:5000/api/data/normal",
+    "apiDeleteVideo":"http://127.0.0.1:5000/api/Delete/video",
+    "manualVideo":"http://127.0.0.1:5000/api/manual/video",
+    "manualSnapshot":"http://127.0.0.1:5000/api/manual/snapshot"
 }

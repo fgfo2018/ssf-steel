@@ -94,7 +94,7 @@
   </nav> -->
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark  bg-gradient px-3" style="background-color: #262626;">
-    <div class="container-fluid" style="">
+    <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a href="index.html" class="nav-link">即時監控</a>
@@ -141,6 +141,7 @@
             <div class="position-relative">
               <div class="konvaCavnas" id="konvaCavnas1"></div>
               <!-- <img src="static/loading.png" id="rtsp_image01" class="imgCenter" alt="..." /> -->
+              <div class="spanshot-event"></div>
               <div class="ui-skeleton-loaders" id="ui-skeleton-loaders"></div>
               <canvas class="canvas-rtsp" id="rtsp_image01"></canvas>
               <div id="rtsp-error01">
@@ -172,6 +173,7 @@
             <div class="position-relative">
               <div class="konvaCavnas" id="konvaCavnas2"></div>
               <!-- <img src="static/loading.png" id="rtsp_image02" class="imgCenter" alt="..." /> -->
+              <div class="spanshot-event"></div>
               <div class="ui-skeleton-loaders" id="ui-skeleton-loaders"></div>
               <canvas class="canvas-rtsp" id="rtsp_image02"></canvas>
               <div id="rtsp-error02">
@@ -202,6 +204,7 @@
               <div class="konvaCavnas" id="konvaCavnas3"></div>
               <!-- <img src="static/loading.png" id="rtsp_image03" class="imgCenter"
                 alt="..." /> -->
+              <div class="spanshot-event"></div>
               <div class="ui-skeleton-loaders" id="ui-skeleton-loaders"></div>
               <canvas class="canvas-rtsp" id="rtsp_image03"></canvas>
               <div id="rtsp-error03">
@@ -216,7 +219,7 @@
   </div>
   <!-- nested grid -->
   <div class="container-fluid mt-3">
-    <div class="row ">
+    <div class="row">
       <div class="col-md-6">
         <!-- 下1---------------------------------------------------------------------------------------------- -->
         <div class="card shadow" style="width:955px;height:316px;">
@@ -264,232 +267,184 @@
             <!-- <video id="videoList" loop controls muted preload src="static/mock_vod/.mp4" class="video imgCenter">
             </video> -->
             <!-- <button id="play">Play</button> -->
+            <div id="videoListKonvaloading"></div>
             <div id="videoListKonva"></div>
+
 
           </div>
         </div>
       </div>
-      <div class="col-md-2 ">
-        <!-- 下2---------------------------------------------------------------------------------------------- -->
-        <div class="card shadow subtitle" style="width:226px;height:200px;left:12px">
-          <div class="card-header title py-1">
-            系統狀態
-          </div>
-          <form class="form-system_status">
-            <div class="card-body py-1 ">
-
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label class="col-form-label subtitle py-0">相機連線狀態:</label>
-                </div>
-                <div class="col-auto">
-                </div>
-              </div>
-
-              <ul class="py-0 m-0">
-                <div class="row g-3 align-items-center py-0">
-                  <div class="col-auto ">
-                    <li><label class="col-form-label subtitle py-0">L/F副料區:</label></li>
-                  </div>
-                  <div class="col-auto">
-                    <input id="number" name="status_LF" type="" disabled value="" class="subtitle text-center status_LF"
-                      style="width:56px;margin-left:31px;height:21px;border: 1px solid gainsboro;">
-                  </div>
-                </div>
-
-                <div class="row g-3 align-items-center">
-                  <div class="col-auto">
-                    <li><label class="col-form-label subtitle py-0">出鋼室下方樓梯:</label></li>
-                  </div>
-                  <div class="col-auto">
-                    <input id="number" name="status_STAIR" type="" disabled value=""
-                      class="subtitle text-center status_STAIR"
-                      style="width:56px;margin-left:px;height:21px;border: 1px solid gainsboro;">
-                  </div>
-                </div>
-
-                <div class="row g-3 align-items-center">
-                  <div class="col-auto">
-                    <li><label class="col-form-label subtitle py-0">L/D 2F平台:</label></li>
-                  </div>
-                  <div class="col-auto">
-                    <input id="number" name="status_LD" type="" disabled value="" class="subtitle text-center status_LD"
-                      style="width:56px;margin-left:24px;height:21px;border: 1px solid gainsboro;">
-                  </div>
-                </div>
-              </ul>
-
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label class="col-form-label subtitle py-0">錄影狀態:</label>
-                </div>
-                <div class="col-auto">
-                  <input id="number" name="status_recording" type="" disabled value=""
-                    class="subtitle text-center status_recording"
-                    style="width:56px;margin-left:68px;height:21px;border: 1px solid gainsboro;">
-                </div>
-              </div>
-
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label class="col-form-label subtitle py-0">硬碟剩餘容量 (%):</label>
-                </div>
-                <div class="col-auto">
-                  <input id="number" name="status_available_space" type="" disabled value=""
-                    class="subtitle text-center judge status_available_space"
-                    style="width:56px;margin-left:23px;height:21px;border: 1px solid gainsboro;">
-                </div>
-              </div>
+      <div class="col-md-6">
+        <!-- 系統 / 量測 / 顯示 / 監測 -->
+        <div class="right-bottom-grid-area1">
+          <!-- 系統狀態 -->
+          <div class="card shadow subtitle" style="width:226px">
+            <div class="card-header title py-1">
+              系統狀態
             </div>
-            <button type="submit" hidden>get</button>
-          </form>
-        </div>
+            <form class="form-system_status">
+              <div class="card-body py-1 ">
 
-
-
-        <div class="row">
-          <div class="col-md-12 mt-3">
-            <form class="form-temperature_status">
-              <!-- 下3---------------------------------------------------------------------------------------- -->
-              <div class="card shadow subtitle" style="width:226px;left:12px">
-                <div class="card-header title py-1">
-                  熱像儀主機溫度
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle py-0">相機連線狀態:</label>
+                  </div>
+                  <div class="col-auto">
+                  </div>
                 </div>
-                <div class="card-body py-1">
-                  <div class="row g-3 align-items-center">
-                    <div class="col-8">
-                      <label class="col-form-label subtitle py-0">L/F副料區 (°C)</label>
+
+                <ul class="py-0 m-0">
+                  <div class="row g-3 align-items-center py-0">
+                    <div class="col-auto ">
+                      <li><label class="col-form-label subtitle py-0">L/F副料區:</label></li>
                     </div>
-                    <div class="col-4">
-                      <input id="number" name="temperature_LF" type="" disabled value=""
-                        class="subtitle text-center judge temperature_LF"
-                        style="width:56px;height:21px;border: 1px solid gainsboro;">
-                    </div>
-                  </div>
-                  <div class="row g-3 align-items-center">
-                    <div class="col-8">
-                      <label class="col-form-label subtitle py-0">出鋼室下方樓梯 (°C)</label>
-                    </div>
-                    <div class="col-4">
-                      <input id="number" name="temperature_STAIR" type="" disabled value=""
-                        class="subtitle text-center judge temperature_STAIR"
-                        style="width:56px;height:21px;border: 1px solid gainsboro;">
+                    <div class="col-auto">
+                      <input id="number" name="status_LF" type="" disabled value=""
+                        class="subtitle text-center status_LF"
+                        style="width:56px;margin-left:31px;height:21px;border: 1px solid gainsboro;">
                     </div>
                   </div>
+
                   <div class="row g-3 align-items-center">
-                    <div class="col-8">
-                      <label class="col-form-label subtitle py-0">L/D 2F平台 (°C)</label>
+                    <div class="col-auto">
+                      <li><label class="col-form-label subtitle py-0">出鋼室下方樓梯:</label></li>
                     </div>
-                    <div class="col-4">
-                      <input id="number" name="temperature_LD" type="" disabled value=""
-                        class="subtitle text-center judge temperature_LD"
-                        style="width:56px;height:21px;border: 1px solid gainsboro;">
+                    <div class="col-auto">
+                      <input id="number" name="status_STAIR" type="" disabled value=""
+                        class="subtitle text-center status_STAIR"
+                        style="width:56px;margin-left:px;height:21px;border: 1px solid gainsboro;">
                     </div>
+                  </div>
+
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <li><label class="col-form-label subtitle py-0">L/D 2F平台:</label></li>
+                    </div>
+                    <div class="col-auto">
+                      <input id="number" name="status_LD" type="" disabled value=""
+                        class="subtitle text-center status_LD"
+                        style="width:56px;margin-left:24px;height:21px;border: 1px solid gainsboro;">
+                    </div>
+                  </div>
+                </ul>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle py-0">自動錄影狀態:</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="status_recording" type="" disabled value=""
+                      class="subtitle text-center status_recording"
+                      style="width:56px;margin-left:44px;height:21px;border: 1px solid gainsboro;">
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle py-0">硬碟剩餘容量 (%):</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="status_available_space" type="" disabled value=""
+                      class="subtitle text-center judge status_available_space"
+                      style="width:56px;margin-left:23px;height:21px;border: 1px solid gainsboro;">
                   </div>
                 </div>
               </div>
               <button type="submit" hidden>get</button>
             </form>
           </div>
-        </div>
-      </div>
 
+          <!-- 量測參數設定 -->
+          <div class="card shadow subtitle" style="width:290px;right:64px;height:200px;">
+            <div class="card-header title py-1">
+              量測參數設定
+            </div>
+            <form class="form-temperature_setting">
+              <div class="card-body py-1">
 
-      <div class="col-md-4">
-        <div class="row">
-          <div class=" col-md-5">
-            <!-- 下4------------------------------------------------------------------------------------------ -->
-            <div class="card shadow subtitle" style="width:290px;right:64px;height:200px;">
-              <div class="card-header title py-1">
-                量測參數設定
-              </div>
-              <form class="form-temperature_setting">
-                <div class="card-body py-1">
-
-                  <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                      <label class="col-form-label subtitle py-0">Reflected Temperature (°C)</label>
-                    </div>
-                    <div class="col-auto">
-                      <input id="number" name="setting_reflected_temperature" type="number" value="" step="0.1" min="0"
-                        max="1000" class="subtitle setting_reflected_temperature"
-                        style="width:56px;margin-left:27.5px;height:21px;border: 1px solid gainsboro;" required>
-                    </div>
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle py-0">Reflected Temperature (°C)</label>
                   </div>
-
-                  <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                      <label class="col-form-label subtitle p-0">Atmospheric Temperature (°C)</label>
-                    </div>
-                    <div class="col-auto">
-                      <input id="number" name="setting_atmospheric_temperature" type="number" value="" step="0.1"
-                        min="0" max="1000" class="subtitle setting_atmospheric_temperature"
-                        style="width:56px;margin-left:8px;height:21px;border: 1px solid gainsboro;" required>
-                    </div>
-                  </div>
-
-                  <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                      <label class="col-form-label subtitle p-0">Object Distance (m)</label>
-                    </div>
-                    <div class="col-auto">
-                      <input id="number" name="setting_object_distance" type="number" value="" step="0.1" min="0"
-                        max="25" class="subtitle setting_object_distance"
-                        style="width:56px;margin-left:67px;height:21px;border: 1px solid gainsboro;" required>
-                    </div>
-                  </div>
-
-                  <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                      <label class="col-form-label subtitle p-0">Object Emissivity (%)</label>
-                    </div>
-                    <div class="col-auto">
-                      <input id="number" name="setting_object_emissivity" type="number" value="" step="0.01" min="0"
-                        max="1" class="subtitle setting_object_emissivity"
-                        style="width:56px;margin-left:61.5px;height:21px;border: 1px solid gainsboro;" required>
-                    </div>
-                  </div>
-
-                  <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                      <label class="col-form-label subtitle p-0">Relative Humidity (%)</label>
-                    </div>
-                    <div class="col-auto">
-                      <input id="number" name="setting_relative_humidity" type="number" value="" step="0.01" min="0"
-                        max="1" class="subtitle setting_relative_humidity"
-                        style="width:56px;margin-left:57.5px;height:21px;border: 1px solid gainsboro;" required>
-                    </div>
-                  </div>
-
-                  <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                      <label class="col-form-label subtitle p-0">Extenal Optics Temperature (°C)</label>
-                    </div>
-                    <div class="col-auto">
-                      <input id="number" name="setting_external_optics_temperature" type="number" value="" step="0.1"
-                        min="0" max="100" class="subtitle setting_external_optics_temperature"
-                        style="width:56px;margin-left:0px;height:21px;border: 1px solid gainsboro;" required>
-                    </div>
-                  </div>
-
-                  <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                      <label class="col-form-label subtitle p-0">External Optics Transmission (%)</label>
-                    </div>
-                    <div class="col-auto">
-                      <input id="number" name="setting_external_optics_transmission" type="number" value="" step="0.01"
-                        min="0" max="1" class="subtitle setting_external_optics_transmission"
-                        style="width:56px;height:21px;margin-left:-3px;border: 1px solid gainsboro;" required>
-                    </div>
+                  <div class="col-auto">
+                    <input id="number" name="setting_reflected_temperature" type="number" value="" step="0.1" min="0"
+                      max="1000" class="subtitle setting_reflected_temperature"
+                      style="width:56px;margin-left:27.5px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
-                <button type="submit" hidden>get</button>
-              </form>
-            </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle p-0">Atmospheric Temperature (°C)</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="setting_atmospheric_temperature" type="number" value="" step="0.1" min="0"
+                      max="1000" class="subtitle setting_atmospheric_temperature"
+                      style="width:56px;margin-left:8px;height:21px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle p-0">Object Distance (m)</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="setting_object_distance" type="number" value="" step="0.1" min="0" max="25"
+                      class="subtitle setting_object_distance"
+                      style="width:56px;margin-left:67px;height:21px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle p-0">Object Emissivity (%)</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="setting_object_emissivity" type="number" value="" step="0.01" min="0"
+                      max="1" class="subtitle setting_object_emissivity"
+                      style="width:56px;margin-left:61.5px;height:21px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle p-0">Relative Humidity (%)</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="setting_relative_humidity" type="number" value="" step="0.01" min="0"
+                      max="1" class="subtitle setting_relative_humidity"
+                      style="width:56px;margin-left:57.5px;height:21px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle p-0">Extenal Optics Temperature (°C)</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="setting_external_optics_temperature" type="number" value="" step="0.1"
+                      min="0" max="100" class="subtitle setting_external_optics_temperature"
+                      style="width:56px;margin-left:0px;height:21px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="col-form-label subtitle p-0">External Optics Transmission (%)</label>
+                  </div>
+                  <div class="col-auto">
+                    <input id="number" name="setting_external_optics_transmission" type="number" value="" step="0.01"
+                      min="0" max="1" class="subtitle setting_external_optics_transmission"
+                      style="width:56px;height:21px;margin-left:-3px;border: 1px solid gainsboro;" required>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" hidden>get</button>
+            </form>
           </div>
-          <div class="col-md-7">
-            <!-- 下5------------------------------------------------------------------------------------------ -->
-            <div class="card shadow subtitle" style="width:373px;right:24px;">
+          <div class="right-bottom-grid-area2">
+            <!-- 顯示狀態設定 -->
+            <div class="card shadow subtitle" style="width:373px;">
               <div class="card-header title py-1">
                 顯示狀態設定
               </div>
@@ -548,63 +503,123 @@
                         id="setting_colorbar_max" required>
                     </div>
                     <div class="col-12 mt-1 text-danger setting_colorbar-visible-error d-none">
-                      # 量測範圍設定錯誤，格式: [測量最小值] < [測量最大值] </div> </div> </div> <button type="submit" hidden>get</button>
+                      # 量測範圍設定錯誤，格式: [測量最小值] < [測量最大值] </div>
+                    </div>
+                  </div> <button type="submit" hidden>get</button>
               </form>
             </div>
 
+            <!-- 監測設定 -->
+            <div class="card shadow subtitle" style="width:373px;">
+              <div class="card-header title py-1">
+                監測設定
+              </div>
+              <form class="form-alarm_temperature">
+                <div class="card-body py-1" style="margin-left: 3px;">
+                  <div class="row g-2">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">第一段警報溫度 (°C):</label>
+                      <input id="number" type="number" step="0.1" name="setting_first_alarm_temperature" value=""
+                        class="subtitle setting_first_alarm_temperature is-visible" style="width:56px;height:21px;"
+                        required>
+                    </div>
 
-            <div class="row">
-              <div class="col-md-12 mt-3">
-                <!-- 下6-------------------------------------------------------------------------------------- -->
-                <div class="card shadow subtitle" style="width:373px;right:24px;">
-                  <div class="card-header title py-1">
-                    監測設定
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">&nbsp&nbsp取樣率 (Hz):</label>
+                      <input id="number" type="number" step="0.1" name="setting_sampling_rate" value=""
+                        class="subtitle setting_sampling_rate"
+                        style="margin-left:23px; width:56px;height:21px;border: 1px solid gainsboro;" required>
+                    </div>
                   </div>
-                  <form class="form-alarm_temperature">
-                    <div class="card-body py-1" style="margin-left: 3px;">
-                      <div class="row g-2">
-                        <div class="col-auto">
-                          <label class="col-form-label subtitle p-0">第一段警報溫度 (°C):</label>
-                          <input id="number" type="number" step="0.1" name="setting_first_alarm_temperature" value=""
-                            class="subtitle setting_first_alarm_temperature is-visible" style="width:56px;height:21px;"
-                            required>
-                        </div>
-
-                        <div class="col-auto">
-                          <label class="col-form-label subtitle p-0">&nbsp&nbsp取樣率 (Hz):</label>
-                          <input id="number" type="number" step="0.1" name="setting_sampling_rate" value=""
-                            class="subtitle setting_sampling_rate"
-                            style="margin-left:23px; width:56px;height:21px;border: 1px solid gainsboro;" required>
-                        </div>
-                      </div>
 
 
-                      <div class="row g-2 align-items-center">
-                        <div class="col-auto">
-                          <label class="col-form-label subtitle p-0">第二段警報溫度 (°C):</label>
-                          <input id="number" type="number" step="0.1" value=""
-                            class="subtitle setting_second_alarm_temperature is-visible"
-                            name="setting_second_alarm_temperature" style="width:56px;height:21px;" required>
+                  <div class="row g-2 align-items-center">
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">第二段警報溫度 (°C):</label>
+                      <input id="number" type="number" step="0.1" value=""
+                        class="subtitle setting_second_alarm_temperature is-visible"
+                        name="setting_second_alarm_temperature" style="width:56px;height:21px;" required>
 
-                        </div>
-                        <div class="col-auto">
-                          <label class="col-form-label subtitle p-0">&nbsp&nbsp像素閥值 (pixel):</label>
-                          <input id="number" type="number" step="0.1" value="" class="subtitle setting_threshold_pixel"
-                            name="setting_threshold_pixel" style="width:56px;height:21px;border: 1px solid gainsboro;"
-                            required>
-                        </div>
-                        <div class="col-12 mt-1 text-danger alarm-visible-error d-none">
-                          # 警報溫度範圍設定錯誤，格式: [第一段警報溫度] < [第二段警報溫度] </div> </div> </div> <button type="submit" hidden>
-                            get</button>
-                  </form>
+                    </div>
+                    <div class="col-auto">
+                      <label class="col-form-label subtitle p-0">&nbsp&nbsp像素閥值 (pixel):</label>
+                      <input id="number" type="number" step="0.1" value="" class="subtitle setting_threshold_pixel"
+                        name="setting_threshold_pixel" style="width:56px;height:21px;border: 1px solid gainsboro;"
+                        required>
+                    </div>
+                    <div class="col-12 mt-1 text-danger alarm-visible-error d-none">
+                      # 警報溫度範圍設定錯誤，格式: [第一段警報溫度] < [第二段警報溫度] </div>
+                    </div>
+                  </div> <button type="submit" hidden>
+                    get</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <!-- 熱像儀溫度 / 手動操作 / 輸出設定 -->
+        <div class="right-bottom-grid-area3">
+          <!-- 熱像儀主機溫度 -->
+          <div>
+            <form class="form-temperature_status">
+              <div class="card shadow subtitle" style="width:226px;left:12px">
+                <div class="card-header title py-1">
+                  熱像儀主機溫度
                 </div>
+                <div class="card-body py-1">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-8">
+                      <label class="col-form-label subtitle py-0">L/F副料區 (°C)</label>
+                    </div>
+                    <div class="col-4">
+                      <input id="number" name="temperature_LF" type="" disabled value=""
+                        class="subtitle text-center judge temperature_LF"
+                        style="width:56px;height:21px;border: 1px solid gainsboro;">
+                    </div>
+                  </div>
+                  <div class="row g-3 align-items-center">
+                    <div class="col-8">
+                      <label class="col-form-label subtitle py-0">出鋼室下方樓梯 (°C)</label>
+                    </div>
+                    <div class="col-4">
+                      <input id="number" name="temperature_STAIR" type="" disabled value=""
+                        class="subtitle text-center judge temperature_STAIR"
+                        style="width:56px;height:21px;border: 1px solid gainsboro;">
+                    </div>
+                  </div>
+                  <div class="row g-3 align-items-center">
+                    <div class="col-8">
+                      <label class="col-form-label subtitle py-0">L/D 2F平台 (°C)</label>
+                    </div>
+                    <div class="col-4">
+                      <input id="number" name="temperature_LD" type="" disabled value=""
+                        class="subtitle text-center judge temperature_LD"
+                        style="width:56px;height:21px;border: 1px solid gainsboro;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" hidden>get</button>
+            </form>
+          </div>
+          <!-- 手動操作 -->
+          <div class="card shadow subtitle" style="width:100%;">
+            <div class="card-header title py-1">
+              手動操作
+            </div>
+            <div class="px-3 py-1 Manual-operation-crad">
+              <div class="Manual-operation-content">
+                <div class="record-txt">立即錄影</div>
+                <div class="">擷取畫面</div>
+              </div>
+              <div class="Manual-operation-content align-items-center">
+                <div class="record-start" id="record" data-id="0"></div>
+                <div class="record-snapshot"><img src="/static/photo-camera-interface-symbol-for-button.png" /></div>
               </div>
             </div>
           </div>
-        </div>
-        <div class=" col-md-12 demo-content text-black mt-3">
-          <!-- 下7-------------------------------------------------------------------------------------------- -->
-          <div class="card shadow subtitle" style="width:680px;right:64px">
+          <!-- 輸出設定 -->
+          <div class="card shadow subtitle" style="width: 517px; margin-left: 16px;">
             <div class="card-header title py-1">
               輸出設定
             </div>
@@ -617,7 +632,7 @@
                   <div class="col-auto">
                     <input id="" type="text" value="" class="subtitle setting_export_maximum_data"
                       name="setting_export_maximum_data"
-                      style="width:447px;margin-left:38px;height:21px;border: 1px solid gainsboro;" required>
+                      style="width:284px;margin-left:38px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
 
@@ -628,7 +643,7 @@
                   <div class="col-auto">
                     <input id="" type="text" value="" class="subtitle setting_export_image_video"
                       name="setting_export_image_video"
-                      style="width:447px;margin-left:30px;height:21px;border: 1px solid gainsboro;" required>
+                      style="width:284px;margin-left:30px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
 
@@ -639,7 +654,7 @@
                   <div class="col-auto">
                     <input id="" type="text" value="" class="subtitle setting_export_camera_temperature"
                       name="setting_export_camera_temperature"
-                      style="width:447px;margin-left:1px;height:21px;border: 1px solid gainsboro;" required>
+                      style="width:284px;margin-left:1px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
               </div>
@@ -649,6 +664,9 @@
         </div>
       </div>
     </div>
+
+  </div>
+  </div>
   </div>
   </div>
   </div>
@@ -699,6 +717,91 @@
   </div>
 
   <script type="text/javascript">
+    // 手動操作
+    // 錄影
+    var config = getConfig();
+    function getConfig() {
+        var rtn;
+        $.ajax({
+          url: '/config',
+          type: 'get',
+          async: false,
+          success: function (res) {
+            rtn = res;
+          },
+          error: function (res) {
+            rtn = false;
+          }
+        });
+        return rtn;
+      }
+    setInterval((e) => {
+      record2(0)
+    }, 1000)
+    $("#record").click(function () {
+      if ($(this).data("id") === "1") {
+        record2(1)
+      } else if ($(this).data("id") === "2") {
+        record2(2)
+      }
+    })
+    function record2(e) {
+      $.ajax({
+        url: config.manualVideo,
+        method: 'POST',
+        data: JSON.stringify({
+          "status": e
+        }),
+        dataType: "json",
+        contentType: 'application/json; charset=utf-8',
+        success: (res) => {
+          var data = res.status
+          if (data === 0) {
+            $('.record-txt').html('立即錄影')
+            $("#record").addClass("record-start")
+            $("#record").removeClass("record-stop")
+            $("#record").data("id","1")
+          } else if (data === 1) {
+            $('.record-txt').html('停止錄影')
+            $("#record").removeClass("record-start")
+            $("#record").addClass("record-stop")
+            $("#record").data("id", "2")
+          }else{
+            console.log("record viedo is not working")
+          }
+        },
+        error: (err) => { }
+      })
+    }
+    // 截圖
+    var spanshotstatus = false
+    $('.record-snapshot').click(function () {
+      $(this).addClass("record-snapshotDisable")
+      $('.spanshot-event').css("opacity", "1")
+      $(".spanshot-event").animate({
+        opacity: 0,
+      }, 300);
+      $.ajax({
+        url: config.manualSnapshot,
+        type: 'get',
+        success: (res) => {
+          setTimeout(() => {
+            // $('.spanshot-event').removeClass("spanshot-event-start")
+            $(this).removeClass("record-snapshotDisable")
+            var toastLiveExample = document.getElementById('liveToast3')
+            var toast = new bootstrap.Toast(toastLiveExample)
+            document.getElementById('thisMessage3').innerHTML = "擷取影像已儲存"
+            toast.show()
+          }, 1000)
+        },
+        error: (res) => {
+          setTimeout(() => {
+            $(this).removeClass("record-snapshotDisable")
+          }, 1000)
+        }
+      });
+
+    })
     //下1選擇影像
     $(document).ready(function () {
       function getPixelColor(x, y, ctxdata) {
@@ -711,13 +814,18 @@
       var gettemplate = setInterval(() => {
         var Tmax1 = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
         if (!isNaN(Tmax1)) {
+          if (Tmax !== parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value) || Tmin !== parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)) {
+            console.log('溫度改變')
+
+            patterns()
+          }
           Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
           Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
           // console.log(Tmax, Tmin)
-          patterns()
-          clearInterval(gettemplate)
+          // patterns()
+          // clearInterval(gettemplate)
         }
-      })
+      }, 1000)
       var videoUrl = null
       var ex = 0
       var ey = 0
@@ -820,7 +928,6 @@
       var anim = new Konva.Animation(function () {
         // do nothing, animation just need to update the layer
         deawtem()
-        // console.log(videok.videoWidth)
       }, layer);
       // videok.addEventListener('loadedmetadata', function (e) {
       //   imagek.width(953);
@@ -862,7 +969,7 @@
       });
       // videok.play();
       // konva end
-      var config = getConfig();
+      
       var VideoTemp = null;
       url = config.web_video_initial;
       var status = true
@@ -873,13 +980,30 @@
       var VideoRange = $('#video-range')
       var VideoStart = 0
       var VideoTotleTime = 0
+      var waitTime = 10 // 影片偵錯時間容忍值
       videok.addEventListener("timeupdate",
         function (ev) {
           VideoStart = ev.target.currentTime
           VideoTotleTime = ev.target.duration
+          // console.log('更新')
           videoTimeDisplay(VideoStart, VideoTotleTime)
           VideoRange.val((ev.target.currentTime / ev.target.duration) * 100)
+          waitTime = 10
         });
+      // 判斷影片是否有在撥放
+      var videoUpdateinterval = 0
+      setInterval(() => {
+        if (waitTime < 5 && waitTime > 0) {
+          console.log("影片似乎不正常，" + waitTime + "秒後自動刷新")
+        } else if (waitTime === 0) {
+          console.log("重新刷新影片")
+          blobVideo()
+          waitTime = 10
+        }
+        if (playstatus) {
+          waitTime -= 1
+        }
+      }, 1000)
       var vtm = $('.video-control-btn-img')
       $("#video-control").on("click", '.video-control-btn', function () {
         if (playstatus) {
@@ -953,6 +1077,7 @@
         // console.log(status)
       }, 1000)
 
+
       function getVideosList(url, initial, VideoTemp, config) {
         var initial = initial;
         $.ajax({
@@ -1009,26 +1134,12 @@
               z++
             })
           },
-          error: function (thrownError) {}
+          error: function (thrownError) { }
 
         })
       }
 
-      function getConfig() {
-        var rtn;
-        $.ajax({
-          url: '/config',
-          type: 'get',
-          async: false,
-          success: function (res) {
-            rtn = res;
-          },
-          error: function (res) {
-            rtn = false;
-          }
-        });
-        return rtn;
-      }
+      
 
       function deawtem() {
 
@@ -1121,7 +1232,7 @@
           if (this.status === 200) {
             var videoBlob = this.response;
             if (videoBlob.type === 'video/mp4') {
-              console.log(videoBlob.type)
+              // console.log(videoBlob.type)
               var vid = URL.createObjectURL(videoBlob);
               // console.log(vid)
               videok.src = vid
@@ -1272,13 +1383,17 @@
       var gettemplate = setInterval(() => {
         var Tmax1 = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
         if (!isNaN(Tmax1)) {
+          if (Tmax !== parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value) || Tmin !== parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)) {
+            console.log('溫度改變2')
+            patterns()
+          }
           Tmax = parseInt(document.getElementsByClassName("setting_colorbar_max")[0].value)
           Tmin = parseInt(document.getElementsByClassName("setting_colorbar_min")[0].value)
           // console.log(Tmax, Tmin)
-          patterns()
-          clearInterval(gettemplate)
+
+          // clearInterval(gettemplate)
         }
-      })
+      }, 1000)
 
       function patterns() {
         var patternsData = []
@@ -1387,7 +1502,7 @@
           // console.log(JSON.parse(data))
           data.forEach((index, val) => {
             if (val < 3) {
-              const canvas = document.getElementById(`rtsp_image0${val+1}`)
+              const canvas = document.getElementById(`rtsp_image0${val + 1}`)
               var img = new Image()
               var ctx = canvas.getContext('2d')
               // var blob = getBlob(atob(index.img), 'image/jpg')
@@ -1732,7 +1847,7 @@
                 console.log("[:8554] is not connected")
               }
             },
-            error: function (thrownError) {}
+            error: function (thrownError) { }
           })
           var logname = {
             name: i
@@ -1747,7 +1862,7 @@
             success: function (response) {
               console.log('save log')
             },
-            error: function (thrownError) {}
+            error: function (thrownError) { }
           })
         }
         stay01++
@@ -1967,8 +2082,8 @@
                         data: data,
                         dataType: 'json',
                         contentType: 'application/json; charset=utf-8',
-                        success: function (response) {},
-                        error: function (thrownError) {}
+                        success: function (response) { },
+                        error: function (thrownError) { }
                       })
                     }, 5000)
                   }
@@ -1986,8 +2101,8 @@
                         data: data,
                         dataType: 'json',
                         contentType: 'application/json; charset=utf-8',
-                        success: function (response) {},
-                        error: function (thrownError) {}
+                        success: function (response) { },
+                        error: function (thrownError) { }
                       })
                     }, 5000)
                   }
@@ -2049,7 +2164,7 @@
         var setting_first_alarm_temperature = $(".setting_first_alarm_temperature");
         var setting_second_alarm_temperature = $(".setting_second_alarm_temperature");
         if (parseFloat(setting_first_alarm_temperature.val()) > parseFloat(setting_second_alarm_temperature
-            .val())) {
+          .val())) {
           setting_first_alarm_temperature.addClass("is-error")
           setting_second_alarm_temperature.addClass("is-error")
           $(".alarm-visible-error").removeClass("d-none")

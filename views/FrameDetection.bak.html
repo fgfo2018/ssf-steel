@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 這邊是備份DO功能加進來之前 -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/jqurey.number.js"></script>
+
+</head>
+
+<body style="background-color: #e2e2e2;">
+    <div class="loading_bar"></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark  bg-gradient px-3" style="background-color: #262626;">
+        <div class="container-fluid" style="">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">即時監控</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dataScraping.html" class="nav-link">資料分析</a>
+                </li>
+                <li class="nav-item">
+                    <a href="FrameDetection.html" class="nav-link">檢測框調整</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-3 px-4">
+        <div class="monitor-flex row">
+            <div class="col-4 px-1">
+                <div>
+                    <div class="text-center my-1">L/F 副料區</div>
+                    <img src="static/LF.png" />
+                </div>
+            </div>
+            <div class="col-4 px-1">
+                <div>
+                    <div class="text-center my-1">出鋼室下方樓梯</div>
+                    <img src="static/ST.png" />
+                </div>
+            </div>
+            <div class="col-4 px-1">
+                <div>
+                    <div class="text-center my-1">L/D 2F平台</div>
+                    <img src="static/LD.png" />
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 monitor-data">
+            <div class="col-4 ps-3 pe-1">
+                <div class="row ps-3">
+                    <div class="col-12">
+                        L/F 副料區
+                    </div>
+                    <div class="col-9  mt-2">
+                        <div class="d-flex">
+                            <div style="width: 243px;"> - 檢測框水平方向縮放比率: </div>
+                            <div class="ps-3">
+                                <input type="number" value="0.95" style="width: 178px;" />
+                            </div>
+                        </div>
+                        <div class="d-flex mt-1">
+                            <div style="width: 243px;"> - 檢測框垂直方向縮放比率: </div>
+                            <div class="ps-3">
+                                <input type="number" value="0.95" style="width: 178px;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 mt-2 text-end">
+                        <button class="custom-btu" type="submit">
+                            <div class="d-flex justify-content-center">
+                                <div style="width:30px" class="loading-icon d-none">
+                                    <span class="spinner-border spinner-border-sm" role="status"
+                                        aria-hidden="true"></span>
+                                </div>
+                                set
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 px-1">
+                <div class="row ps-3">
+                    <div class="col-12">
+                        出鋼室下方樓梯
+                    </div>
+                    <div class="col-9  mt-2">
+                        <div class="d-flex">
+                            <div style="width: 243px;"> - 檢測框水平方向縮放比率: </div>
+                            <div class="ps-3">
+                                <input type="number" value="0.95" style="width: 178px;" />
+                            </div>
+                        </div>
+                        <div class="d-flex mt-1">
+                            <div style="width: 243px;"> - 檢測框垂直方向縮放比率: </div>
+                            <div class="ps-3">
+                                <input type="number" value="0.95" style="width: 178px;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 mt-2 text-end">
+                        <button class="custom-btu" type="submit">
+                            <div class="d-flex justify-content-center">
+                                <div style="width:30px" class="loading-icon d-none">
+                                    <span class="spinner-border spinner-border-sm" role="status"
+                                        aria-hidden="true"></span>
+                                </div>
+                                set
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 px-1">
+                <div class="row ps-3">
+                    <div class="col-12">
+                        L/D 2F平台
+                    </div>
+                    <div class="col-9  mt-2">
+                        <div class="d-flex">
+                            <div style="width: 243px;"> - 檢測框水平方向縮放比率: </div>
+                            <div class="ps-3">
+                                <input type="number" value="0.95" style="width: 178px;" />
+                            </div>
+                        </div>
+                        <div class="d-flex mt-1">
+                            <div style="width: 243px;"> - 檢測框垂直方向縮放比率: </div>
+                            <div class="ps-3">
+                                <input type="number" value="0.95" style="width: 178px;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 mt-2 text-end">
+                        <button class="custom-btu" type="submit">
+                            <div class="d-flex justify-content-center">
+                                <div style="width:30px" class="loading-icon d-none">
+                                    <span class="spinner-border spinner-border-sm" role="status"
+                                        aria-hidden="true"></span>
+                                </div>
+                                set
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 訊息 -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast align-items-center text-white border-0 mt-2" role="alert"
+            aria-live="assertive" aria-atomic="true" data-bs-delay="1500">
+            <div class="d-flex">
+                <div class="toast-body" id="thisMessage">
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <style>
+        .monitor-flex>div>div {
+            background-color: #fff;
+            font-size: 22px;
+            border: 1px solid #cbcbcb;
+            /* border-radius: 3px; */
+        }
+
+        .monitor-flex img {
+            width: 100%
+        }
+
+        .monitor-data div {
+            font-size: 20px;
+        }
+
+        .monitor-data button {
+            width: 102px;
+            padding: 21px 0px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script type="text/javascript">
+        var s = true;
+        $('button').on("click", () => {
+            $('.custom-btu').attr('disabled', true)
+            $('input').attr('disabled', true);
+            $('.loading-icon').removeClass('d-none')
+            setTimeout(() => {
+                // 打開按鈕
+                $('.custom-btu').attr('disabled', false);
+                $('input').attr('disabled', false);
+                $('.loading-icon').addClass('d-none')
+                // 開啟訊息
+                var toastLiveExample = document.getElementById('liveToast')
+                var toastColor = $('.toast')
+                var thisMessage = document.getElementById('thisMessage')
+                var toast = new bootstrap.Toast(toastLiveExample)
+                // 正常
+                if(s){
+                    s = false
+                    toastColor.addClass('bg-primary')
+                    toastColor.removeClass('bg-danger')
+                    thisMessage.innerHTML = '資料成功儲存'
+                }else{
+                    s = true
+                    toastColor.addClass('bg-danger')
+                    toastColor.removeClass('bg-primary')
+                    thisMessage.innerHTML = '資訊儲存失敗'
+                }
+                toast.show()
+            }, 2000)
+        })
+    </script>
+</body>
+
+</html>

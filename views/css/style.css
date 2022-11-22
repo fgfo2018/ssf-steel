@@ -108,9 +108,11 @@
   /* margin-top: 0px; */
   /* background-color: rgb(177, 177, 177); */
 }
-.canvas-rtsp{
+
+.canvas-rtsp {
   cursor: crosshair;
 }
+
 .tri {
   /* margin-top: 25px; */
   padding-top: 14px;
@@ -389,6 +391,7 @@ tr.active {
     background-color: #ff5452;
   }
 }
+
 @keyframes example2 {
   0% {
     background-color: #ffe0b7;
@@ -399,25 +402,38 @@ tr.active {
   }
 }
 
-.konvaCavnas{
+.konvaCavnas {
   position: absolute;
-  bottom:6px;
-  left:0;
+  bottom: 6px;
+  left: 0;
   cursor: crosshair;
 }
 
-#recvideoplay{
+#recvideoplay {
   position: absolute;
   top: 0;
   left: 0;
 
 }
 
-#videoListKonva{
+#videoListKonva {
   cursor: crosshair;
 }
 
-.video-control-btn{
+#videoListKonvaloading {
+  position: absolute;
+  background: rgb(44, 44, 44);
+  /* background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%); */
+  background: linear-gradient(102deg, #d7d7d7 11%, #f3f3f3 28%, #d7d7d7 33%);
+  background-size: 200% 100%;
+  animation: 1s shine linear infinite;
+  width: 100%;
+  height: 245px;
+  left: 0;
+}
+
+
+.video-control-btn {
   cursor: pointer;
 }
 
@@ -445,6 +461,7 @@ tr.active {
     background: #434343;
     /* box-shadow: -80px 0 0 80px #43e5f7; */
   }
+
   input[type='range']::-webkit-slider-thumb:active {
     /* width: 10px; */
     /* -webkit-appearance: none; */
@@ -454,4 +471,102 @@ tr.active {
     /* box-shadow: -80px 0 0 80px #43e5f7; */
   }
 
+}
+
+/* 右下大區塊 grid */
+.right-bottom-grid-area1 {
+  display: grid;
+  grid-template-columns: 33.2% 26.1% 10%;
+  margin-left: 13px;
+}
+
+.right-bottom-grid-area2 {
+  display: grid;
+  grid-template-rows: 108px 82px;
+  grid-row-gap: 10px;
+}
+
+.right-bottom-grid-area3 {
+  display: grid;
+  grid-template-columns: 27.2% 15.6% 57%;
+  margin-top: 15px;
+}
+
+/* 手動操作 */
+.Manual-operation-crad {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.Manual-operation-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.record-start {
+  width: 30px;
+  height: 30px;
+  background-color: #7FFFD4;
+  border-radius: 30px;
+  margin-bottom: 6px;
+  transform: scale(0.7);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.record-start:hover {
+  transform: scale(1);
+}
+
+.record-stop {
+  width: 30px;
+  height: 30px;
+  background-color: #ff2c2c;
+  border-radius: 7px;
+  margin-bottom: 6px;
+  transform: scale(0.7);
+  transition: all 0.5s;
+  cursor: pointer;
+  animation-name: oxxo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse
+}
+
+@keyframes oxxo {
+  0% {
+    background-color: #ff7171;
+  }
+
+  100% {
+    background-color: #ff2c2c;
+    transform: scale(0.8);
+  }
+}
+
+.record-snapshot {
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.45;
+}
+
+.record-snapshot>img {
+  width: 69%;
+}
+
+.record-snapshotDisable{
+  opacity:1;
+
+}
+.spanshot-event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+  z-index: 99999;
+  pointer-events: none;
 }

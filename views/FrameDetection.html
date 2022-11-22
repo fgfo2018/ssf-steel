@@ -13,7 +13,77 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/jqurey.number.js"></script>
+    <script src="./js/jquery.mask.js"></script>
+    <style type="text/css">
+        .table-bg {
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px #00000096;
+            padding: 8px;
+            border-radius: 2px;
+        }
 
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        .tg td {
+            border-color: rgb(207 207 207) !important;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            padding: 6px 11px;
+            word-break: normal;
+        }
+
+        .tg th {
+            border-color: rgb(207 207 207) !important;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            overflow: hidden;
+            padding: 6px 11px;
+            word-break: normal;
+        }
+
+        .tg .tg-0pky {
+            border-color: inherit;
+            text-align: center;
+            /* vertical-align: top */
+        }
+
+        .t-image>img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        td button {
+            width: 102px;
+            padding: 21px 0px;
+            border: 1px solid #000;
+        }
+
+        td input {
+            width: 66%;
+        }
+
+        td select {
+            width: 66%;
+            height: 26px;
+        }
+
+        .custom-validation,
+        .custom-validation:focus-visible .custom-validation:focus {
+            border: 1px #f00 solid !important;
+            outline-color: #f00 !important;
+        }
+    </style>
 </head>
 
 <body style="background-color: #e2e2e2;">
@@ -35,129 +105,162 @@
     </nav>
 
     <div class="container-fluid mt-3 px-4">
-        <div class="monitor-flex row">
-            <div class="col-4 px-1">
-                <div>
-                    <div class="text-center my-1">L/F 副料區</div>
-                    <img src="static/LF.png" />
-                </div>
-            </div>
-            <div class="col-4 px-1">
-                <div>
-                    <div class="text-center my-1">出鋼室下方樓梯</div>
-                    <img src="static/ST.png" />
-                </div>
-            </div>
-            <div class="col-4 px-1">
-                <div>
-                    <div class="text-center my-1">L/D 2F平台</div>
-                    <img src="static/LD.png" />
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4 monitor-data">
-            <div class="col-4 ps-3 pe-1">
-                <div class="row ps-3">
-                    <div class="col-12">
-                        L/F 副料區
-                    </div>
-                    <div class="col-9  mt-2">
-                        <div class="d-flex">
-                            <div style="width: 243px;"> - 檢測框水平方向縮放比率: </div>
-                            <div class="ps-3">
-                                <input type="number" value="0.95" style="width: 178px;" />
-                            </div>
-                        </div>
-                        <div class="d-flex mt-1">
-                            <div style="width: 243px;"> - 檢測框垂直方向縮放比率: </div>
-                            <div class="ps-3">
-                                <input type="number" value="0.95" style="width: 178px;" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 mt-2 text-end">
-                        <button class="custom-btu" type="submit">
-                            <div class="d-flex justify-content-center">
-                                <div style="width:30px" class="loading-icon d-none">
-                                    <span class="spinner-border spinner-border-sm" role="status"
-                                        aria-hidden="true"></span>
-                                </div>
-                                set
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 px-1">
-                <div class="row ps-3">
-                    <div class="col-12">
-                        出鋼室下方樓梯
-                    </div>
-                    <div class="col-9  mt-2">
-                        <div class="d-flex">
-                            <div style="width: 243px;"> - 檢測框水平方向縮放比率: </div>
-                            <div class="ps-3">
-                                <input type="number" value="0.95" style="width: 178px;" />
-                            </div>
-                        </div>
-                        <div class="d-flex mt-1">
-                            <div style="width: 243px;"> - 檢測框垂直方向縮放比率: </div>
-                            <div class="ps-3">
-                                <input type="number" value="0.95" style="width: 178px;" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 mt-2 text-end">
-                        <button class="custom-btu" type="submit">
-                            <div class="d-flex justify-content-center">
-                                <div style="width:30px" class="loading-icon d-none">
-                                    <span class="spinner-border spinner-border-sm" role="status"
-                                        aria-hidden="true"></span>
-                                </div>
-                                set
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 px-1">
-                <div class="row ps-3">
-                    <div class="col-12">
-                        L/D 2F平台
-                    </div>
-                    <div class="col-9  mt-2">
-                        <div class="d-flex">
-                            <div style="width: 243px;"> - 檢測框水平方向縮放比率: </div>
-                            <div class="ps-3">
-                                <input type="number" value="0.95" style="width: 178px;" />
-                            </div>
-                        </div>
-                        <div class="d-flex mt-1">
-                            <div style="width: 243px;"> - 檢測框垂直方向縮放比率: </div>
-                            <div class="ps-3">
-                                <input type="number" value="0.95" style="width: 178px;"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 mt-2 text-end">
-                        <button class="custom-btu" type="submit">
-                            <div class="d-flex justify-content-center">
-                                <div style="width:30px" class="loading-icon d-none">
-                                    <span class="spinner-border spinner-border-sm" role="status"
-                                        aria-hidden="true"></span>
-                                </div>
-                                set
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <div class="table-bg">
+            <table class="tg">
+                <thead>
+                    <tr>
+                        <th class="tg-0pky" rowspan="2" style="border: 0px;width:10%"></th>
+                        <th class="tg-0pky" style="width:26%;">L/F 副料區</th>
+                        <th class="tg-0pky" style="width:26%;">出鋼室下方樓梯</th>
+                        <th class="tg-0pky" style="width:26%;">L/D 2F平台</th>
+                        <th class="tg-0pky" rowspan="2" style="border: 0px;width:10%;"></th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0pky t-image" style="border: 0px; padding:0px;">
+                            <img src="static/LF.png" />
+                        </th>
+                        <th class="tg-0pky t-image" style="border: 0px; padding:0px;">
+                            <img src="static/ST.png" />
+                        </th>
+                        <th class="tg-0pky t-image" style="border: 0px; padding:0px;">
+                            <img src="static/LD.png" />
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tg-0pky  text-start" colspan="5" style="padding-left: 25px;">
+                            檢測框縮放比率(0.0~1.00)
+                        </td>
+                    </tr>
+                    <form id="area" method="#">
+                        <tr>
+                            <td class="tg-0pky" valign="center">水平</td>
+                            <td class="tg-0pky">
+                                <input id="Detection_LF_X" class="customInput" type="number" min="0.50" max="1.50"
+                                    step="0.01" required />
+                            </td>
+                            <td class="tg-0pky">
+                                <input id="Detection_STAIR_X" class="customInput" type="number" min="0.50" max="1.50"
+                                    step="0.01" required />
+                            </td>
+                            <td class="tg-0pky">
+                                <input id="Detection_LD_X" class="customInput" type="number" min="0.50" max="1.50"
+                                    step="0.01" required />
+                            </td>
+                            <td class="tg-0pky" rowspan="2">
+                                <!-- <button type="button" id="DetectionBtn1">設定</button> -->
+                                <button type="submit" class="custom-btu" id="DetectionBtn1">
+                                    <div class="d-flex justify-content-center">
+                                        <div style="width:30px" class="loading-icon d-none">
+                                            <span class="spinner-border spinner-border-sm" role="status"
+                                                aria-hidden="true"></span>
+                                        </div>
+                                        設定
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">垂直</td>
+                            <td class="tg-0pky">
+                                <input id="Detection_LF_Y" type="number" min="0.50" max="1.50" step="0.01"
+                                    class="customInput" required />
+                            </td>
+                            <td class="tg-0pky">
+                                <input id="Detection_STAIR_Y" type="number" min="0.50" max="1.50" step="0.01"
+                                    class="customInput" required />
+                            </td>
+                            <td class="tg-0pky">
+                                <input id="Detection_LD_Y" type="number" min="0.50" max="1.50" step="0.01"
+                                    class="customInput" required />
+                            </td>
+                        </tr>
+                    </form>
+                    <tr>
+                        <td class="tg-0pky" colspan="5"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky  text-start" colspan="5" style="padding-left: 25px;">警報輸出 A</td>
+                    </tr>
+                    <form id="area2" method="#">
+                        <tr>
+                            <td class="tg-0pky">IP</td>
+                            <td class="tg-0pky" style="border: 0px;">
+                                <input class="ip_address1 customInput" required />
+                            </td>
+                            <td class="tg-0pky" colspan="2" style="border: 0px;"></td>
+                            <td class="tg-0pky" rowspan="3">
+                                <button class="custom-btu" type="submit" id="DetectionBtn3">
+                                    <div class="d-flex justify-content-center">
+                                        <div style="width:30px" class="loading-icon d-none">
+                                            <span class="spinner-border spinner-border-sm" role="status"
+                                                aria-hidden="true"></span>
+                                        </div>
+                                        設定
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">第一段警報DO</td>
+                            <td class="tg-0pky tg-0pkylist1">
+                                <select id="DILIST" class="customInput">
+                                </select>
+                            </td>
+                            <td class="tg-0pky"><input class="firstAlarm1" disabled /></td>
+                            <td class="tg-0pky"><input class="firstAlarm1" disabled /></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">第二段警報DO</td>
+                            <td class="tg-0pky tg-0pkylist2">
+                                <select id="DILIST1" class="customInput">
+                                </select>
+                            </td>
+                            <td class="tg-0pky"><input class="secondAlarm1" disabled /></td>
+                            <td class="tg-0pky"><input class="secondAlarm1" disabled /></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky  text-start" colspan="5" style="padding-left: 25px;">警報輸出 B</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">IP</td>
+                            <td class="tg-0pky" style="border: 0px;"><input class="ip_address2 customInput" required />
+                            </td>
+                            <td class="tg-0pky" colspan="2" style="border: 0px;"></td>
+                            <td class="tg-0pky" rowspan="3">
+                                <button class="custom-btu" type="submit" id="DetectionBtn2">
+                                    <div class="d-flex justify-content-center">
+                                        <div style="width:30px" class="loading-icon d-none">
+                                            <span class="spinner-border spinner-border-sm" role="status"
+                                                aria-hidden="true"></span>
+                                        </div>
+                                        設定
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">第一段警報DO</td>
+                            <td class="tg-0pky"><input class="firstAlarm1" disabled /></td>
+                            <td class="tg-0pky"><input class="firstAlarm1" disabled /></td>
+                            <td class="tg-0pky"><input class="firstAlarm1" disabled /></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">第二段警報DO</td>
+                            <td class="tg-0pky"><input class="secondAlarm1" disabled /></td>
+                            <td class="tg-0pky"><input class="secondAlarm1" disabled /></td>
+                            <td class="tg-0pky"><input class="secondAlarm1" disabled /></td>
+                        </tr>
+                    </form>
+                </tbody>
+            </table>
         </div>
     </div>
     <!-- 訊息 -->
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <div id="liveToast" class="toast align-items-center text-white border-0 mt-2" role="alert"
-            aria-live="assertive" aria-atomic="true" data-bs-delay="1500">
+        <div id="liveToast" class="toast align-items-center text-white border-0 mt-2" role="alert" aria-live="assertive"
+            aria-atomic="true" data-bs-delay="1500">
             <div class="d-flex">
                 <div class="toast-body" id="thisMessage">
                 </div>
@@ -189,35 +292,278 @@
         }
     </style>
     <script type="text/javascript">
-        var s = true;
-        $('button').on("click", () => {
-            $('.custom-btu').attr('disabled', true)
-            $('input').attr('disabled', true);
-            $('.loading-icon').removeClass('d-none')
-            setTimeout(() => {
-                // 打開按鈕
-                $('.custom-btu').attr('disabled', false);
-                $('input').attr('disabled', false);
-                $('.loading-icon').addClass('d-none')
-                // 開啟訊息
+        $(document).ready(function () {
+            var config = getConfig();
+            $('.ip_address1').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+                translation: {
+                    'Z': {
+                        pattern: /[0-9]/, optional: true
+                    }
+                },
+                placeholder: "xxx.xxx.xxx.xxx"
+            });
+            $('.ip_address2').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+                translation: {
+                    'Z': {
+                        pattern: /[0-9]/, optional: true
+                    }
+                },
+                placeholder: "xxx.xxx.xxx.xxx"
+            });
+            // DO 列表新增
+            for (var i = 0; i <= 16; i++) {
+                $('#DILIST').append(`<option value="${i}">${("0" + i).slice(-2)}</option>`)
+            }
+            for (var z = 0; z <= 16; z++) {
+                $('#DILIST1').append(`<option value="${z}">${("0" + z).slice(-2)}</option>`)
+            }
+            // $('#DILIST').val(5)
+            // end 
+            // 資料初始化
+            var select1 = 0
+            var select2 = 0
+            var s = true;
+            initial()
+            // setInterval(() =>{
+            //     initial()
+            // },1000)
+            function initial() {
+                $.ajax({
+                    url: config.DetectionFrameInit,
+                    method: 'GET',
+                    success: function (data) {
+                        console.log(data)
+                        // 檢測框縮放比率(0.0~1.00)
+                        $('#Detection_LF_X').val(data.Detection_scaling_LF_X)
+                        $('#Detection_LF_Y').val(data.Detection_scaling_LF_Y)
+                        $('#Detection_STAIR_X').val(data.Detection_scaling_STAIR_X)
+                        $('#Detection_STAIR_Y').val(data.Detection_scaling_STAIR_Y)
+                        $('#Detection_LD_X').val(data.Detection_scaling_LD_X)
+                        $('#Detection_LD_Y').val(data.Detection_scaling_LD_Y)
+                        // 警報輸出 A
+                        $('.ip_address1').val(data.modbus_ip1)
+                        $('#DILIST').val(data.firstAlarm)
+                        $('#DILIST1').val(data.secondAlarm)
+                        select1 = $('#DILIST').val()
+                        select2 = $('#DILIST1').val()
+                        $('.firstAlarm1').each(function (index, val) {
+                            $(this).val(data.firstAlarm)
+                        })
+                        $('.secondAlarm1').each(function (index, val) {
+                            $(this).val(data.secondAlarm)
+                        })
+                        // 警報輸出 B
+                        $('.ip_address2').val(data.modbus_ip2)
+                    },
+                    error: function (thrownError) {
+                        console.log(thrownError)
+                    }
+                })
+            }
+            // 資料初始化 end
+            // _____資料送出
+            $("#area").submit((e) => {
+                e.preventDefault(); // avoid to execute the actual submit 
+                var item = [
+                    'Detection_LF_X',
+                    'Detection_LF_Y',
+                    'Detection_STAIR_X',
+                    'Detection_STAIR_Y',
+                    'Detection_LD_X',
+                    'Detection_LD_Y',
+                ]
+                var arr = {}
+                item.forEach((val, index) => {
+                    var e = $(`#${val}`).val()
+                    // $(`#${val}`).attr('disabled', true);
+                    arr[item[index]] = e
+                })
+                $(`.customInput`).attr('disabled', true);
+                $('.custom-btu').attr('disabled', true)
+                $('.loading-icon').removeClass('d-none')
+                var req = [
+                    {
+                        Detection_scaling_LF_X: parseFloat(arr.Detection_LF_X),
+                        Detection_scaling_LF_Y: parseFloat(arr.Detection_LF_Y)
+                    },
+                    {
+                        Detection_scaling_STAIR_X: parseFloat(arr.Detection_STAIR_X),
+                        Detection_scaling_STAIR_Y: parseFloat(arr.Detection_STAIR_Y)
+                    },
+                    {
+                        Detection_scaling_LD_X: parseFloat(arr.Detection_LD_X),
+                        Detection_scaling_LD_Y: parseFloat(arr.Detection_LD_Y)
+                    }
+                ]
                 var toastLiveExample = document.getElementById('liveToast')
                 var toastColor = $('.toast')
                 var thisMessage = document.getElementById('thisMessage')
                 var toast = new bootstrap.Toast(toastLiveExample)
-                // 正常
-                if(s){
-                    s = false
-                    toastColor.addClass('bg-primary')
-                    toastColor.removeClass('bg-danger')
-                    thisMessage.innerHTML = '資料成功儲存'
-                }else{
-                    s = true
+                $.ajax({
+                    url: config.DetectionFramechange,
+                    method: 'POST',
+                    data: JSON.stringify(req),
+                    contentType: 'application/json; charset=utf-8',
+                    success: (res) => {
+                        console.log('修改完成')
+                        console.log(res)
+                        $(`.customInput`).attr('disabled', false);
+                        $('.custom-btu').attr('disabled', false);
+                        $('.loading-icon').addClass('d-none')
+                        toastColor.addClass('bg-primary')
+                        toastColor.removeClass('bg-danger')
+                        thisMessage.innerHTML = '資料成功儲存'
+                        toast.show()
+                        initial()
+                    },
+                    error: function (err) {
+                        $(`.customInput`).attr('disabled', false);
+                        $('.custom-btu').attr('disabled', false);
+                        $('.loading-icon').addClass('d-none')
+                        toastColor.addClass('bg-danger')
+                        toastColor.removeClass('bg-primary')
+                        thisMessage.innerHTML = '資訊儲存失敗'
+                        toast.show()
+                        initial()
+                    }
+                })
+            });
+            $("#area2").submit((e) => {
+                e.preventDefault(); // avoid to execute the actual submit
+                $(`.customInput`).attr('disabled', true);
+                $('.custom-btu').attr('disabled', true)
+                $('.loading-icon').removeClass('d-none')
+                var req = [
+                    {
+                        modbus_ip1: $('.ip_address1').val(),
+                        modbus_ip2: $('.ip_address2').val(),
+                        firstAlarm: parseInt($('#DILIST').val()),
+                        secondAlarm: parseInt($('#DILIST1').val())
+                    }
+                ]
+                var toastLiveExample = document.getElementById('liveToast')
+                var toastColor = $('.toast')
+                var thisMessage = document.getElementById('thisMessage')
+                var toast = new bootstrap.Toast(toastLiveExample)
+                $.ajax({
+                    url: config.DOchange,
+                    method: 'POST',
+                    data: JSON.stringify(req),
+                    contentType: 'application/json; charset=utf-8',
+                    success: (res) => {
+                        console.log('修改完成')
+                        console.log(res)
+                        $(`.customInput`).attr('disabled', false);
+                        $('.custom-btu').attr('disabled', false);
+                        $('.loading-icon').addClass('d-none')
+                        toastColor.addClass('bg-primary')
+                        toastColor.removeClass('bg-danger')
+                        thisMessage.innerHTML = '資料成功儲存'
+                        toast.show()
+                        initial()
+                    },
+                    error: function (err) {
+                        $(`.customInput`).attr('disabled', false);
+                        $('.custom-btu').attr('disabled', false);
+                        $('.loading-icon').addClass('d-none')
+                        toastColor.addClass('bg-danger')
+                        toastColor.removeClass('bg-primary')
+                        thisMessage.innerHTML = '資訊儲存失敗'
+                        toast.show()
+                        initial()
+                    }
+                })
+            })
+            // 檢測框
+            // 警報A B
+            // 判斷警報下拉變動
+            var toastLiveExample = document.getElementById('liveToast')
+            var toastColor = $('.toast')
+            var thisMessage = document.getElementById('thisMessage')
+            var toast = new bootstrap.Toast(toastLiveExample)
+            $(".tg-0pkylist1").on("change", '#DILIST', function () {
+                // 判斷
+                if ($(this).val() === $('#DILIST1').val()) {
+                    $('#DILIST').val(select1)
+                    $(this).addClass('custom-validation')
                     toastColor.addClass('bg-danger')
                     toastColor.removeClass('bg-primary')
-                    thisMessage.innerHTML = '資訊儲存失敗'
+                    thisMessage.innerHTML = '請注意警報數值不能相同'
+                    toast.show()
+                } else {
+                    select1 = $('#DILIST').val()
+                    $(this).removeClass('custom-validation')
                 }
-                toast.show()
-            }, 2000)
+                console.log($(this).val())
+                var data = $(this).val()
+                $('.firstAlarm1').each(function () {
+                    $(this).val(data)
+                })
+            })
+            $(".tg-0pkylist2").on("change", '#DILIST1', function () {
+                console.log($(this).val())
+                if ($(this).val() === $('#DILIST').val()) {
+                    $('#DILIST1').val(select2)
+                    $(this).addClass('custom-validation')
+                    toastColor.addClass('bg-danger')
+                    toastColor.removeClass('bg-primary')
+                    thisMessage.innerHTML = '請注意警報數值不能相同'
+                    toast.show()
+                } else {
+                    select2 = $('#DILIST1').val()
+                    $(this).removeClass('custom-validation')
+                }
+                var data = $(this).val()
+                $('.secondAlarm1').each(function () {
+                    $(this).val(data)
+                })
+            })
+            // _____資料送出 end
+            // var s = true;
+            // $('button').on("click", () => {
+            //     $('.custom-btu').attr('disabled', true)
+            //     $('input').attr('disabled', true);
+            //     $('.loading-icon').removeClass('d-none')
+            //     setTimeout(() => {
+            //         // 打開按鈕
+            //         $('.custom-btu').attr('disabled', false);
+            //         $('input').attr('disabled', false);
+            //         $('.loading-icon').addClass('d-none')
+            //         // 開啟訊息
+            //         var toastLiveExample = document.getElementById('liveToast')
+            //         var toastColor = $('.toast')
+            //         var thisMessage = document.getElementById('thisMessage')
+            //         var toast = new bootstrap.Toast(toastLiveExample)
+            //         // 正常
+            //         if (s) {
+            //             s = false
+            //             toastColor.addClass('bg-primary')
+            //             toastColor.removeClass('bg-danger')
+            //             thisMessage.innerHTML = '資料成功儲存'
+            //         } else {
+            //             s = true
+            //             toastColor.addClass('bg-danger')
+            //             toastColor.removeClass('bg-primary')
+            //             thisMessage.innerHTML = '資訊儲存失敗'
+            //         }
+            //         toast.show()
+            //     }, 2000)
+            // })
+            function getConfig() {
+                var rtn;
+                $.ajax({
+                    url: '/config',
+                    type: 'get',
+                    async: false,
+                    success: function (res) {
+                        rtn = res;
+                    },
+                    error: function (res) {
+                        rtn = false;
+                    }
+                });
+                return rtn;
+            }
         })
     </script>
 </body>

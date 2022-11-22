@@ -1,6 +1,7 @@
 $(function () {
     // 載入config
     var config = null
+    var Interval = null
     $.ajax({
         url: '/config',
         type: 'get',
@@ -12,69 +13,78 @@ $(function () {
             rtn = false;
         }
     });
-    console.log(config.web_dataScraping_initial)
+    // console.log(config.web_dataScraping_initial)
     //初始化資料報表
     const refreshurl = config.web_dataScraping_refresh //定義資料報表API位置
-    $.ajax({
-        url: config.web_dataScraping_initial,
-        data: range,
-        method: 'GET',
-        dataType: "json",
-        success: function (data) {
-            var maxtre = maxtr()
-            var array = data
-            var sum = 0
-            array.sort(function (a, b) {
-                var keyA = new Date(a.table_start),
-                    keyB = new Date(b.table_start);
-                // Compare the 2 dates
-                if (keyA < keyB) return 1;
-                if (keyA > keyB) return -1;
-                return 0;
-            });
-            array.forEach(element => {
-                array[sum].id = sum + 1
-                var start = new Date(element.table_start)
-                var end = new Date(element.table_stop)
-                var totle = (end.getTime() - start.getTime()) / 1000
-                // console.log(totle)
-                totle = getDuration(totle)
-                var bucketNumber = element.table_bucketNumber
-                if (bucketNumber === -1) {
-                    bucketNumber = ""
-                }
-                array[sum].table_bucketNumber = {
-                    bucketNumber: bucketNumber,
-                    table_itemName: element.table_itemName
-                }
-                // L/F
-                array[sum].table_maxTempLF = {
-                    maxTr: element.table_maxTempLF,
-                    status: Compare(element.table_maxTempLF, f_tr, s_tr)
-                }
-                array[sum].table_maxTempSTAIR = {
-                    maxTr: element.table_maxTempSTAIR,
-                    status: Compare(element.table_maxTempSTAIR, f_tr, s_tr)
-                }
-                array[sum].table_maxTempLD = {
-                    maxTr: element.table_maxTempLD,
-                    status: Compare(element.table_maxTempLD, f_tr, s_tr)
-                }
-                // console.log(totle)
-                array[sum].sec = totle
-                sum++
-            })
-            mydata(array)
-            // $('.max_tr01').parent().css('background','#ff8d00')
-            // $('.max_tr01').closest('tr').css('background','rgb(255 220 223)')
-            $('.max_tr01').closest('tr').css('background', '#F4EAE4')
-            // $('.max_tr02').parent().css('background','rgb(255, 0, 0)')
-            $('.max_tr02').closest('tr').css('background', '#F4EAE4')
-        },
-        error: function (err) {
-            console.log(err)
-        },
-    })
+    initial1()
+    function initial1() {
+        $.ajax({
+            url: config.web_dataScraping_initial,
+            data: range,
+            method: 'GET',
+            dataType: "json",
+            success: function (data) {
+                var maxtre = maxtr()
+                var array = data
+                var sum = 0
+                array.sort(function (a, b) {
+                    var keyA = new Date(a.table_start),
+                        keyB = new Date(b.table_start);
+                    // Compare the 2 dates
+                    if (keyA < keyB) return 1;
+                    if (keyA > keyB) return -1;
+                    return 0;
+                });
+                array.forEach(element => {
+                    array[sum].id = sum + 1
+                    var start = new Date(element.table_start)
+                    var end = new Date(element.table_stop)
+                    var totle = (end.getTime() - start.getTime()) / 1000
+                    // console.log(totle)
+                    totle = getDuration(totle)
+                    var bucketNumber = element.table_bucketNumber
+                    if (bucketNumber === -1) {
+                        bucketNumber = ""
+                    }
+                    array[sum].table_bucketNumber = {
+                        bucketNumber: bucketNumber,
+                        table_itemName: element.table_itemName
+                    }
+                    // L/F
+                    array[sum].table_maxTempLF = {
+                        maxTr: element.table_maxTempLF,
+                        status: Compare(element.table_maxTempLF, f_tr, s_tr)
+                    }
+                    array[sum].table_maxTempSTAIR = {
+                        maxTr: element.table_maxTempSTAIR,
+                        status: Compare(element.table_maxTempSTAIR, f_tr, s_tr)
+                    }
+                    array[sum].table_maxTempLD = {
+                        maxTr: element.table_maxTempLD,
+                        status: Compare(element.table_maxTempLD, f_tr, s_tr)
+                    }
+                    // table_start
+                    array[sum].delete_vidoe = {
+                        table_start: element.table_start
+                    }
+                    // console.log(totle)
+                    array[sum].sec = totle
+                    sum++
+                })
+                mydata(array)
+                // $('.max_tr01').parent().css('background','#ff8d00')
+                // $('.max_tr01').closest('tr').css('background','rgb(255 220 223)')
+                $('.max_tr01').closest('tr').css('background', '#F4EAE4')
+                // $('.max_tr02').parent().css('background','rgb(255, 0, 0)')
+                $('.max_tr02').closest('tr').css('background', '#F4EAE4')
+            },
+            error: function (err) {
+                console.log('請求錯誤')
+                initial1()
+                console.log('重新讀取資料')
+            },
+        })
+    }
     // 警報input
     var alarmInput = false
     $('.toolbar').on('focus', 'input', function () {
@@ -93,7 +103,7 @@ $(function () {
     })
     $('#table2').on('focusout', 'input', function () {
         var tempInputVal = $(this).attr("data-tmp")
-        console.log(tempInputVal , $(this).val())
+        console.log(tempInputVal, $(this).val())
         if (tempInputVal !== $(this).val()) {
             // console.log("this is updata")
             $(this).addClass("thisdataupdata")
@@ -131,7 +141,7 @@ $(function () {
                 data = JSON.stringify(data)
                 console.log(data)
                 $.ajax({
-                    url: 'http://127.0.0.1:5000/api/data/changed',
+                    url: config.apiDataChanged,
                     method: 'POST',
                     data: data,
                     dataType: "json",
@@ -140,7 +150,7 @@ $(function () {
                         startRefresh(range)
                         message('警報溫度已更新')
                     },
-                    error: function (err) {}
+                    error: function (err) { }
                 })
                 // console.log(alarmInput)
                 alarmInput = false;
@@ -157,7 +167,7 @@ $(function () {
                 output = JSON.stringify(output)
                 $(".thisdataupdata").removeClass("thisdataupdata")
                 $.ajax({
-                    url: 'http://127.0.0.1:5000/api/analysis/setnumber',
+                    url: config.analysisSetnumber,
                     data: output,
                     method: 'POST',
                     dataType: "json",
@@ -166,7 +176,7 @@ $(function () {
                         startRefresh(range)
                         message('桶號已經修改完成')
                     },
-                    error: function (err) {}
+                    error: function (err) { }
                 })
             }
         }
@@ -197,6 +207,7 @@ $(function () {
     })
     // 刷新請求作業
     function startRefresh(time) {
+        console.log(time, refreshurl)
         time = JSON.stringify(time)
         $.ajax({
             url: refreshurl,
@@ -246,6 +257,10 @@ $(function () {
                         status: Compare(element.table_maxTempLD, f_tr,
                             s_tr)
                     }
+                    // table_start
+                    array[sum].delete_vidoe = {
+                        table_start: element.table_start
+                    }
                     // console.log(totle)
                     array[sum].sec = totle
                     sum++
@@ -267,7 +282,7 @@ $(function () {
     function maxtr() {
         var array = []
         $.ajax({
-            url: 'http://127.0.0.1:5000/api/data/normal',
+            url: config.dataNormal,
             dataType: "json",
             method: 'GET',
             async: false, // 關閉非同步作業
@@ -283,7 +298,7 @@ $(function () {
                 $(".f_tr").attr("data-value", f_tr)
                 $(".s_tr").attr("data-value", s_tr)
             },
-            error: function (err) {}
+            error: function (err) { }
         })
         return array
     }
@@ -326,57 +341,63 @@ $(function () {
             showToggle: true,
             sortReset: true,
             columns: [{
-                    title: '編號',
-                    field: 'id',
-                    align: 'center',
-                    sortable: 'true',
-                },
-                {
-                    title: '桶號',
-                    field: 'table_bucketNumber',
-                    align: 'center',
-                    sortable: true,
-                    formatter: bucketNumberForm,
-                },
-                {
-                    title: '錄影開始時間',
-                    field: 'table_start',
-                    align: 'center',
-                    sortable: true,
-                },
-                {
-                    title: '錄影終止時間',
-                    field: 'table_stop',
-                    align: 'center',
-                    sortable: true,
-                },
-                {
-                    title: '總秒數',
-                    field: 'sec',
-                    align: 'center',
-                    sortable: true,
-                },
-                {
-                    title: 'L/F 副料區',
-                    field: 'table_maxTempLF',
-                    align: 'center',
-                    sortable: true,
-                    formatter: maxTemp,
-                },
-                {
-                    title: '出鋼室地下樓梯',
-                    field: 'table_maxTempSTAIR',
-                    align: 'center',
-                    sortable: true,
-                    formatter: maxTemp,
-                },
-                {
-                    title: 'L/D 2F平台',
-                    field: 'table_maxTempLD',
-                    align: 'center',
-                    sortable: true,
-                    formatter: maxTemp,
-                }
+                title: '編號',
+                field: 'id',
+                align: 'center',
+                sortable: 'true',
+            },
+            {
+                title: '桶號',
+                field: 'table_bucketNumber',
+                align: 'center',
+                sortable: true,
+                formatter: bucketNumberForm,
+            },
+            {
+                title: '錄影開始時間',
+                field: 'table_start',
+                align: 'center',
+                sortable: true,
+            },
+            {
+                title: '錄影終止時間',
+                field: 'table_stop',
+                align: 'center',
+                sortable: true,
+            },
+            {
+                title: '總秒數',
+                field: 'sec',
+                align: 'center',
+                sortable: true,
+            },
+            {
+                title: 'L/F 副料區',
+                field: 'table_maxTempLF',
+                align: 'center',
+                sortable: true,
+                formatter: maxTemp,
+            },
+            {
+                title: '出鋼室地下樓梯',
+                field: 'table_maxTempSTAIR',
+                align: 'center',
+                sortable: true,
+                formatter: maxTemp,
+            },
+            {
+                title: 'L/D 2F平台',
+                field: 'table_maxTempLD',
+                align: 'center',
+                sortable: true,
+                formatter: maxTemp,
+            }, {
+                title: '刪除',
+                field: 'delete_vidoe',
+                align: 'center',
+                sortable: true,
+                formatter: deleteVidoe,
+            }
                 // ,
                 // {
                 // 	title: '拍照時間',
@@ -388,15 +409,86 @@ $(function () {
         }
         return array
     }
+    var dataJSON = null
+    var reciprocalInt = null
+    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+    $('.table-responsive').on('click', '#inDeleteVideo', function () {
+        myModal.show()
+        console.log($(this).attr("data-date"))
+        var date = new Date($(this).attr("data-date"))
+        time = date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + "_T" + ("0" + date.getHours()).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2)
+        dataJSON = [
+            {
+                video_name: time
+            }
+        ]
+        $(".videotimename").html(time)
+        $(".videotimename1").html($(this).attr("data-date"))
+        // var reciprocal = 0
+        // $("#btnDeleteVidoe").attr('disabled', true);
+        // $("#btnDeleteVidoe>span").html(8)
+        // if (reciprocalInt !== null) {
+        //     clearInterval(reciprocalInt)
+        // }
+        // reciprocalInt = setInterval(() => {
+        //     if (reciprocal < 0) {
+        //         $("#btnDeleteVidoe>span").html("")
+        //         $("#btnDeleteVidoe").attr('disabled', false);
+        //         reciprocal = 0
+        //         clearInterval(reciprocalInt)
+        //         reciprocalInt = null
+        //     } else {
+        //         $("#btnDeleteVidoe>span").html(reciprocal)
+        //         reciprocal -= 1
+        //     }
+
+        // }, 1000)
+
+    })
+    $("#btnDeleteVidoe").click(function () {
+        myModal.hide()
+        deleteVideoAPI()
+    })
+    $("#btnDeleteVidoeclo").click(function () {
+        myModal.hide()
+    })
+    function deleteVideoAPI() {
+        $.ajax({
+            url: config.apiDeleteVideo,
+            type: 'post',
+            // dataType: "application/json",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(dataJSON),
+            // async: false,
+            success: (res) => {
+                console.log('刪除')
+                startRefresh(range)
+                setTimeout(() => {
+                    const data = $('#table2').bootstrapTable(
+                        'getRowByUniqueId',
+                        1)
+                    getDATA(data)
+                }, 500)
+
+                // config = res;
+            },
+            error: function (res) {
+                // rtn = false;
+            }
+        });
+    }
+
+    function deleteVidoe(e) {
+        // console.log(e)
+        return [`<div style="z-index:999;" data-date="${e.table_start}" id="inDeleteVideo"><img src="/static/trash.png" width="30px" class="me-3" /></div>`]
+    }
     // input輸入框
     function bucketNumberForm(e) {
-        return ['<input type="number" min="0" style="width:50px;text-align: center;" name="' + e
-            .table_itemName +
-            '" value="' + e
-            .bucketNumber + '" data-tmp="' + e
-            .bucketNumber + '">' + '<span class="d-none">' + e
-            .bucketNumber + '</span>'
-        ]
+        return [`<input type="number" min="0" style="width:50px;text-align: center;" name="${e
+            .table_itemName}" value="${e
+                .bucketNumber}" data-tmp="${e
+                    .bucketNumber}"><span class="d-none">${e
+                        .bucketNumber}</span>`]
     }
     // 合併溫度方法
     function maxTemp(e) {
@@ -569,23 +661,23 @@ $(function () {
             show: true,
         },
         series: [{
-                name: 'L/F 副料區',
-                type: 'line',
-                color: '#77849A',
-                smooth: true,
-            },
-            {
-                name: '出鋼室地下樓梯',
-                type: 'line',
-                color: '#D0CAC4',
-                smooth: true,
-            },
-            {
-                name: 'L/D 2F平台',
-                type: 'line',
-                color: '#CF8786',
-                smooth: true,
-            },
+            name: 'L/F 副料區',
+            type: 'line',
+            color: '#77849A',
+            smooth: true,
+        },
+        {
+            name: '出鋼室地下樓梯',
+            type: 'line',
+            color: '#D0CAC4',
+            smooth: true,
+        },
+        {
+            name: 'L/D 2F平台',
+            type: 'line',
+            color: '#CF8786',
+            smooth: true,
+        },
         ]
     };
     // 使用刚指定的配置项和数据显示图表。
@@ -645,8 +737,10 @@ $(function () {
     })
 
     function getDATA(data) {
-        const download = 'http://127.0.0.1:5000/download/' + data.table_itemName + '.txt' //設定api位置
-        const videodownload = 'http://127.0.0.1:5000/download/' + data.table_itemName + '.mp4'
+        clearInterval(Interval)
+        // console.log(data)
+        const download = config.web_dataScraping_download + data.table_itemName + '.txt' //設定api位置
+        const videodownload = config.web_dataScraping_download + data.table_itemName + '.mp4'
         // $("#videoList").attr("src", video)
         // 將影片下載到內部(解決steam導致無法選擇影片進度問題)
         blobVideo(videodownload)
@@ -670,17 +764,17 @@ $(function () {
                         data: timesum
                     },
                     series: [{
-                            name: 'L/F 副料區',
-                            data: response.temperature_LF
-                        },
-                        {
-                            name: '出鋼室地下樓梯',
-                            data: response.temperature_STAIR
-                        },
-                        {
-                            name: 'L/D 2F平台',
-                            data: response.temperature_LD
-                        },
+                        name: 'L/F 副料區',
+                        data: response.temperature_LF
+                    },
+                    {
+                        name: '出鋼室地下樓梯',
+                        data: response.temperature_STAIR
+                    },
+                    {
+                        name: 'L/D 2F平台',
+                        data: response.temperature_LD
+                    },
                     ]
                 });
                 // 自動高亮
@@ -733,7 +827,7 @@ $(function () {
                     }
                 }, 1500);
             },
-            error: function (err) {}
+            error: function (err) { }
         })
     }
 
