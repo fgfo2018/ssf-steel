@@ -1,4 +1,5 @@
 $(function () {
+    document.getElementById('selectDate').valueAsDate = new Date();
     // 載入config
     var config = null
     var Interval = null
@@ -15,6 +16,7 @@ $(function () {
     });
     // console.log(config.web_dataScraping_initial)
     //初始化資料報表
+    var clickSum = null;
     const refreshurl = config.web_dataScraping_refresh //定義資料報表API位置
     initial1()
     function initial1() {
@@ -27,14 +29,16 @@ $(function () {
                 var maxtre = maxtr()
                 var array = data
                 var sum = 0
-                array.sort(function (a, b) {
-                    var keyA = new Date(a.table_start),
-                        keyB = new Date(b.table_start);
-                    // Compare the 2 dates
-                    if (keyA < keyB) return 1;
-                    if (keyA > keyB) return -1;
-                    return 0;
-                });
+                // array.sort(function (a, b) {
+                //     var keyA = new Date(a.table_start),
+                //         keyB = new Date(b.table_start);
+                //     // Compare the 2 dates
+                //     if (keyA < keyB) return 1;
+                //     if (keyA > keyB) return -1;
+                //     return 0;
+                // });
+                // console.log(array)
+
                 array.forEach(element => {
                     array[sum].id = sum + 1
                     var start = new Date(element.table_start)
@@ -71,6 +75,8 @@ $(function () {
                     array[sum].sec = totle
                     sum++
                 })
+                array.sort(compareFn)
+                console.log(array.sort(compareFn))
                 mydata(array)
                 // $('.max_tr01').parent().css('background','#ff8d00')
                 // $('.max_tr01').closest('tr').css('background','rgb(255 220 223)')
@@ -84,6 +90,21 @@ $(function () {
                 console.log('重新讀取資料')
             },
         })
+    }
+    // 排序
+    function compareFn(a, b) {
+        var ae = a.table_bucketNumber.bucketNumber
+        if (ae === '') {
+            ae = -1
+        }
+        if (ae < b.table_bucketNumber.bucketNumber) {
+            return -1;
+        }
+        if (ae > b.table_bucketNumber.bucketNumber) {
+            return 1;
+        }
+        // a must be equal to b
+        return 0;
     }
     // 警報input
     var alarmInput = false
@@ -103,7 +124,7 @@ $(function () {
     })
     $('#table2').on('focusout', 'input', function () {
         var tempInputVal = $(this).attr("data-tmp")
-        console.log(tempInputVal, $(this).val())
+        // console.log(tempInputVal, $(this).val())
         if (tempInputVal !== $(this).val()) {
             // console.log("this is updata")
             $(this).addClass("thisdataupdata")
@@ -139,7 +160,7 @@ $(function () {
                     return false
                 }
                 data = JSON.stringify(data)
-                console.log(data)
+                // console.log(data)
                 $.ajax({
                     url: config.apiDataChanged,
                     method: 'POST',
@@ -173,10 +194,17 @@ $(function () {
                     dataType: "json",
                     contentType: 'application/json; charset=utf-8',
                     success: function (res) {
-                        startRefresh(range)
+                        startRefresh(range, 1)
                         message('桶號已經修改完成')
+                        const data = $('#table2').bootstrapTable(
+                            'getRowByUniqueId',
+                            1)
+                        getDATA(data)
                     },
-                    error: function (err) { }
+                    error: function (err) {
+                        message('資料錯誤，尚未修改桶號，自動恢復上次儲存資料', 1)
+                        startRefresh(range, 1)
+                    }
                 })
             }
         }
@@ -185,11 +213,22 @@ $(function () {
 
 
     // 日期更新後執行
-    $('input[name="dates"]').on('apply.daterangepicker', function (ev, picker) {
-        console.log(picker.startDate.format('YYYY-MM-DD'));
-        console.log(picker.endDate.format('YYYY-MM-DD'));
-        var datesstart = picker.startDate.format('YYYY-MM-DD') + ' 00:00:00'
-        var datesstop = picker.endDate.format('YYYY-MM-DD') + ' 23:59:59'
+    // $('input[name="dates"]').on('apply.daterangepicker', function (ev, picker) {
+    //     console.log(picker.startDate.format('YYYY-MM-DD'));
+    //     console.log(picker.endDate.format('YYYY-MM-DD'));
+    //     var datesstart = picker.startDate.format('YYYY-MM-DD') + ' 00:00:00'
+    //     var datesstop = picker.endDate.format('YYYY-MM-DD') + ' 23:59:59'
+    //     range = {
+    //         'table_timeselectStart': datesstart,
+    //         'table_timeselectStop': datesstop
+    //     }
+    //     startRefresh(range)
+    //     // console.log(range)
+    // });
+    $('#selectDate').on('change', function (ev) {
+        // console.log($(this).val());
+        var datesstart = $(this).val() + ' 00:00:00'
+        var datesstop = $(this).val() + ' 23:59:59'
         range = {
             'table_timeselectStart': datesstart,
             'table_timeselectStop': datesstop
@@ -206,8 +245,8 @@ $(function () {
         }
     })
     // 刷新請求作業
-    function startRefresh(time) {
-        console.log(time, refreshurl)
+    function startRefresh(time, err) {
+        // console.log(time, refreshurl)
         time = JSON.stringify(time)
         $.ajax({
             url: refreshurl,
@@ -219,14 +258,14 @@ $(function () {
                 var maxtre = maxtr()
                 var array = data
                 var sum = 0
-                array.sort(function (a, b) {
-                    var keyA = new Date(a.table_start),
-                        keyB = new Date(b.table_start);
-                    // Compare the 2 dates
-                    if (keyA < keyB) return 1;
-                    if (keyA > keyB) return -1;
-                    return 0;
-                });
+                // array.sort(function (a, b) {
+                //     var keyA = new Date(a.table_start),
+                //         keyB = new Date(b.table_start);
+                //     // Compare the 2 dates
+                //     if (keyA < keyB) return 1;
+                //     if (keyA > keyB) return -1;
+                //     return 0;
+                // });
                 array.forEach(element => {
                     array[sum].id = sum + 1
                     var start = new Date(element.table_start)
@@ -265,13 +304,23 @@ $(function () {
                     array[sum].sec = totle
                     sum++
                 })
+                array.sort(compareFn)
+                // console.log(array)
                 updata(array)
+
                 // $('.max_tr01').parent().css('background','#ff8d00')
                 // $('.max_tr01').closest('tr').css('background','rgb(255 220 223)')
                 $('.max_tr01').closest('tr').css('background', '#F4EAE4')
                 // $('.max_tr02').parent().css('background','rgb(255, 0, 0)')
                 $('.max_tr02').closest('tr').css('background', '#F4EAE4')
-                message('資料已刷新')
+                if (err === undefined) {
+                    message('資料已刷新')
+                }
+                clickSum = null
+                var d = $('#table2').bootstrapTable(
+                    'getRowByUniqueId',
+                    1)
+                getDATA(d)
             },
             error: function (err) {
                 console.log(err)
@@ -339,18 +388,20 @@ $(function () {
             exportTypes: ['txt', 'csv', 'excel'], // 導出類型
             exportDataType: 'all', // basic', 'all', 'selected'
             showToggle: true,
-            sortReset: true,
+            // sortReset: true,
             columns: [{
-                title: '編號',
+                title: '發生順序',
                 field: 'id',
                 align: 'center',
-                sortable: 'true',
+                sortable: true,
             },
             {
                 title: '桶號',
                 field: 'table_bucketNumber',
                 align: 'center',
-                sortable: true,
+                sortable: false,
+                sort: true,
+                sortValue: 'number',
                 formatter: bucketNumberForm,
             },
             {
@@ -414,7 +465,7 @@ $(function () {
     var myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
     $('.table-responsive').on('click', '#inDeleteVideo', function () {
         myModal.show()
-        console.log($(this).attr("data-date"))
+        // console.log($(this).attr("data-date"))
         var date = new Date($(this).attr("data-date"))
         time = date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + "_T" + ("0" + date.getHours()).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2)
         dataJSON = [
@@ -518,14 +569,14 @@ $(function () {
         return duration;
     }
     // 日期選擇
-    $('input[name="dates"]').daterangepicker({
-        locale: formatDates(),
-        showDropdowns: false,
-        maxDate: today,
-        maxSpan: {
-            "days": 7
-        },
-    });
+    // $('input[name="dates"]').daterangepicker({
+    //     locale: formatDates(),
+    //     showDropdowns: false,
+    //     maxDate: today,
+    //     maxSpan: {
+    //         "days": 0
+    //     },
+    // });
 
     //選擇日期格式
     function formatDates() {
@@ -625,7 +676,7 @@ $(function () {
                     title: '自動播放',
                     icon: 'image://static/play.png',
                     onclick: function () {
-                        console.log(testasd);
+                        // console.log(testasd);
                         testasd++
                         Trend.setOption({
                             toolbox: {
@@ -714,9 +765,9 @@ $(function () {
     const testdata = $('#table2').bootstrapTable(
         'getRowByUniqueId',
         1)
-    var clickSum = null;
     $('.table-responsive').on('click', 'tr', function () {
-        var id = parseInt($(this).attr("data-index")) + 1
+        // var id = parseInt($(this).attr("data-index")) + 1
+        var id = parseInt($(this).attr("data-uniqueid"))
         $('.max_tr01').closest('tr').css('background', '#F4EAE4')
         $('.max_tr02').closest('tr').css('background', '#F4EAE4')
 
@@ -730,6 +781,7 @@ $(function () {
                 const data = $('#table2').bootstrapTable(
                     'getRowByUniqueId',
                     id)
+                console.log(id)
                 getDATA(data)
             }
         }
@@ -738,7 +790,7 @@ $(function () {
 
     function getDATA(data) {
         clearInterval(Interval)
-        // console.log(data)
+        console.log(data)
         const download = config.web_dataScraping_download + data.table_itemName + '.txt' //設定api位置
         const videodownload = config.web_dataScraping_download + data.table_itemName + '.mp4'
         // $("#videoList").attr("src", video)
@@ -879,11 +931,15 @@ $(function () {
         message(test)
     })
 
-    function message(message) {
+    function message(message, err) {
+        var s = 'bg-primary'
+        if (err !== undefined) {
+            s = 'btn-danger'
+        }
         setTimeout(function () {
             var id = Math.floor(Math.random() * 99999);
             id = 'name' + id
-            var html = `<div id="liveToast" class="Toast-custom bg-primary mb-1 ${id}">
+            var html = `<div id="liveToast" class="Toast-custom ${s} mb-1 ${id}">
 			<div class="Toastbody-custom">
 				${message}
 			</div>

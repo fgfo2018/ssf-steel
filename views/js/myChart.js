@@ -1,5 +1,22 @@
-const url = 'http://127.0.0.1:5000/api/analysis/refresh'
 var myChart = echarts.init(document.getElementById('main2'));
+var config = getConfig();
+function getConfig() {
+    var rtn;
+    $.ajax({
+        url: '/config',
+        type: 'get',
+        async: false,
+        success: function (res) {
+            rtn = res;
+        },
+        error: function (res) {
+            rtn = false;
+        }
+    });
+    return rtn;
+}
+const url = config.web_dataScraping_refresh
+
 // prettier-ignore
 // (x, y , 0:沒事 1:有事, 拉了幾桶(3桶/hr))
 var Interval = null
@@ -122,25 +139,34 @@ $(window).keypress(function (event) {
     }
 })
 getData(url)
+// _____________ 2022/11/22 backup
 // 判斷表單點到的日期
-var clickSum = null;
-$('.table-responsive').on('click', 'tr', function () {
-    var id = parseInt($(this).attr("data-index")) + 1
-    if (!isNaN(id)) { // 判斷id是否有數字
+// var clickSum = null;
+// $('.table-responsive').on('click', 'tr', function () {
+//     var id = parseInt($(this).attr("data-index")) + 1
+//     if (!isNaN(id)) { // 判斷id是否有數字
 
-        if (clickSum !== id) { // 判斷是否點擊同一列
-            if (Interval !== null) {
-                clearInterval(Interval)
-            }
-            const data = $('#table2').bootstrapTable(
-                'getRowByUniqueId',
-                id)
-            var clickdata = new Date(data.table_start)
-            getData(url, clickdata)
-        }
-    }
-    clickSum = id
-})
+//         if (clickSum !== id) { // 判斷是否點擊同一列
+//             if (Interval !== null) {
+//                 clearInterval(Interval)
+//             }
+//             const data = $('#table2').bootstrapTable(
+//                 'getRowByUniqueId',
+//                 id)
+//             var clickdata = new Date(data.table_start)
+//             getData(url, clickdata)
+//         }
+//     }
+//     clickSum = id
+// })
+// _____________ 2022/11/22 backup
+$('.selectDate1').on('change', function (ev) {
+    setTimeout(() => {
+        var date = new Date($(this).val())
+        getData(url, date)
+    }, 300)
+    // console.log(range)
+});
 
 function getData(url, clickdata) {
     // var date_range = $('#date_range').val();
@@ -237,7 +263,7 @@ function listinterval(res, clickdata) {
             f_tr = res.setting_first_alarm_temperature
             s_tr = res.setting_second_alarm_temperature
         },
-        error: function (err) {}
+        error: function (err) { }
     })
 
     // 宣告陣列

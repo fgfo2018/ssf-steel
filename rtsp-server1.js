@@ -16,6 +16,7 @@ const app = express(),
 const bodyParser = require('body-parser')
 
 server.listen(config.server01_Port);
+console.log(`server open : http://localhost:${config.server01_Port}/`)
 app.use(bodyParser.text({
         type: '*/*'
     }), express.static(__dirname + '/views'),
