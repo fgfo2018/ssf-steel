@@ -1,0 +1,1 @@
+Cannot find "/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js" in tableexport.jquery.plugin@1.26.0
