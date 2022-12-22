@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<script src="/socket.io/socket.io.js"></script>
+	<script src="/socket.io/jquery-3.6.0.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"
 		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="./js/bootstrap.js"></script>
@@ -95,7 +96,8 @@
 									</div>
 									<div class="col-12 pt-1">
 										<div class="form-floating">
-											<input name="dates" class="form-control selectDate1"  type="date" id="selectDate" />
+											<input name="dates" class="form-control selectDate1" type="date"
+												id="selectDate" />
 											<!-- <input name="dates" class="form-control" id="floatingInputGrid" /> -->
 											<!-- <label for="floatingInputGrid">選擇資料日期範圍</label> -->
 											<label for="floatingInputGrid">選擇資料日期</label>
@@ -105,11 +107,10 @@
 							</div>
 							<table id="table2" data-height="807" data-toolbar=".toolbar" data-show-export="true"
 								data-pagination="false" data-click-to-select="true" data-toolbar="#toolbar"
-								data-show-toggle="true" 
-								data-sort-class="table-active"
-								data-show-columns="true" data-sortable="true"
-								data-toggle="table2" data-search="false" data-live-search="false" data-show-refresh="true"
-								data-unique-id="id">
+								data-show-toggle="true" data-sort-class="table-active" data-show-columns="true"
+								data-sortable="true" data-toggle="table2" data-search="false" data-live-search="false"
+								data-show-refresh="true" data-sort-reset="true" data-unique-id="id"
+								data-custom-sort="customSort">
 								<thead>
 									<form class="data-report">
 										<button hidden="true" type="submit"></button>
@@ -198,7 +199,8 @@
 
 	</div>
 	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9999999999;">
+	<div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9999999999;">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -227,6 +229,37 @@
 		// 	console.log('open')
 		// 	myModal.show()
 		// },1000)
+		function customSort(sortName, sortOrder, data) {
+			if(sortName === 'table_bucketNumber'){
+				var order = sortOrder === 'desc' ? -1 : 1
+				data.sort(function (a, b) {
+					// console.log(a[sortName].sortSum,b[sortName].sortSum)
+					var aa = parseInt(a[sortName].sortSum)
+					var bb = parseInt(b[sortName].sortSum)
+					if (aa < bb) {
+						return order * -1
+					}
+					if (aa > bb) {
+						return order
+					}
+					return 0
+				})
+			}else{
+				var order = sortOrder === 'desc' ? -1 : 1
+				data.sort(function (a, b) {
+					var aa = +((a[sortName] + '').replace(/[^\d]/g, ''))
+					var bb = +((b[sortName] + '').replace(/[^\d]/g, ''))
+					if (aa < bb) {
+						return order * -1
+					}
+					if (aa > bb) {
+						return order
+					}
+					return 0
+				})
+			}
+			
+		}
 	</script>
 	<script src="./js/dataScraping.js"></script>
 	<script src="./js/myChart.js"></script>

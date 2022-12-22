@@ -52,7 +52,8 @@ $(function () {
                     }
                     array[sum].table_bucketNumber = {
                         bucketNumber: bucketNumber,
-                        table_itemName: element.table_itemName
+                        table_itemName: element.table_itemName,
+                        sortSum: element.table_bucketNumber + 1
                     }
                     // L/F
                     array[sum].table_maxTempLF = {
@@ -75,8 +76,8 @@ $(function () {
                     array[sum].sec = totle
                     sum++
                 })
-                array.sort(compareFn)
-                console.log(array.sort(compareFn))
+                // array.sort(compareFn)
+                // console.log(array.sort(compareFn))
                 mydata(array)
                 // $('.max_tr01').parent().css('background','#ff8d00')
                 // $('.max_tr01').closest('tr').css('background','rgb(255 220 223)')
@@ -149,6 +150,10 @@ $(function () {
         'table_timeselectStop': listday
     }
     $(window).keypress(function (event) {
+        // if (Interval !== null) {
+        //     clearInterval(Interval)
+        //     Interval = null
+        // }
         if (event.which === 13) {
             event.preventDefault();
             if (alarmInput) {
@@ -273,12 +278,14 @@ $(function () {
                     var totle = (end.getTime() - start.getTime()) / 1000
                     // console.log(totle)
                     totle = getDuration(totle)
+                    var tmpeNumber = array[sum].table_bucketNumber
                     if (array[sum].table_bucketNumber === -1) {
                         array[sum].table_bucketNumber = ""
                     }
                     array[sum].table_bucketNumber = {
                         bucketNumber: element.table_bucketNumber,
-                        table_itemName: element.table_itemName
+                        table_itemName: element.table_itemName,
+                        sortSum: tmpeNumber + 1
                     }
                     // L/F
                     array[sum].table_maxTempLF = {
@@ -304,7 +311,7 @@ $(function () {
                     array[sum].sec = totle
                     sum++
                 })
-                array.sort(compareFn)
+                // array.sort(compareFn)
                 // console.log(array)
                 updata(array)
 
@@ -378,7 +385,13 @@ $(function () {
     }
     // 更新
     function updata(mydata2) {
-        $('#table2').bootstrapTable('refreshOptions', database(mydata2));
+        $('#table2').bootstrapTable('destroy');
+        $('#table2').bootstrapTable(database(mydata2), function () {
+            // $('.max_tr01').closest('tr').css('background', '#F4EAE4')
+            // $('.max_tr02').closest('tr').css('background', '#F4EAE4')
+            // console.log(123)
+        });
+        // $('#table2').bootstrapTable('refreshOptions', database(mydata2));
     }
     // table格式化
     function database(mydata2) {
@@ -387,7 +400,7 @@ $(function () {
             classes: 'table table-borderless  table-hover data-checkbox="true" data-field="',
             exportTypes: ['txt', 'csv', 'excel'], // 導出類型
             exportDataType: 'all', // basic', 'all', 'selected'
-            showToggle: true,
+            // showToggle: true,
             // sortReset: true,
             columns: [{
                 title: '發生順序',
@@ -399,9 +412,8 @@ $(function () {
                 title: '桶號',
                 field: 'table_bucketNumber',
                 align: 'center',
-                sortable: false,
-                sort: true,
-                sortValue: 'number',
+                // sortable: false,
+                sortable: true,
                 formatter: bucketNumberForm,
             },
             {
@@ -446,7 +458,7 @@ $(function () {
                 title: '刪除',
                 field: 'delete_vidoe',
                 align: 'center',
-                sortable: true,
+                sortable: false,
                 formatter: deleteVidoe,
             }
                 // ,
@@ -766,6 +778,10 @@ $(function () {
         'getRowByUniqueId',
         1)
     $('.table-responsive').on('click', 'tr', function () {
+        // if (Interval !== null) {
+        //     clearInterval(Interval)
+        //     Interval = null
+        // }
         // var id = parseInt($(this).attr("data-index")) + 1
         var id = parseInt($(this).attr("data-uniqueid"))
         $('.max_tr01').closest('tr').css('background', '#F4EAE4')
@@ -789,7 +805,7 @@ $(function () {
     })
 
     function getDATA(data) {
-        clearInterval(Interval)
+        
         console.log(data)
         const download = config.web_dataScraping_download + data.table_itemName + '.txt' //設定api位置
         const videodownload = config.web_dataScraping_download + data.table_itemName + '.mp4'
@@ -853,6 +869,10 @@ $(function () {
                     hover = true
                 });
                 let currentIndex = -1;
+                if (Interval !== null) {
+                    clearInterval(Interval)
+                    Interval = null
+                }
                 Interval = setInterval(function () {
                     if (hover) {
                         var dataLen = response.time.length;
