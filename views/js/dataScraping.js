@@ -17,11 +17,11 @@ $(function () {
     // console.log(config.web_dataScraping_initial)
     //初始化資料報表
     var clickSum = null;
-    const refreshurl = config.web_dataScraping_refresh //定義資料報表API位置
+    const refreshurl = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_dataScraping_refresh}` //定義資料報表API位置
     initial1()
     function initial1() {
         $.ajax({
-            url: config.web_dataScraping_initial,
+            url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_dataScraping_initial}`,
             data: range,
             method: 'GET',
             dataType: "json",
@@ -167,7 +167,7 @@ $(function () {
                 data = JSON.stringify(data)
                 // console.log(data)
                 $.ajax({
-                    url: config.apiDataChanged,
+                    url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.apiDataChanged}`,
                     method: 'POST',
                     data: data,
                     dataType: "json",
@@ -193,7 +193,7 @@ $(function () {
                 output = JSON.stringify(output)
                 $(".thisdataupdata").removeClass("thisdataupdata")
                 $.ajax({
-                    url: config.analysisSetnumber,
+                    url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.analysisSetnumber}`,
                     data: output,
                     method: 'POST',
                     dataType: "json",
@@ -338,7 +338,7 @@ $(function () {
     function maxtr() {
         var array = []
         $.ajax({
-            url: config.dataNormal,
+            url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.dataNormal}`,
             dataType: "json",
             method: 'GET',
             async: false, // 關閉非同步作業
@@ -517,7 +517,7 @@ $(function () {
     })
     function deleteVideoAPI() {
         $.ajax({
-            url: config.apiDeleteVideo,
+            url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.apiDeleteVideo}`,
             type: 'post',
             // dataType: "application/json",
             contentType: 'application/json; charset=utf-8',
@@ -807,8 +807,8 @@ $(function () {
     function getDATA(data) {
         
         console.log(data)
-        const download = config.web_dataScraping_download + data.table_itemName + '.txt' //設定api位置
-        const videodownload = config.web_dataScraping_download + data.table_itemName + '.mp4'
+        const download = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_dataScraping_download}` + data.table_itemName + '.txt' //設定api位置
+        const videodownload = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_dataScraping_download}` + data.table_itemName + '.mp4'
         // $("#videoList").attr("src", video)
         // 將影片下載到內部(解決steam導致無法選擇影片進度問題)
         blobVideo(videodownload)

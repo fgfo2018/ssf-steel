@@ -330,7 +330,7 @@
             // },1000)
             function initial() {
                 $.ajax({
-                    url: config.DetectionFrameInit,
+                    url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.DetectionFrameInit}`,
                     method: 'GET',
                     success: function (data) {
                         console.log(data)
@@ -401,7 +401,7 @@
                 var thisMessage = document.getElementById('thisMessage')
                 var toast = new bootstrap.Toast(toastLiveExample)
                 $.ajax({
-                    url: config.DetectionFramechange,
+                    url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.DetectionFramechange}`,
                     method: 'POST',
                     data: JSON.stringify(req),
                     contentType: 'application/json; charset=utf-8',
@@ -447,7 +447,7 @@
                 var thisMessage = document.getElementById('thisMessage')
                 var toast = new bootstrap.Toast(toastLiveExample)
                 $.ajax({
-                    url: config.DOchange,
+                    url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.DOchange}`,
                     method: 'POST',
                     data: JSON.stringify(req),
                     contentType: 'application/json; charset=utf-8',

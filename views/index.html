@@ -723,20 +723,20 @@
     // 錄影
     var config = getConfig();
     function getConfig() {
-        var rtn;
-        $.ajax({
-          url: '/config',
-          type: 'get',
-          async: false,
-          success: function (res) {
-            rtn = res;
-          },
-          error: function (res) {
-            rtn = false;
-          }
-        });
-        return rtn;
-      }
+      var rtn;
+      $.ajax({
+        url: '/config',
+        type: 'get',
+        async: false,
+        success: function (res) {
+          rtn = res;
+        },
+        error: function (res) {
+          rtn = false;
+        }
+      });
+      return rtn;
+    }
     setInterval((e) => {
       record2(0)
     }, 1000)
@@ -749,7 +749,7 @@
     })
     function record2(e) {
       $.ajax({
-        url: config.manualVideo,
+        url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.manualVideo}`,
         method: 'POST',
         data: JSON.stringify({
           "status": e
@@ -762,13 +762,13 @@
             $('.record-txt').html('立即錄影')
             $("#record").addClass("record-start")
             $("#record").removeClass("record-stop")
-            $("#record").data("id","1")
+            $("#record").data("id", "1")
           } else if (data === 1) {
             $('.record-txt').html('停止錄影')
             $("#record").removeClass("record-start")
             $("#record").addClass("record-stop")
             $("#record").data("id", "2")
-          }else{
+          } else {
             console.log("record viedo is not working")
           }
         },
@@ -784,7 +784,7 @@
         opacity: 0,
       }, 300);
       $.ajax({
-        url: config.manualSnapshot,
+        url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.manualSnapshot}`,
         type: 'get',
         success: (res) => {
           setTimeout(() => {
@@ -971,9 +971,9 @@
       });
       // videok.play();
       // konva end
-      
+
       var VideoTemp = null;
-      url = config.web_video_initial;
+      url = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_video_initial}`;
       var status = true
       getVideosList(url, status, VideoTemp, config)
       var controlTemp = 0
@@ -1074,7 +1074,7 @@
       var run = null;
       var temp = null
       run = setInterval(function () {
-        none = config.web_video_normal
+        none = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_video_normal}`
         getVideosList(none, status, VideoTemp, config)
         // console.log(status)
       }, 1000)
@@ -1106,11 +1106,11 @@
                 VideoTemp = VideoTemp[Object.keys(VideoTemp)[Object.keys(VideoTemp).length - 1]]
               }
               if (data === VideoTemp) {
-                $('#videoSelect').append('<option value="' + config.web_video_url_prefix + data +
+                $('#videoSelect').append('<option value="' + `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_video_url_prefix}` + data +
                   '" selected>' + data +
                   '</option>')
               } else {
-                $('#videoSelect').append('<option value="' + config.web_video_url_prefix + data + '">' +
+                $('#videoSelect').append('<option value="' + `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_video_url_prefix}` + data + '">' +
                   data +
                   '</option>')
               }
@@ -1120,8 +1120,8 @@
                   // $('#videoList').attr("src", config.web_video_url_prefix + data)
                   // videoL.play();
                   document.getElementById("videoSelect").selectedIndex = 0;
-                  tempvideourl = config.web_video_url_prefix + data
-                  videoUrl = config.web_video_url_prefix + data
+                  tempvideourl = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_video_url_prefix}` + data
+                  videoUrl = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_video_url_prefix}` + data
                   blobVideo()
                   // blobVideo('http://127.0.0.1:5000/download/20220501_T155224.mp4')
                   // videok.src = config.web_video_url_prefix + data
@@ -1141,7 +1141,7 @@
         })
       }
 
-      
+
 
       function deawtem() {
 
@@ -1469,7 +1469,11 @@
         const rtsperror3 = document.getElementById('rtsp-error03')
         console.log('正在建立與後台之間的連線協定...')
         // var ws = new WebSocket("ws://127.0.0.1:8765");
-        var ws = new WebSocket(config.web_socket_url);
+        if (config.TESTMODE === "0") {
+          var ws = new WebSocket(`ws://${window.location.hostname}:${config.web_socket_Port}${config.web_socket_url}`);
+        } else {
+          var ws = new WebSocket(`ws://${window.location.hostname}:${config.web_socket_Port}${config.web_socket_TEST}`);
+        }
         ws.onopen = () => {
           console.log('與後台之間的連線協定建立成功!')
           console.log('功能運作正常!!!')
@@ -2048,7 +2052,7 @@
           function func(data, param) {
             var toastLiveExample = document.getElementById('liveToast2')
             var toast2 = new bootstrap.Toast(toastLiveExample)
-            var PostUrl = config.web_data_changed
+            var PostUrl = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_data_changed}`
             $.ajax({
               type: "POST",
               url: PostUrl,
@@ -2204,7 +2208,7 @@
         ]
         $.ajax({
           type: "GET",
-          url: config.web_data_initial,
+          url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_data_initial}`,
           dataType: "json",
           success: function (response) {
             $('#liveAlertPlaceholder').addClass('d-none');

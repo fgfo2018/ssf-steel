@@ -15,7 +15,7 @@ function getConfig() {
     });
     return rtn;
 }
-const url = config.web_dataScraping_refresh
+const url = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_dataScraping_refresh}`
 
 // prettier-ignore
 // (x, y , 0:沒事 1:有事, 拉了幾桶(3桶/hr))
