@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors')
 var fs = require("fs");
+const requestIp = require('request-ip');
 filename = "./config.json";
 let rawdata = fs.readFileSync(filename);
 let config = JSON.parse(rawdata);
@@ -18,9 +19,9 @@ const bodyParser = require('body-parser')
 server.listen(config.server01_Port);
 console.log(`server open : http://localhost:${config.server01_Port}/`)
 app.use(bodyParser.text({
-        type: '*/*'
-    }), express.static(__dirname + '/views'),
-    cors()
+    type: '*/*'
+}), express.static(__dirname + '/views'),
+    cors(), requestIp.mw()
 );
 var uri =
     config.server01_Url,
@@ -74,7 +75,7 @@ app.get('/checkPort', function (req, res) {
             })
         }).connect(item[1], item[0]);
     })
-    
+
 })
 // ping end
 
@@ -82,7 +83,18 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/views/index.html');
 });
 
+app.get('/myip1', function (req, res) {
+    const output = getSpotsData();
+    var myString = output.passIP
+    var array = myString.split(',')
+    // const ipAddress = req.socket.remoteAddress;
+    const ip = req.clientIp.replace(/^.*:/, '');
+    // console.log(ip);
+    res.send({ ip: ip, passip: array });
+});
+
 app.get('/config', function (req, res) {
+
     const output = getSpotsData();
     // console.log();
     res.send(output)

@@ -1,6 +1,8 @@
 $(function () {
-    document.getElementById('selectDate').valueAsDate = new Date();
+    // 
+    // document.getElementById('selectDate').valueAsDate = new Date();
     // 載入config
+    var fixedtablebodyscrollTop = 0 
     var config = null
     var Interval = null
     $.ajax({
@@ -55,6 +57,34 @@ $(function () {
                         table_itemName: element.table_itemName,
                         sortSum: element.table_bucketNumber + 1
                     }
+                    if (element.table_frequency === null) {
+                        element.table_frequency = ""
+                    }
+                    array[sum].table_frequency = {
+                        frequency: element.table_frequency,
+                        table_itemName: element.table_itemName,
+                    }
+                    if (element.table_bucket_temperture === null) {
+                        element.table_bucket_temperture = ""
+                    }
+                    array[sum].table_bucket_temperture = {
+                        bucketTemperture: element.table_bucket_temperture,
+                        table_itemName: element.table_itemName,
+                    }
+                    if (element.table_remark1 === null) {
+                        element.table_remark1 = ""
+                    }
+                    array[sum].table_remark1 = {
+                        remark1: element.table_remark1,
+                        table_itemName: element.table_itemName,
+                    }
+                    if (element.table_remark2 === null) {
+                        element.table_remark2 = ""
+                    }
+                    array[sum].table_remark2 = {
+                        remark2: element.table_remark2,
+                        table_itemName: element.table_itemName,
+                    }
                     // L/F
                     array[sum].table_maxTempLF = {
                         maxTr: element.table_maxTempLF,
@@ -84,6 +114,13 @@ $(function () {
                 $('.max_tr01').closest('tr').css('background', '#F4EAE4')
                 // $('.max_tr02').parent().css('background','rgb(255, 0, 0)')
                 $('.max_tr02').closest('tr').css('background', '#F4EAE4')
+                // 判斷圖表滾輪高度
+                // const scroller1 = document.querySelector(".fixed-table-body");
+                // scroller1.addEventListener("scroll", (event) => {
+                //     console.log(`scrollTop: ${scroller1.scrollTop}`)
+                //     fixedtablebodyscrollTop = scroller1.scrollTop
+                // });
+                
             },
             error: function (err) {
                 console.log('請求錯誤')
@@ -149,11 +186,14 @@ $(function () {
         'table_timeselectStart': today,
         'table_timeselectStop': listday
     }
+    
     $(window).keypress(function (event) {
         // if (Interval !== null) {
         //     clearInterval(Interval)
         //     Interval = null
         // }
+        const scroller1 = document.querySelector(".fixed-table-body");
+        fixedtablebodyscrollTop = scroller1.scrollTop
         if (event.which === 13) {
             event.preventDefault();
             if (alarmInput) {
@@ -183,13 +223,84 @@ $(function () {
             } else {
                 $('input').blur()
                 var data = $(".thisdataupdata").serializeArray()
+                var tmp = []
+                var tmp2 = []
+                var typeName = ['BN', 'FQ', 'BT', 'RE1', 'RE2']
                 var output = []
                 data.forEach(function (element) {
+                    var index = element.name.split("_")
+                    index = {
+                        type: index[0],
+                        time: `${index[1]}_${index[2]}`,
+                        value: element.value
+                    }
+                    tmp.push(index)
+                })
+                // table_bucketNumber: "" = BN
+                // table_frequency: "" = FQ
+                // table_bucket_temperture: "" = BT
+                // table_remark1: "" = RE1
+                // table_remark2: "" = 
+                tmp.forEach((element) => {
+                    tmp2[element.time] = {
+                        table_itemName: element.time,
+                        table_bucketNumber: "",
+                        table_frequency: "",
+                        table_bucket_temperture: "",
+                        table_remark1: "",
+                        table_remark2: ""
+                    }
+                })
+                Object.keys(tmp2).forEach((key) => {
+                    typeName.forEach((element) => {
+                        console.log(document.querySelector(`[name='${element}_${key}']`).value)
+                        var value = document.querySelector(`[name='${element}_${key}']`).value
+                        if (element === "BN") {
+                            tmp2[key].table_bucketNumber = value
+                        } else if (element === "FQ") {
+                            tmp2[key].table_frequency = value
+                        } else if (element === "BT") {
+                            tmp2[key].table_bucket_temperture = value
+                        } else if (element === "RE1") {
+                            tmp2[key].table_remark1 = value
+                        } else if (element === "RE2") {
+                            tmp2[key].table_remark2 = value
+                        }
+                    })
+
+                })
+                Object.keys(tmp2).forEach((key) => {
                     output.push({
-                        table_itemName: element.name,
-                        table_bucketNumber: element.value
+                        table_itemName: tmp2[key].table_itemName,
+                        table_bucketNumber: tmp2[key].table_bucketNumber,
+                        table_frequency: tmp2[key].table_frequency,
+                        table_bucket_temperture: tmp2[key].table_bucket_temperture,
+                        table_remark1: tmp2[key].table_remark1,
+                        table_remark2: tmp2[key].table_remark2
                     })
                 })
+                // tmp.forEach((element) => {
+                //     if (element.type === "BN"){
+                //         tmp2[element.time].table_bucketNumber = element.value
+                //     }else if (element.type === "FQ"){
+                //         tmp2[element.time].table_frequency = element.value
+                //     } else if (element.type === "BT") {
+                //         tmp2[element.time].table_bucket_temperture = element.value
+                //     } else if (element.type === "RE1") {
+                //         tmp2[element.time].table_remark1 = element.value
+                //     }
+                // })
+                // data.forEach(function (element) {
+                //     output.push({
+                //         table_itemName: element.name,
+                //         table_bucketNumber: element.value,
+                //         table_frequency: "0",
+                //         table_bucket_temperture: "0",
+                //         table_remark1: "0",
+                //         table_remark2: null
+                //     })
+                // })
+                // console.log(output)
                 output = JSON.stringify(output)
                 $(".thisdataupdata").removeClass("thisdataupdata")
                 $.ajax({
@@ -199,12 +310,19 @@ $(function () {
                     dataType: "json",
                     contentType: 'application/json; charset=utf-8',
                     success: function (res) {
+
                         startRefresh(range, 1)
                         message('桶號已經修改完成')
                         const data = $('#table2').bootstrapTable(
                             'getRowByUniqueId',
                             1)
                         getDATA(data)
+                        setTimeout(() => {
+                            const scroller1 = document.querySelector(".fixed-table-body");
+                            scroller1.scrollTop = fixedtablebodyscrollTop
+                            // console.log(fixedtablebodyscrollTop)
+                        },10)
+                        
                     },
                     error: function (err) {
                         message('資料錯誤，尚未修改桶號，自動恢復上次儲存資料', 1)
@@ -218,22 +336,11 @@ $(function () {
 
 
     // 日期更新後執行
-    // $('input[name="dates"]').on('apply.daterangepicker', function (ev, picker) {
-    //     console.log(picker.startDate.format('YYYY-MM-DD'));
-    //     console.log(picker.endDate.format('YYYY-MM-DD'));
-    //     var datesstart = picker.startDate.format('YYYY-MM-DD') + ' 00:00:00'
-    //     var datesstop = picker.endDate.format('YYYY-MM-DD') + ' 23:59:59'
-    //     range = {
-    //         'table_timeselectStart': datesstart,
-    //         'table_timeselectStop': datesstop
-    //     }
-    //     startRefresh(range)
-    //     // console.log(range)
-    // });
-    $('#selectDate').on('change', function (ev) {
-        // console.log($(this).val());
-        var datesstart = $(this).val() + ' 00:00:00'
-        var datesstop = $(this).val() + ' 23:59:59'
+    $('input[name="dates"]').on('apply.daterangepicker', function (ev, picker) {
+        // console.log(picker.startDate.format('YYYY-MM-DD'));
+        // console.log(picker.endDate.format('YYYY-MM-DD'));
+        var datesstart = picker.startDate.format('YYYY-MM-DD') + ' 00:00:00'
+        var datesstop = picker.endDate.format('YYYY-MM-DD') + ' 23:59:59'
         range = {
             'table_timeselectStart': datesstart,
             'table_timeselectStop': datesstop
@@ -241,6 +348,17 @@ $(function () {
         startRefresh(range)
         // console.log(range)
     });
+    // $('#selectDate').on('change', function (ev) {
+    //     console.log($(this).val());
+    //     var datesstart = $(this).val() + ' 00:00:00'
+    //     var datesstop = $(this).val() + ' 23:59:59'
+    //     range = {
+    //         'table_timeselectStart': datesstart,
+    //         'table_timeselectStop': datesstop
+    //     }
+    //     startRefresh(range)
+    //     // console.log(range)
+    // });
     // 按刷新鍵觸發此動作
     $('.table-responsive').on('click', 'button', function () {
         if (this.name === "refresh") {
@@ -286,6 +404,34 @@ $(function () {
                         bucketNumber: element.table_bucketNumber,
                         table_itemName: element.table_itemName,
                         sortSum: tmpeNumber + 1
+                    }
+                    if (element.table_frequency === null) {
+                        element.table_frequency = ""
+                    }
+                    array[sum].table_frequency = {
+                        frequency: element.table_frequency,
+                        table_itemName: element.table_itemName,
+                    }
+                    if (element.table_bucket_temperture === null) {
+                        element.table_bucket_temperture = ""
+                    }
+                    array[sum].table_bucket_temperture = {
+                        bucketTemperture: element.table_bucket_temperture,
+                        table_itemName: element.table_itemName,
+                    }
+                    if (element.table_remark1 === null) {
+                        element.table_remark1 = ""
+                    }
+                    array[sum].table_remark1 = {
+                        remark1: element.table_remark1,
+                        table_itemName: element.table_itemName,
+                    }
+                    if (element.table_remark2 === null) {
+                        element.table_remark2 = ""
+                    }
+                    array[sum].table_remark2 = {
+                        remark2: element.table_remark2,
+                        table_itemName: element.table_itemName,
                     }
                     // L/F
                     array[sum].table_maxTempLF = {
@@ -379,7 +525,7 @@ $(function () {
         });
         $('#table2').on('click', '.table-borderless',
             function () {
-                console.log(123)
+                // console.log(123)
             }
         )
     }
@@ -403,7 +549,7 @@ $(function () {
             // showToggle: true,
             // sortReset: true,
             columns: [{
-                title: '發生順序',
+                title: '順序',
                 field: 'id',
                 align: 'center',
                 sortable: true,
@@ -417,49 +563,82 @@ $(function () {
                 formatter: bucketNumberForm,
             },
             {
-                title: '錄影開始時間',
+                title: '回數',
+                field: 'table_frequency',
+                align: 'center',
+                sortable: false,
+                // sortable: true,
+                formatter: frequency
+            }
+                ,
+            {
+                title: '精煉爐溫度',
+                field: 'table_bucket_temperture',
+                align: 'center',
+                sortable: false,
+                // sortable: true,
+                formatter: bucketTemperture
+            },
+            {
+                title: '開始時間',
                 field: 'table_start',
                 align: 'center',
                 sortable: true,
             },
             {
-                title: '錄影終止時間',
+                title: '&nbsp;&nbsp;終止時間&nbsp;&nbsp;&nbsp;',
                 field: 'table_stop',
                 align: 'center',
-                sortable: true,
+                sortable: false,
+                width:'300px'
             },
             {
                 title: '總秒數',
                 field: 'sec',
                 align: 'center',
-                sortable: true,
+                sortable: false,
             },
             {
                 title: 'L/F 副料區',
                 field: 'table_maxTempLF',
                 align: 'center',
-                sortable: true,
+                sortable: false,
                 formatter: maxTemp,
             },
             {
                 title: '出鋼室地下樓梯',
                 field: 'table_maxTempSTAIR',
                 align: 'center',
-                sortable: true,
+                sortable: false,
                 formatter: maxTemp,
             },
             {
                 title: 'L/D 2F平台',
                 field: 'table_maxTempLD',
                 align: 'center',
-                sortable: true,
+                sortable: false,
                 formatter: maxTemp,
             }, {
+                title: '備註',
+                field: 'table_remark1',
+                align: 'center',
+                sortable: false,
+                formatter: remark1
+            }
+                , {
+                title: '',
+                field: 'table_remark2',
+                align: 'center',
+                sortable: false,
+                formatter: remark2
+            }
+                , {
                 title: '刪除',
                 field: 'delete_vidoe',
                 align: 'center',
                 sortable: false,
                 formatter: deleteVidoe,
+
             }
                 // ,
                 // {
@@ -524,7 +703,7 @@ $(function () {
             data: JSON.stringify(dataJSON),
             // async: false,
             success: (res) => {
-                console.log('刪除')
+                // console.log('刪除')
                 startRefresh(range)
                 setTimeout(() => {
                     const data = $('#table2').bootstrapTable(
@@ -547,11 +726,37 @@ $(function () {
     }
     // input輸入框
     function bucketNumberForm(e) {
-        return [`<input type="number" min="0" style="width:50px;text-align: center;" name="${e
-            .table_itemName}" value="${e
-                .bucketNumber}" data-tmp="${e
-                    .bucketNumber}"><span class="d-none">${e
-                        .bucketNumber}</span>`]
+        try {
+            return [`<input type="number" min="0" style="width:50px;text-align: center;" name="BN_${e
+                .table_itemName}" value="${e
+                    .bucketNumber}" data-tmp="${e
+                        .bucketNumber}"><span class="d-none">${e
+                            .bucketNumber}</span>`]
+        } catch { return [] }
+    }
+    function frequency(e) {
+        try {
+            return [`<input type="number" min="0" style="width:50px;text-align: center;" name="FQ_${e
+                .table_itemName}" value="${e.frequency}" data-tmp="${e.frequency}">`]
+        } catch { return [] }
+    }
+    function bucketTemperture(e) {
+        try {
+            return [`<input type="number" min="0" style="width:50px;text-align: center;" name="BT_${e
+                .table_itemName}" value="${e.bucketTemperture}" data-tmp="${e.bucketTemperture}">`]
+        } catch { return [] }
+    }
+    function remark1(e) {
+        try {
+            return [`<input type="text" min="0" style="width:50px;text-align: center;" name="RE1_${e
+                .table_itemName}" value="${e.remark1}" data-tmp="${e.remark1}">`]
+        } catch { return [] }
+    }
+    function remark2(e) {
+        try {
+            return [`<input type="text" min="0" style="width:50px;text-align: center;" name="RE2_${e
+                .table_itemName}" value="${e.remark2}" data-tmp="${e.remark2}">`]
+        } catch { return [] }
     }
     // 合併溫度方法
     function maxTemp(e) {
@@ -581,14 +786,14 @@ $(function () {
         return duration;
     }
     // 日期選擇
-    // $('input[name="dates"]').daterangepicker({
-    //     locale: formatDates(),
-    //     showDropdowns: false,
-    //     maxDate: today,
-    //     maxSpan: {
-    //         "days": 0
-    //     },
-    // });
+    $('input[name="dates"]').daterangepicker({
+        locale: formatDates(),
+        showDropdowns: false,
+        maxDate: today,
+        maxSpan: {
+            "days": 7
+        },
+    });
 
     //選擇日期格式
     function formatDates() {
@@ -797,7 +1002,7 @@ $(function () {
                 const data = $('#table2').bootstrapTable(
                     'getRowByUniqueId',
                     id)
-                console.log(id)
+                // console.log(id)
                 getDATA(data)
             }
         }
@@ -805,8 +1010,8 @@ $(function () {
     })
 
     function getDATA(data) {
-        
-        console.log(data)
+
+        // console.log(data)
         const download = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_dataScraping_download}` + data.table_itemName + '.txt' //設定api位置
         const videodownload = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_dataScraping_download}` + data.table_itemName + '.mp4'
         // $("#videoList").attr("src", video)

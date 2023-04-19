@@ -100,7 +100,8 @@
 
 .video2 {
   /* position: absolute; */
-  width: 880px;
+  /* width: 880px; */
+  width: 100%;
   /* height: 230px; */
   /* margin: 5px; */
   /* height: 282px; */
@@ -108,7 +109,9 @@
   /* margin-top: 0px; */
   /* background-color: rgb(177, 177, 177); */
 }
-
+.fixed-table-body{
+  overflow-x: hidden !important;
+}
 .canvas-rtsp {
   cursor: crosshair;
 }
@@ -251,6 +254,7 @@ input[type='number']::-webkit-outer-spin-button {
 /* 滾動條樣式 */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-button {
@@ -498,6 +502,21 @@ tr.active {
   grid-template-columns: 60% 40%;
 }
 
+.Manual-operation-crad-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(108 108 108 / 12%);
+  z-index: 999999;
+}
+
+.no-click1{
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .Manual-operation-content {
   display: flex;
   flex-direction: column;
@@ -555,10 +574,11 @@ tr.active {
   width: 69%;
 }
 
-.record-snapshotDisable{
-  opacity:1;
+.record-snapshotDisable {
+  opacity: 1;
 
 }
+
 .spanshot-event {
   position: absolute;
   top: 0;

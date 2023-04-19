@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>dataScraping</title>
+	<title>資料分析</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link type="font/woff" href="css/free-fa-solid-900.woff2" />
@@ -78,9 +78,9 @@
 	</nav>
 	<div class="container-fluid mt-3 mr-0">
 		<div class="row ">
-			<div class="col-md-6">
+			<div class="col-md-6" style="z-index: 9;">
 				<!-- 左一---------------------------------------------------------------------------------------------- -->
-				<div class="card shadow" style="height:874px;width:942px">
+				<div class="card shadow" style="height:874px;width:1064px">
 					<div class="card-header title py-1" style="font-size: 14px;font-weight: 900;">
 						<div class="row g-1 align-items-center">
 							<div class="col-auto">
@@ -112,11 +112,12 @@
 									</div>
 									<div class="col-12 pt-1">
 										<div class="form-floating">
-											<input name="dates" class="form-control selectDate1" type="date"
-												id="selectDate" />
+											<!-- <input name="dates" class="form-control selectDate1" type="date"
+												id="selectDate" /> -->
+												<input name="dates" class="form-control" id="floatingInputGrid" />
 											<!-- <input name="dates" class="form-control" id="floatingInputGrid" /> -->
-											<!-- <label for="floatingInputGrid">選擇資料日期範圍</label> -->
-											<label for="floatingInputGrid">選擇資料日期</label>
+											<label for="floatingInputGrid">選擇資料日期範圍</label>
+											<!-- <label for="floatingInputGrid">選擇資料日期</label> -->
 										</div>
 									</div>
 								</div>
@@ -126,7 +127,7 @@
 								data-show-toggle="true" data-sort-class="table-active" data-show-columns="true"
 								data-sortable="true" data-toggle="table2" data-search="false" data-live-search="false"
 								data-show-refresh="true" data-sort-reset="true" data-unique-id="id"
-								data-custom-sort="customSort">
+								data-custom-sort="customSort" >
 								<thead>
 									<form class="data-report">
 										<button hidden="true" type="submit"></button>
@@ -139,7 +140,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="row">
+				<div class="row" style="padding-left: 121px;">
 					<div class="col-md-12">
 						<!-- 下1---------------------------------------------------------------------------------------------- -->
 						<div class="card shadow" style="height:296px;">
@@ -184,7 +185,7 @@
 							</div>
 							<div class="card-body p-0 ">
 								<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-								<div id="main" style="width: 920px;height:290px;"></div>
+								<div id="main" style="width: 790px;height:290px;"></div>
 
 							</div>
 						</div>
@@ -202,7 +203,7 @@
 							<div class="card-body p-0 ">
 
 								<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-								<div id="main2" style="width: 920px;height:228px;padding-bottom: 0px;">
+								<div id="main2" style="width: 790px;height:228px;padding-bottom: 0px;">
 								</div>
 							</div>
 						</div>
@@ -279,6 +280,48 @@
 	</script>
 	<script src="./js/dataScraping.js"></script>
 	<script src="./js/myChart.js"></script>
+	<script type="text/javascript">
+		lock()
+		setInterval(() => {
+			lock()
+		}, 1000)
+		function lock() {
+			var myip = getmyip();
+			// console.log(myip.ip)
+			// document.getElementById("myip").innerHTML = myip.ip
+			if (myip.ip === '1') {
+				myip.ip = 'localhost'
+			}
+			var pass = myip.passip.indexOf(myip.ip)
+			if (pass === -1) {
+				// document.getElementById("myip1").innerHTML = 'NO'
+				// document.querySelectorAll("#number").disabled = true;
+				$("#table2 input").attr('disabled', 'disabled');
+				$("#btnDeleteVidoe").attr('disabled', 'disabled');
+				$("#table2 #inDeleteVideo").addClass('no-click1')
+
+			} else {
+				$("#table2 input").attr('disabled', false);
+				$("#table2 #inDeleteVideo").removeClass('no-click1')
+				// document.getElementById("myip1").innerHTML = 'YES'
+			}
+		}
+		function getmyip() {
+			var rtn;
+			$.ajax({
+				url: '/myip1',
+				type: 'get',
+				async: false,
+				success: function (res) {
+					rtn = res;
+				},
+				error: function (res) {
+					rtn = false;
+				}
+			});
+			return rtn;
+		}
+	</script>
 </body>
 
 </html>

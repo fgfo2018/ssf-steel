@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>檢測框調整</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <script src="/socket.io/socket.io.js"></script>
@@ -566,6 +566,44 @@
                 return rtn;
             }
         })
+    </script>
+    <script type="text/javascript">
+        lock()
+        setInterval(() => {
+            lock()
+        }, 1000)
+        function lock() {
+            var myip = getmyip();
+            // console.log(myip.ip)
+            // document.getElementById("myip").innerHTML = myip.ip
+            if (myip.ip === '1') {
+                myip.ip = 'localhost'
+            }
+            var pass = myip.passip.indexOf(myip.ip)
+            if (pass === -1) {
+                // document.getElementById("myip1").innerHTML = 'NO'
+                // document.querySelectorAll("#number").disabled = true;
+                $("input,button,select").attr('disabled', 'disabled');
+            } else {
+                $("input,button,select").attr('disabled', false);
+                // document.getElementById("myip1").innerHTML = 'YES'
+            }
+        }
+        function getmyip() {
+            var rtn;
+            $.ajax({
+                url: '/myip1',
+                type: 'get',
+                async: false,
+                success: function (res) {
+                    rtn = res;
+                },
+                error: function (res) {
+                    rtn = false;
+                }
+            });
+            return rtn;
+        }
     </script>
 </body>
 

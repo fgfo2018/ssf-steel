@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <h1>
+        <div>你的本機IP是:<span id="myip"></span></div>
+        <div>是否通過認證:<span id="myip1"></span></div>
+    </h1>
+    <script type="text/javascript">
+        var myip = getmyip();
+        // console.log(myip.ip)
+        document.getElementById("myip").innerHTML = myip.ip
+        if(myip.ip === '1'){
+            myip.ip = 'localhost'
+        }
+        var pass = myip.passip.indexOf(myip.ip)
+        if (pass === -1) {
+            document.getElementById("myip1").innerHTML = 'NO'
+        } else {
+            document.getElementById("myip1").innerHTML = 'YES'
+        }
+        function getmyip() {
+            var rtn;
+            $.ajax({
+                url: '/myip1',
+                type: 'get',
+                async: false,
+                success: function (res) {
+                    rtn = res;
+                },
+                error: function (res) {
+                    rtn = false;
+                }
+            });
+            return rtn;
+        }
+    </script>
+</body>
+
+</html>

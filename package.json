@@ -7,6 +7,7 @@
     "express": "^4.17.3",
     "ffmpeg": "^0.0.4",
     "nodejs": "^0.0.0",
+    "request-ip": "^3.3.0",
     "rtsp-ffmpeg": "^0.0.16",
     "socket.io": "^4.4.1"
   },
