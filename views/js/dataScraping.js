@@ -2,7 +2,7 @@ $(function () {
     // 
     // document.getElementById('selectDate').valueAsDate = new Date();
     // 載入config
-    var fixedtablebodyscrollTop = 0 
+    var fixedtablebodyscrollTop = 0
     var config = null
     var Interval = null
     $.ajax({
@@ -16,6 +16,9 @@ $(function () {
             rtn = false;
         }
     });
+
+    
+    // fixedtablebodyscrollTop = scroller1.scrollTop
     // console.log(config.web_dataScraping_initial)
     //初始化資料報表
     var clickSum = null;
@@ -119,8 +122,13 @@ $(function () {
                 // scroller1.addEventListener("scroll", (event) => {
                 //     console.log(`scrollTop: ${scroller1.scrollTop}`)
                 //     fixedtablebodyscrollTop = scroller1.scrollTop
+                const scroller1 = document.querySelector(".fixed-table-body");
+                scroller1.addEventListener('scroll', (e) => {
+                    // console.log(scroller1.scrollTop);
+                    fixedtablebodyscrollTop = scroller1.scrollTop
+                })
                 // });
-                
+
             },
             error: function (err) {
                 console.log('請求錯誤')
@@ -186,7 +194,7 @@ $(function () {
         'table_timeselectStart': today,
         'table_timeselectStop': listday
     }
-    
+
     $(window).keypress(function (event) {
         // if (Interval !== null) {
         //     clearInterval(Interval)
@@ -300,7 +308,7 @@ $(function () {
                 //         table_remark2: null
                 //     })
                 // })
-                // console.log(output)
+                console.log(output)
                 output = JSON.stringify(output)
                 $(".thisdataupdata").removeClass("thisdataupdata")
                 $.ajax({
@@ -321,8 +329,8 @@ $(function () {
                             const scroller1 = document.querySelector(".fixed-table-body");
                             scroller1.scrollTop = fixedtablebodyscrollTop
                             // console.log(fixedtablebodyscrollTop)
-                        },10)
-                        
+                        }, 10)
+
                     },
                     error: function (err) {
                         message('資料錯誤，尚未修改桶號，自動恢復上次儲存資料', 1)
@@ -474,6 +482,11 @@ $(function () {
                     'getRowByUniqueId',
                     1)
                 getDATA(d)
+                const scroller1 = document.querySelector(".fixed-table-body");
+                scroller1.addEventListener('scroll', (e) => {
+                    // console.log(scroller1.scrollTop);
+                    fixedtablebodyscrollTop = scroller1.scrollTop
+                })
             },
             error: function (err) {
                 console.log(err)
@@ -590,7 +603,7 @@ $(function () {
                 field: 'table_stop',
                 align: 'center',
                 sortable: false,
-                width:'300px'
+                width: '300px'
             },
             {
                 title: '總秒數',
@@ -695,6 +708,8 @@ $(function () {
         myModal.hide()
     })
     function deleteVideoAPI() {
+        
+
         $.ajax({
             url: `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.apiDeleteVideo}`,
             type: 'post',
@@ -710,8 +725,12 @@ $(function () {
                         'getRowByUniqueId',
                         1)
                     getDATA(data)
+                    const scroller1 = document.querySelector(".fixed-table-body");
+                    scroller1.scrollTop = fixedtablebodyscrollTop
                 }, 500)
 
+                console.log('刪除');
+                
                 // config = res;
             },
             error: function (res) {
@@ -1103,6 +1122,8 @@ $(function () {
                         // this_video.pause()
                     }
                 }, 1500);
+                const scroller1 = document.querySelector(".fixed-table-body");
+                scroller1.scrollTop = fixedtablebodyscrollTop
             },
             error: function (err) { }
         })

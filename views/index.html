@@ -253,26 +253,29 @@
             </div>
           </div>
           <div class="card-body p-0 ">
-            <div class="row  align-items-center tri subtitle">
-              <div class="col-4">
-                &nbsp;&nbsp;&nbsp;L/F 副料區
+            <div class="card-videoListKonva">
+              <div class="row  align-items-center tri subtitle">
+                <div class="col-4">
+                  &nbsp;&nbsp;&nbsp;L/F 副料區
+                </div>
+                <div class="col-4">
+                  &nbsp;&nbsp;&nbsp;出鋼室地下樓梯
+                </div>
+                <div class="col-4">
+                  &nbsp;&nbsp;&nbsp;L/D 2F平台
+                </div>
               </div>
-              <div class="col-4">
-                &nbsp;&nbsp;&nbsp;出鋼室地下樓梯
-              </div>
-              <div class="col-4">
-                &nbsp;&nbsp;&nbsp;L/D 2F平台
+              <!-- <div class="gap"></div>
+            <div class="gap2"></div> -->
+              <!-- <video id="videoList" loop controls muted preload src="static/mock_vod/.mp4" class="video imgCenter">
+            </video> -->
+              <!-- <button id="play">Play</button> -->
+              <div class="videoListKonvaCanvas">
+                <div id="videoListKonvaloading"></div>
+                <div id="videoListKonva"></div>
+                <div id="videoListKonva1"></div>
               </div>
             </div>
-            <!-- <div class="gap"></div>
-            <div class="gap2"></div> -->
-            <!-- <video id="videoList" loop controls muted preload src="static/mock_vod/.mp4" class="video imgCenter">
-            </video> -->
-            <!-- <button id="play">Play</button> -->
-            <div id="videoListKonvaloading"></div>
-            <div id="videoListKonva"></div>
-
-
           </div>
         </div>
       </div>
@@ -808,6 +811,9 @@
       });
 
     })
+
+
+
     //下1選擇影像
     $(document).ready(function () {
       function getPixelColor(x, y, ctxdata) {
@@ -919,7 +925,7 @@
       // },1000)
       // Konva
       var stage = new Konva.Stage({
-        container: 'videoListKonva',
+        container: 'videoListKonva1',
         width: 953,
         height: 245,
       });
@@ -928,46 +934,46 @@
       const canvas1 = layer.getCanvas()._canvas;
       canvas1.id = 'videoListKonvaC';
       var videok = document.createElement('video');
+      document.getElementById('videoListKonva').appendChild(videok);
       videok.setAttribute('crossOrigin', '')
       videok.muted = true;
       videok.autoplay = true;
       videok.loop = true;
-      // videok.src = 'http://127.0.0.1:5000/download/20220501_T162607.mp4'
-      var imagek = new Konva.Image({
-        image: videok,
-        // draggable: true,
-        x: 0,
-        y: 0,
-      });
-      layer.add(imagek);
-
-      var anim = new Konva.Animation(function () {
-        // do nothing, animation just need to update the layer
-        deawtem()
-      }, layer);
-      // videok.addEventListener('loadedmetadata', function (e) {
-      //   imagek.width(953);
-      //   imagek.height(245);
+      var canvasForPixel = document.createElement('canvas');
+      canvasForPixel.width = 953
+      canvasForPixel.height = 245;
+      var ctx1 = canvasForPixel.getContext('2d');
+      // var imagek = new Konva.Image({
+      //   image: videok,
+      //   // draggable: true,
+      //   x: 0,
+      //   y: 0,
       // });
-      anim.start();
+      // layer.add(imagek);
+      var playstatus = true
+      var anim = new Konva.Animation(function () {
+        // deawtem()
+      }, layer);
+      // anim.start();
       var simpleText = new Konva.Text({
         fontSize: 14,
         fontStyle: 'bold',
         fill: '#fff',
         offsetX: -10,
         offsetY: 28,
+        // text:'test',
         visible: false
       });
       layer.add(simpleText);
-      // var circle = new Konva.Circle({
-      //   x: 0,
-      //   y: 0,
-      //   radius: 4,
-      //   fill: 'red',
-      //   stroke: 'black',
-      //   strokeWidth: 1,
-      // });
-      // layer.add(circle);
+      var circle = new Konva.Circle({
+        x: 0,
+        y: 0,
+        radius: 4,
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+      });
+      layer.add(circle);
       stage.on('mousemove', (e) => {
         ex = e.evt.layerX
         ey = e.evt.layerY
@@ -975,7 +981,10 @@
         eh = e.target.height()
         // circle.x(e.evt.layerX)
         // circle.y(e.evt.layerY)
-        // deawtem()
+        // if(!playstatus){
+        deawtem()
+        // layer.batchDraw();
+        // }
         simpleText.visible(true)
       })
 
@@ -992,18 +1001,22 @@
       getVideosList(url, status, VideoTemp, config)
       var controlTemp = 0
       // 影片控制
-      var playstatus = true
       var VideoRange = $('#video-range')
       var VideoStart = 0
       var VideoTotleTime = 0
       var waitTime = 10 // 影片偵錯時間容忍值
       videok.addEventListener("timeupdate",
         function (ev) {
+          console.log(ev.target.currentTime);
           VideoStart = ev.target.currentTime
           VideoTotleTime = ev.target.duration
           // console.log('更新')
           videoTimeDisplay(VideoStart, VideoTotleTime)
           VideoRange.val((ev.target.currentTime / ev.target.duration) * 100)
+          
+          deawtem()
+          // layer.batchDraw(); // 手動更新圖層
+          // imagek.draw();
           waitTime = 10
         });
       // 判斷影片是否有在撥放
@@ -1064,6 +1077,7 @@
         VideoTemp = videoValue
         videoUrl = videoValue
         blobVideo()
+        console.log('get video2');
         // videok.src = videoValue
         // videok.addEventListener('loadedmetadata', function (e) {
         //   imagek.width(953);
@@ -1137,6 +1151,7 @@
                   tempvideourl = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_video_url_prefix}` + data
                   videoUrl = `${window.location.protocol}//${window.location.hostname}:${config.backEndPort}${config.web_video_url_prefix}` + data
                   blobVideo()
+                  console.log('get video1');
                   // blobVideo('http://127.0.0.1:5000/download/20220501_T155224.mp4')
                   // videok.src = config.web_video_url_prefix + data
                   // videok.addEventListener('loadedmetadata', function (e) {
@@ -1158,7 +1173,7 @@
 
 
       function deawtem() {
-
+        ctx1.drawImage(videok, 0, 0, canvasForPixel.width, canvasForPixel.height);
         // 計算邊緣
         if (ey < 50) {
           simpleText.offsetY(-12)
@@ -1176,15 +1191,17 @@
         simpleText.y(ey)
         // simpleText.text(`000°C`)
         // var cee = canvas1.getContext()
-        const ctx123 = layer.getContext();
-
-        // const imageData = ctx123.getImageData(0, 0, 1, 1);
-        var ecolor = getPixelColor(ex, ey, ctx123)
+        var cee = ctx1
+        // const ctx123 = layer.getContext();
+        var ecolor = cee.getImageData(ex, ey, 1, 1).data;
+        // // const imageData = ctx123.getImageData(0, 0, 1, 1);
+        // var ecolor = getPixelColor(ex, ey, ctx123)
         var rgb = [ecolor[0], ecolor[1], ecolor[2]]
+        // console.log(rgb);
         var status = false
         var end = 0
         var temp = null
-        // console.log(rgb)
+        // // console.log(rgb)
         patternsmetadata.forEach((index) => {
           if (rgb[1] <= 214 && rgb[0] <= 212) {
             if (index.G >= rgb[1]) {
@@ -1227,13 +1244,9 @@
           }
           simpleText.text(`${temperature1}°C`)
         }
-        // 點溫判斷
-        // pointX = e.evt.layerX / e.target.width()
-        // pointY = e.evt.layerY / e.target.height()
-        // var ecolor = getPixelColor(e.target.width() * pointX, e.target.height() * pointY, layer)
-        // console.log(ctx1)
       }
       // 影片本地化
+      var savebloburl = []
       function blobVideo() {
         // console.log(url);
         // $('.video-loading>div').html('影像載入中...')
@@ -1248,15 +1261,22 @@
           if (this.status === 200) {
             var videoBlob = this.response;
             if (videoBlob.type === 'video/mp4') {
+              var savebloburllen = savebloburl.length
+              for (var i = 0; i < savebloburllen; i++) {
+                console.log('remove tempUrl : ', savebloburl[i]);
+                URL.revokeObjectURL(savebloburl[i])
+                savebloburl = []
+              }
               // console.log(videoBlob.type)
               var vid = URL.createObjectURL(videoBlob);
-              // console.log(vid)
+              // console.log(vid)  URL.revokeObjectURL(tempimg[i])
               videok.src = vid
               videok.addEventListener('loadedmetadata', function (e) {
                 imagek.width(953);
                 imagek.height(245);
               });
               videok.play();
+              savebloburl.push(vid)
             } else {
               console.log('非影片類型，重新呼叫影片...')
               setTimeout(() => {

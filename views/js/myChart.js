@@ -32,9 +32,9 @@ option = {
         },
         x: 'right'
     },
-    tooltip: {
-        position: 'top'
-    },
+    // tooltip: {
+    //     position: 'top'
+    // },
     animation: false,
     grid: {
         height: '72%',
