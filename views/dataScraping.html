@@ -200,8 +200,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="card-body p-0 ">
-
+							<div class="card-body p-0" style="position: relative;">
+								<div class="heat-map-select-date d-flex align-items-center">
+									<div style="width: 115px">選擇統計日期:</div>
+									<input name="datess" class="form-control form-control-sm" id="floatingInputGrid" style="width: 150px;" />
+								</div>
 								<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 								<div id="main2" style="width: 790px;height:228px;padding-bottom: 0px;">
 								</div>
@@ -322,6 +325,14 @@
 			return rtn;
 		}
 	</script>
+	<style type="text/css">
+		.heat-map-select-date{
+			position: absolute;
+			top: 3px;
+			right: 3px;
+			z-index: 10;
+		}
+	</style>
 </body>
 
 </html>

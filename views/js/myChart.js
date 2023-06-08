@@ -139,6 +139,18 @@ $(window).keypress(function (event) {
     }
 })
 getData(url)
+$('input[name="datess"]').daterangepicker({
+    locale: formatDates(),
+    singleDatePicker: true,
+    showDropdowns: true,
+    drops:'up'
+});
+$('input[name="datess"]').on('apply.daterangepicker', function (ev, picker) {
+    // console.log(picker.startDate.format('YYYY-MM-DD'));
+    var date = new Date(picker.startDate.format('YYYY-MM-DD'))
+    getData(url, date)
+    // console.log(picker.endDate.format('YYYY-MM-DD'));
+})
 // _____________ 2022/11/22 backup
 // 判斷表單點到的日期
 // var clickSum = null;
@@ -160,12 +172,12 @@ getData(url)
 //     clickSum = id
 // })
 // _____________ 2022/11/22 backup
-$('.selectDate1').on('change', function (ev) {
-    setTimeout(() => {
-        var date = new Date($(this).val())
-        getData(url, date)
-    }, 300)
-    // console.log(range)
+$('#floatingInputGrid').on('change', function (ev) {
+    // setTimeout(() => {
+    //     var date = new Date($(this).val())
+    //     getData(url, date)
+    // }, 300)
+    console.log(range)
 });
 
 function getData(url, clickdata) {
@@ -212,9 +224,9 @@ function getData(url, clickdata) {
                 visualMap: {
                     max: max
                 },
-                title: {
-                    text: '統計日期:' + time,
-                },
+                // title: {
+                //     text: '統計日期:' + time,
+                // },
                 series: [{
                     name: '',
                     data: data,
@@ -338,4 +350,40 @@ function listinterval(res, clickdata) {
     }
     // 印出陣列
     return output
+}
+//選擇日期格式
+function formatDates() {
+    return {
+        "format": "YYYY/MM/DD",
+        "separator": " - ",
+        "applyLabel": "確定",
+        "cancelLabel": "取消",
+        "fromLabel": "表單",
+        "toLabel": "至",
+        "customRangeLabel": "自訂",
+        "daysOfWeek": [
+            "日",
+            "一",
+            "二",
+            "三",
+            "四",
+            "五",
+            "六"
+        ],
+        "monthNames": [
+            "1月",
+            "2月",
+            "3月",
+            "4月",
+            "5月",
+            "6月",
+            "7月",
+            "8月",
+            "9月",
+            "10月",
+            "11月",
+            "12月"
+        ],
+        "firstDay": 0
+    }
 }
