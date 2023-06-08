@@ -599,11 +599,11 @@ $(function () {
                 sortable: true,
             },
             {
-                title: '&nbsp;&nbsp;終止時間&nbsp;&nbsp;&nbsp;',
+                title: '終止時間&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
                 field: 'table_stop',
                 align: 'center',
                 sortable: false,
-                width: '300px'
+                // width: '300px'
             },
             {
                 title: '總秒數',

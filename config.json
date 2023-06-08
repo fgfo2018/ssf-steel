@@ -35,5 +35,6 @@
     "apiDeleteVideo": "/api/Delete/video",
     "manualVideo": "/api/manual/video",
     "manualSnapshot": "/api/manual/snapshot",
-    "passIP": "localhost,192.168.0.116,192.168.0.173"
+    "passIP": "192.168.0.116,192.168.0.173",
+    "outputSettingPasswd" : "1234"
 }

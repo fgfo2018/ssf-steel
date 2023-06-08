@@ -472,7 +472,9 @@ tr.active {
 .video-control-btn {
   cursor: pointer;
 }
-
+.setting_export_lock-btn{
+  cursor: pointer;
+}
 /*Chrome*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   /* input[type='range'] {

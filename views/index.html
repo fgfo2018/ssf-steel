@@ -233,16 +233,16 @@
               </div>
               <div class="col-auto" id="videosList">
 
-                <select id="videoSelect" class="subtitle" style="border: 1px solid gainsboro;">
+                <select id="videoSelect" class="subtitle iplock" style="border: 1px solid gainsboro;">
                 </select>
                 <button id="autonew" style="display:none;" title="目前你已鎖定影像，請點選此按鈕解除鎖定，程式將自動更新最新影像">AUTO</button>
               </div>
               <div class="col-auto ms-auto" id="video-control">
                 <div class="d-flex align-items-center" title="錄影回放影像控制">
-                  <div class="video-control-btn pause  ">
+                  <div class="video-control-btn pause iplock">
                     <img src="/static/pause.png" class="video-control-btn-img" />
                   </div>
-                  <input type="range" id="video-range" class="form-range mx-2" min="0" max="100" step="0.5"
+                  <input type="range" id="video-range" class="form-range mx-2 iplock" min="0" max="100" step="0.5"
                     id="customRange3">
                   <div>
                     <span class="videoCurrentTime">00:00</span>/<span class="videoTotleTime">00:00</span>
@@ -373,7 +373,7 @@
                   </div>
                   <div class="col-auto">
                     <input id="number" name="setting_reflected_temperature" type="number" value="" step="0.1" min="0"
-                      max="1000" class="subtitle setting_reflected_temperature"
+                      max="1000" class="subtitle setting_reflected_temperature iplock"
                       style="width:56px;margin-left:27.5px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
@@ -384,7 +384,7 @@
                   </div>
                   <div class="col-auto">
                     <input id="number" name="setting_atmospheric_temperature" type="number" value="" step="0.1" min="0"
-                      max="1000" class="subtitle setting_atmospheric_temperature"
+                      max="1000" class="subtitle setting_atmospheric_temperature iplock"
                       style="width:56px;margin-left:8px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
@@ -395,7 +395,7 @@
                   </div>
                   <div class="col-auto">
                     <input id="number" name="setting_object_distance" type="number" value="" step="0.1" min="0" max="25"
-                      class="subtitle setting_object_distance"
+                      class="subtitle setting_object_distance iplock"
                       style="width:56px;margin-left:67px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
@@ -405,8 +405,8 @@
                     <label class="col-form-label subtitle p-0">Object Emissivity (%)</label>
                   </div>
                   <div class="col-auto">
-                    <input id="number" name="setting_object_emissivity" type="number" value="" step="0.01" min="0"
-                      max="1" class="subtitle setting_object_emissivity"
+                    <input id="number" name="setting_object_emissivity" type="number" value="" min="0" max="100"
+                      step="1" class="subtitle setting_object_emissivity iplock"
                       style="width:56px;margin-left:61.5px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
@@ -416,8 +416,8 @@
                     <label class="col-form-label subtitle p-0">Relative Humidity (%)</label>
                   </div>
                   <div class="col-auto">
-                    <input id="number" name="setting_relative_humidity" type="number" value="" step="0.01" min="0"
-                      max="1" class="subtitle setting_relative_humidity"
+                    <input id="number" name="setting_relative_humidity" type="number" value="" min="0" max="100"
+                      step="1" class="subtitle setting_relative_humidity iplock"
                       style="width:56px;margin-left:57.5px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
@@ -428,23 +428,24 @@
                   </div>
                   <div class="col-auto">
                     <input id="number" name="setting_external_optics_temperature" type="number" value="" step="0.1"
-                      min="0" max="100" class="subtitle setting_external_optics_temperature"
+                      min="0" max="100" class="subtitle setting_external_optics_temperature iplock"
                       style="width:56px;margin-left:0px;height:21px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
 
                 <div class="row g-3 align-items-center">
                   <div class="col-auto">
-                    <label class="col-form-label subtitle p-0">External Optics Transmission (%)</label>
+                    <label class="col-form-label subtitle p-0">External Optics Transmission
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                   </div>
                   <div class="col-auto">
                     <input id="number" name="setting_external_optics_transmission" type="number" value="" step="0.01"
-                      min="0" max="1" class="subtitle setting_external_optics_transmission"
+                      min="0" max="1" class="subtitle setting_external_optics_transmission iplock"
                       style="width:56px;height:21px;margin-left:-3px;border: 1px solid gainsboro;" required>
                   </div>
                 </div>
               </div>
-              <button type="submit" hidden>get</button>
+              <button type="submit iplock" hidden>get</button>
             </form>
           </div>
           <div class="right-bottom-grid-area2">
@@ -469,8 +470,8 @@
                       </select>
                     </div>
                     <div class="col-auto">
-                      <button type="button" class="btn btn-light btn-sm subtitle py-0 border setting_once_calibration"
-                        style="font-size: 12px;color:#6f6f6f;">執行校正</button>
+                      <button type="button" class="btn btn-light btn-sm border subtitle py-0 setting_once_autofocus iplock"
+                        style="font-size: 12px;color:#6f6f6f;">自動對焦</button>
                     </div>
 
                   </div>
@@ -490,8 +491,8 @@
                       </select>
                     </div>
                     <div class="col-auto">
-                      <button type="button" class="btn btn-light btn-sm border subtitle py-0 setting_once_autofocus"
-                        style="font-size: 12px;color:#6f6f6f;">自動對焦</button>
+                      <button type="button" class="btn btn-light btn-sm subtitle py-0 border setting_once_calibration iplock"
+                        style="font-size: 12px;color:#6f6f6f;">執行校正</button>
                     </div>
                   </div>
                   <div class="row g-3 align-items-center">
@@ -499,12 +500,12 @@
                       <label class="col-form-label  py-0 px-1">量測溫度區間(°C)</label>
                     </div>
                     <div class="col-auto subtitle">
-                      <input id="number" type="number" value="" class="subtitle setting_colorbar_min is-visible"
+                      <input id="number" type="number" value="" class="subtitle setting_colorbar_min is-visible iplock"
                         step="0.1" name="setting_colorbar_min" style="width:56px;height:21px;margin-left:11px;"
                         id="setting_colorbar_min" required>
                       -
                       <input id="number" name="setting_colorbar_max" type="number" value="" step="0.1"
-                        class="subtitle setting_colorbar_max is-visible" style="width:56px;height:21px;"
+                        class="subtitle setting_colorbar_max is-visible iplock" style="width:56px;height:21px;"
                         id="setting_colorbar_max" required>
                     </div>
                     <div class="col-12 mt-1 text-danger setting_colorbar-visible-error d-none">
@@ -525,14 +526,14 @@
                     <div class="col-auto">
                       <label class="col-form-label subtitle p-0">第一段警報溫度 (°C):</label>
                       <input id="number" type="number" step="0.1" name="setting_first_alarm_temperature" value=""
-                        class="subtitle setting_first_alarm_temperature is-visible" style="width:56px;height:21px;"
+                        class="subtitle setting_first_alarm_temperature is-visible iplock" style="width:56px;height:21px;"
                         required>
                     </div>
 
                     <div class="col-auto">
                       <label class="col-form-label subtitle p-0">&nbsp&nbsp取樣率 (Hz):</label>
                       <input id="number" type="number" step="0.1" name="setting_sampling_rate" value=""
-                        class="subtitle setting_sampling_rate"
+                        class="subtitle setting_sampling_rate iplock"
                         style="margin-left:23px; width:56px;height:21px;border: 1px solid gainsboro;" required>
                     </div>
                   </div>
@@ -542,13 +543,13 @@
                     <div class="col-auto">
                       <label class="col-form-label subtitle p-0">第二段警報溫度 (°C):</label>
                       <input id="number" type="number" step="0.1" value=""
-                        class="subtitle setting_second_alarm_temperature is-visible"
+                        class="subtitle setting_second_alarm_temperature is-visible iplock"
                         name="setting_second_alarm_temperature" style="width:56px;height:21px;" required>
 
                     </div>
                     <div class="col-auto">
                       <label class="col-form-label subtitle p-0">&nbsp&nbsp像素閥值 (pixel):</label>
-                      <input id="number" type="number" step="0.1" value="" class="subtitle setting_threshold_pixel"
+                      <input id="number" type="number" step="0.1" value="" class="subtitle setting_threshold_pixel iplock"
                         name="setting_threshold_pixel" style="width:56px;height:21px;border: 1px solid gainsboro;"
                         required>
                     </div>
@@ -626,8 +627,13 @@
           </div>
           <!-- 輸出設定 -->
           <div class="card shadow subtitle" style="width: 517px; margin-left: 16px;">
-            <div class="card-header title py-1">
-              輸出設定
+            <div class="card-header title py-1 d-flex justify-content-between">
+              <div>
+                輸出設定
+              </div>
+              <div class="setting_export_lock-btn">
+                <img id="setting_export_lock-btn-img" src="/static/lock.png">
+              </div>
             </div>
             <form class="form-export_temperature">
               <div class="card-body py-1">
@@ -721,26 +727,77 @@
       </div>
     </div>
   </div>
-
+  <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="setting_export_lock-dialog">
+    <div class="modal-dialog modal-dialog-centered" >
+      <!-- 內容 -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">正在解鎖"輸出設定"</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">請輸入密碼</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+            <div class="invalid-feedback">
+              密碼輸入錯誤!
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">返回</button>
+          <button type="button" class="btn btn-primary setting_export_lock_confirm">送出</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript">
+    var config = getConfig();
+      function getConfig() {
+        var rtn;
+        $.ajax({
+          url: '/config',
+          type: 'get',
+          async: false,
+          success: function (res) {
+            rtn = res;
+          },
+          error: function (res) {
+            rtn = false;
+          }
+        });
+        return rtn;
+      }
+    // 解鎖輸出設定 20230608
+    $(".setting_export_maximum_data ,.setting_export_image_video,.setting_export_camera_temperature").attr('disabled', true);
+    var dialogLockdiv = document.getElementById('setting_export_lock-dialog')
+    var dialogLock = new bootstrap.Modal(dialogLockdiv)
+    $('.setting_export_lock-btn').on('click', () => {
+      if($('.setting_export_lock-btn').hasClass('unlock-d')){
+        $("#setting_export_lock-btn-img").attr('src', '/static/lock.png')
+        $(".setting_export_maximum_data ,.setting_export_image_video,.setting_export_camera_temperature").attr('disabled', true);
+        $('.setting_export_lock-btn').removeClass("unlock-d")
+      }else{
+        dialogLock.show()
+      }
+    })
+    $('.setting_export_lock_confirm').on('click', () => {
+      var exampleInputPassword1 = $('#exampleInputPassword1')
+      if(exampleInputPassword1.val() ===  config.outputSettingPasswd) {
+        exampleInputPassword1.removeClass("is-invalid")
+        $(".setting_export_maximum_data ,.setting_export_image_video,.setting_export_camera_temperature").attr('disabled', false);
+        exampleInputPassword1.val("")
+        dialogLock.hide()
+        $("#setting_export_lock-btn-img").attr('src', '/static/unlocak.png')
+        $('.setting_export_lock-btn').addClass('unlock-d')
+      }else{
+        exampleInputPassword1.addClass("is-invalid")
+      }
+    })
+
     // 手動操作
     // 錄影
-    var config = getConfig();
-    function getConfig() {
-      var rtn;
-      $.ajax({
-        url: '/config',
-        type: 'get',
-        async: false,
-        success: function (res) {
-          rtn = res;
-        },
-        error: function (res) {
-          rtn = false;
-        }
-      });
-      return rtn;
-    }
+    
     setInterval((e) => {
       record2(0)
     }, 1000)
@@ -1007,13 +1064,13 @@
       var waitTime = 10 // 影片偵錯時間容忍值
       videok.addEventListener("timeupdate",
         function (ev) {
-          console.log(ev.target.currentTime);
+          // console.log(ev.target.currentTime);
           VideoStart = ev.target.currentTime
           VideoTotleTime = ev.target.duration
           // console.log('更新')
           videoTimeDisplay(VideoStart, VideoTotleTime)
           VideoRange.val((ev.target.currentTime / ev.target.duration) * 100)
-          
+
           deawtem()
           // layer.batchDraw(); // 手動更新圖層
           // imagek.draw();
@@ -2031,6 +2088,7 @@
       $(".focusSelect").on('change', function () {
         $(".loading_bar").css('opacity', "1");
         $(".loading_bar").css('width', getRandom(50, 70) + "%");
+        // console.log(formName);
         changeApi(formName, temp)
         $(this).removeClass('focusSelect')
       })
@@ -2065,6 +2123,8 @@
 
 
       function changeApi(formName, temp) {
+
+        // changeApi(formName, temp)
         var changeData = {}
         if (valid()) {
           for (var i = 0; i < formName.length; i++) {
@@ -2074,7 +2134,11 @@
               $("." + index.name).attr('disabled', 'disabled');
               $("." + index.name).addClass('LockInput');
               // 鎖住input end
-              changeData[index.name] = index.value
+              if (index.name === 'setting_object_emissivity' || index.name === 'setting_relative_humidity') {
+                changeData[index.name] = index.value / 100
+              } else {
+                changeData[index.name] = index.value
+              }
             })
           }
           if (temp === 1) {
@@ -2350,8 +2414,10 @@
             $(".setting_reflected_temperature").val($.number(response.setting_reflected_temperature, 1))
             $(".setting_atmospheric_temperature").val($.number(response.setting_atmospheric_temperature, 1))
             $(".setting_object_distance").val($.number(response.setting_object_distance, 1))
-            $(".setting_object_emissivity").val($.number(response.setting_object_emissivity, 2))
-            $(".setting_relative_humidity").val($.number(response.setting_relative_humidity, 2))
+            // 20230608--------------------------- update
+            $(".setting_object_emissivity").val(response.setting_object_emissivity * 100)
+            $(".setting_relative_humidity").val(response.setting_relative_humidity * 100)
+            // 20230608--------------------------- update end
             $(".setting_external_optics_temperature").val($.number(response
               .setting_external_optics_temperature,
               1))
@@ -2392,8 +2458,10 @@
               var array = $(formName[i]).serializeArray();
               array.forEach(function (index) {
                 // 鎖住input
-                $("." + index.name).attr('disabled', 'disabled');
-                $("." + index.name).addClass('LockInput');
+                if (index.name !== 'setting_export_maximum_data' || index.name !== 'setting_export_image_video' || index.name !== 'setting_export_camera_temperature') {
+                  $("." + index.name).attr('disabled', 'disabled');
+                  $("." + index.name).addClass('LockInput');
+                }
                 // 鎖住input end
               })
             }
@@ -2463,12 +2531,15 @@
       if (pass === -1) {
         // document.getElementById("myip1").innerHTML = 'NO'
         // document.querySelectorAll("#number").disabled = true;
-        $("input,button,.setting_pattern,.setting_calibration").attr('disabled', 'disabled');
+        // $("input,button,.setting_pattern,.setting_calibration").attr('disabled', 'disabled');
+        $(".iplock,.setting_pattern,.setting_calibration").attr('disabled', 'disabled');
         $("#autonew").attr('disabled', false);
         $(".Manual-operation-crad-display").removeClass('d-none')
-
+        $("#setting_export_lock-dialog input ,#setting_export_lock-dialog button").attr('disabled', false);
+        // console.log("23", $("input[class='setting_export_maximum_data']"));
       } else {
-        $("input,button,.setting_pattern,.setting_calibration").attr('disabled', false);
+        // $("input,button,.setting_pattern,.setting_calibration").attr('disabled', false);
+        $(".iplock,.setting_pattern,.setting_calibration").attr('disabled', false);
         $(".Manual-operation-crad-display").addClass('d-none')
         // document.getElementById("myip1").innerHTML = 'YES'
       }
